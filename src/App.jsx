@@ -1,28 +1,24 @@
-import TopBar from "./components/TopBar";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import MeetSection from "./components/MeetSection";
-import WorkSection from "./components/WorkSection";
-import BrandsSection from "./components/BrandsSection";
-import AboutSection from "./components/AboutSection";
-import FooterSection from "./components/FooterSection";
-import BottomBar from "./components/BottomBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import PortfolioPage from "./pages/PortfolioPage";
+import PortfolioDesignPage from "./pages/PortfolioDesignPage";
+import PortfolioContentPage from "./pages/PortfolioContentPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
   return (
-    <div>
-      <TopBar />
-      <Navbar />
-      <Hero />
-      <MeetSection />
-      <WorkSection />
-      <BrandsSection />
-      <AboutSection />
-      <FooterSection />
-      <BottomBar />
-
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/portfolio/design" element={<PortfolioDesignPage />} />
+        <Route path="/portfolio/content" element={<PortfolioContentPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

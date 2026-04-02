@@ -1,5 +1,6 @@
 import { useState } from "react";
-import logo from "../assets/logo-osecom.png";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo-osecom.png";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,10 +17,13 @@ function Navbar() {
     <nav className={`navbar ${isOpen ? "navbar--open" : ""}`}>
 
       <div className="navbar__top">
-        <a href="#" className="navbar__logo">
+        
+        {/* LOGO */}
+        <Link to="/" className="navbar__logo" onClick={closeMenu}>
           <img src={logo} alt="Logo OseCom Freelance Siouta" />
-        </a>
+        </Link>
 
+        {/* BURGER */}
         <button
           className="navbar__burger"
           aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
@@ -30,23 +34,25 @@ function Navbar() {
 
         {/* MENU DESKTOP */}
         <div className="navbar__menu-container">
-          <a href="#" className="navbar__menu-link">
+
+          <Link to="/shop" className="navbar__menu-link">
             <span>Shop</span>
             <span className="navbar__arrow">⌄</span>
-          </a>
+          </Link>
 
-          <a href="#" className="navbar__menu-link">
+          <Link to="/portfolio" className="navbar__menu-link">
             <span>Portfolio</span>
             <span className="navbar__arrow">⌄</span>
-          </a>
+          </Link>
 
-          <a href="#" className="navbar__menu-link">
+          <Link to="/about" className="navbar__menu-link">
             <span>About</span>
-          </a>
+          </Link>
 
-          <a href="#" className="navbar__menu-link">
+          <Link to="/contact" className="navbar__menu-link">
             <span>Work With Me</span>
-          </a>
+          </Link>
+
         </div>
       </div>
 
@@ -56,23 +62,25 @@ function Navbar() {
           isOpen ? "navbar__mobile-menu--open" : ""
         }`}
       >
-        <a href="#" className="navbar__mobile-link" onClick={closeMenu}>
+
+        <Link to="/shop" className="navbar__mobile-link" onClick={closeMenu}>
           <span>Shop</span>
           <span className="navbar__arrow">⌄</span>
-        </a>
+        </Link>
 
-        <a href="#" className="navbar__mobile-link" onClick={closeMenu}>
+        <Link to="/portfolio" className="navbar__mobile-link" onClick={closeMenu}>
           <span>Portfolio</span>
           <span className="navbar__arrow">⌄</span>
-        </a>
+        </Link>
 
-        <a href="#" className="navbar__mobile-link" onClick={closeMenu}>
+        <Link to="/about" className="navbar__mobile-link" onClick={closeMenu}>
           <span>About</span>
-        </a>
+        </Link>
 
-        <a href="#" className="navbar__mobile-link" onClick={closeMenu}>
+        <Link to="/contact" className="navbar__mobile-link" onClick={closeMenu}>
           <span>Work With Me</span>
-        </a>
+        </Link>
+
       </div>
 
     </nav>
