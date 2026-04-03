@@ -20,11 +20,13 @@ function PortfolioContentCTASection() {
         </h2>
 
         <a
-          href="/contact"
-          className="portfolio-content-cta-section__button"
-        >
-          CONTACT ME
-        </a>
+        href="mailto:tonemail@gmail.com"
+        className="portfolio-content-cta-section__button button button--olive"
+      >
+        CONTACT ME
+      </a>
+
+
       </div>
     </section>
   );

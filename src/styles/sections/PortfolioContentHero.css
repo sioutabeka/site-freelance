@@ -51,52 +51,6 @@
     gap: 10px 12px;
   }
   
-  .portfolio-content-hero__cta {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  
-    border: none;
-    border-radius: 999px;
-    padding: 8px 18px;
-  
-    font-family: "Public Sans", sans-serif;
-    font-size: 12px;
-    line-height: 1;
-    text-transform: uppercase;
-    text-decoration: none;
-  
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  /* COULEURS */
-  
-  .portfolio-content-hero__cta--pink-light {
-    background-color: #fcc5df;
-    color: #3c2015;
-  }
-  
-  .portfolio-content-hero__cta--cream {
-    background-color: #f4edc6;
-    color: #3c2015;
-  }
-  
-  .portfolio-content-hero__cta--pink {
-    background-color: #e76fb5;
-    color: #3c2015;
-  }
-  
-  .portfolio-content-hero__cta--olive {
-    background-color: #828234;
-    color: #3c2015;
-  }
-  
-  /* hover clean */
-  .portfolio-content-hero__cta:hover {
-    background-color: #bfd2ef;
-  }
-  
   /* =========================
      RIGHT VISUALS
   ========================= */
@@ -170,11 +124,6 @@
   
     .portfolio-content-hero__description {
       font-size: 11px;
-    }
-  
-    .portfolio-content-hero__cta {
-      font-size: 10px;
-      padding: 6px 16px;
     }
   
     .portfolio-content-hero__image {

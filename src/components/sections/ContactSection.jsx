@@ -2,8 +2,8 @@ import "../../styles/sections/AboutContact.css";
 
 function ContactSection() {
     return (
-      <section className="about-inquiry">
-        <div className="about-inquiry__inner">
+<section id="work-with-me" className="about-inquiry">
+          <div className="about-inquiry__inner">
           <p className="about-inquiry__tag">FILL OUT THE PROJECT INQUIRY FORM</p>
   
           <h2 className="about-inquiry__title">Work with Me</h2>
@@ -122,9 +122,13 @@ function ContactSection() {
               </div>
             </div>
   
-            <button type="submit" className="about-inquiry__submit">
+            <button
+              type="submit"
+              className="about-inquiry__submit button button--submit button--submit-pink"
+            >
               SUBMIT
             </button>
+
           </form>
   
           <div className="about-inquiry__extra">

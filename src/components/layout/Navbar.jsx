@@ -37,9 +37,9 @@ function Navbar({ mode = "default" }) {
         </button>
 
         <div className="navbar__menu-container">
-          <Link to="/shop" className="navbar__menu-link">
-            <span>Shop</span>
-            <span className="navbar__arrow">⌄</span>
+
+        <Link to="/" className="navbar__menu-link">
+            <span>Home</span>
           </Link>
 
           <div className="navbar__dropdown">
@@ -82,7 +82,7 @@ function Navbar({ mode = "default" }) {
             <span>About</span>
           </Link>
 
-          <Link to="/contact" className="navbar__menu-link">
+          <Link to="/about#work-with-me" className="navbar__menu-link">
             <span>Work With Me</span>
           </Link>
         </div>
@@ -93,9 +93,8 @@ function Navbar({ mode = "default" }) {
           isOpen ? "navbar__mobile-menu--open" : ""
         }`}
       >
-        <Link to="/shop" className="navbar__mobile-link" onClick={closeMenu}>
-          <span>Shop</span>
-          <span className="navbar__arrow">⌄</span>
+        <Link to="/" className="navbar__mobile-link" onClick={closeMenu}>
+          <span>Home</span>
         </Link>
 
         <div className="navbar__mobile-dropdown">
@@ -136,7 +135,7 @@ function Navbar({ mode = "default" }) {
           <span>About</span>
         </Link>
 
-        <Link to="/contact" className="navbar__mobile-link" onClick={closeMenu}>
+        <Link to="/about#work-with-me" className="navbar__mobile-link" onClick={closeMenu}>
           <span>Work With Me</span>
         </Link>
       </div>

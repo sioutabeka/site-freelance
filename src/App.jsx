@@ -6,6 +6,11 @@ import PortfolioDesignPage from "./pages/PortfolioDesignPage";
 import PortfolioContentPage from "./pages/PortfolioContentPage";
 import ContactPage from "./pages/ContactPage";
 
+import PrivacyPolicyPage from "./pages/legal/PrivacyPolicyPage";
+import TermsPage from "./pages/legal/TermsPage";
+import ReturnPolicyPage from "./pages/legal/ReturnPolicyPage";
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +20,10 @@ function App() {
         <Route path="/portfolio/design" element={<PortfolioDesignPage />} />
         <Route path="/portfolio/content" element={<PortfolioContentPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/return-policy" element={<ReturnPolicyPage />} />
+        
       </Routes>
     </BrowserRouter>
   );

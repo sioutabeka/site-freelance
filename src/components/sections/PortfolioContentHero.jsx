@@ -18,22 +18,42 @@ function PortfolioContentHero() {
           </p>
 
           <div className="portfolio-content-hero__cta-grid">
-            <a className="portfolio-content-hero__cta portfolio-content-hero__cta--pink-light">
-              Instagram
-            </a>
+  <a
+    href="https://instagram.com/"
+    target="_blank"
+    rel="noreferrer"
+    className="portfolio-content-hero__cta button button--pink-light"
+  >
+    Instagram
+  </a>
 
-            <a className="portfolio-content-hero__cta portfolio-content-hero__cta--cream">
-              TikTok
-            </a>
+  <a
+    href="https://tiktok.com/"
+    target="_blank"
+    rel="noreferrer"
+    className="portfolio-content-hero__cta button button--cream"
+  >
+    TikTok
+  </a>
 
-            <a className="portfolio-content-hero__cta portfolio-content-hero__cta--pink">
-              YouTube
-            </a>
+  <a
+    href="https://youtube.com/"
+    target="_blank"
+    rel="noreferrer"
+    className="portfolio-content-hero__cta button button--pink-olive"
+  >
+    YouTube
+  </a>
 
-            <a className="portfolio-content-hero__cta portfolio-content-hero__cta--olive">
-              Substack
-            </a>
-          </div>
+  <a
+    href="https://substack.com/"
+    target="_blank"
+    rel="noreferrer"
+    className="portfolio-content-hero__cta button button--olive-pink"
+  >
+    Substack
+  </a>
+</div>
         </div>
 
         <div className="portfolio-content-hero__visuals">

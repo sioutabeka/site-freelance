@@ -48,35 +48,7 @@
     max-width: 568px;
     margin-bottom: 22px;
   }
-  
-  /* =========================
-     BOUTON CTA
-  ========================= */
-  
-  .about-hero__button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  
-    background-color: #ea609f;
-    color: #f7f5eb;
-  
-    border: none;
-    border-radius: 999px;
-    padding: 5px 15px;
-  
-    font-family: "Public Sans", sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-  
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  
-  .about-hero__button:hover {
-    background-color: #828234;
-    color: #f7f5eb;
-  }
+
   
   /* =========================
      IMAGE POLAROID
@@ -202,10 +174,6 @@
       text-align: center;
     }
   
-    .about-hero__button {
-      font-size: 9px;
-      padding: 5px 15px;
-    }
   
     .about-hero__image {
       width: 100%;

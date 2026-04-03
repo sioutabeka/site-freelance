@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import TopBar from "../components/layout/TopBar";
 import Navbar from "../components/layout/Navbar";
 import FooterSection from "../components/layout/FooterSection";
@@ -9,13 +12,27 @@ import AboutServicesSection from "../components/sections/AboutServicesSection";
 import ContactSection from "../components/sections/ContactSection";
 import PortfolioTeaserSection from "../components/sections/PortfolioTeaserSection";
 
-
 function AboutPage() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    }
+  }, [location]);
+
   return (
     <>
       <TopBar />
       <Navbar mode="default" />
-      
+
       <main>
         <AboutHero />
         <AboutStorySection />
@@ -23,7 +40,6 @@ function AboutPage() {
         <AboutServicesSection />
         <ContactSection />
         <PortfolioTeaserSection />
-
       </main>
 
       <FooterSection />

@@ -1,6 +1,8 @@
 import aboutHeroImage from "../../assets/about-hero.jpg";
 import "../../styles/sections/AboutHero.css";
 
+import { Link } from "react-router-dom";
+
 
 function AboutHero() {
   return (
@@ -18,7 +20,13 @@ function AboutHero() {
           whether it&apos;s a campaign, a digital experience, or everyday visuals.
         </p>
 
-        <button className="about-hero__button">WORK WITH ME</button>
+        <Link
+          to="/about#work-with-me"
+          className="about-hero__button button button--pink"
+        >
+          WORK WITH ME
+        </Link>
+
       </div>
 
       <div className="about-hero__image">

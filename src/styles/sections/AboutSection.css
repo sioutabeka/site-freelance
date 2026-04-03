@@ -64,19 +64,6 @@
   /* BOUTON */
   .about-section__button {
     margin-top: 10px;
-    background-color: #bfd2ef;
-    color: #3c2015;
-    border: none;
-    border-radius: 999px;
-    padding: 8px 18px;
-    font-size: 12px;
-    font-family: "Public Sans", sans-serif;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .about-section__button:hover {
-    background-color: #f4edc6;
   }
   
   /* =========================
@@ -131,8 +118,6 @@
   
     .about-section__button {
       margin-top: 8px;
-      font-size: 11px;
-      padding: 8px 16px;
     }
   }
   
@@ -188,8 +173,5 @@
   
     .about-section__button {
       margin-top: 6px;
-      font-size: 10px;
-      padding: 7px 14px;
-      border-radius: 999px;
     }
   }

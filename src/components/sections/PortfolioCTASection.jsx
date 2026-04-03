@@ -17,9 +17,12 @@ function PortfolioCTASection() {
           seamlessly and stand out.
         </p>
 
-        <button type="button" className="portfolio-cta__button">
+        <a
+          href="/about#work-with-me"
+          className="portfolio-cta__button button button--olive"
+        >
           START AN INQUIRY
-        </button>
+        </a>
       </div>
     </section>
   );

@@ -1,0 +1,176 @@
+/* =========================
+   BASE BUTTON
+========================= */
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+  
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+  
+    padding: 5px 15px;
+  
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* =========================
+     VARIANTE BLEUE
+  ========================= */
+  
+  .button--blue {
+    background-color: #bfd2ef;
+    color: #3c2015;
+  }
+  
+  .button--blue:hover {
+    background-color: #f4edc6;
+  }
+
+
+  /* =========================
+   VARIANTE OLIVE
+========================= */
+
+.button--olive {
+    background-color: #828234;
+    color: #f7f5eb;
+  }
+  
+  .button--olive:hover {
+    background-color: #bfd2ef;
+    color: #3c2015;
+  }
+
+
+  /* =========================
+   VARIANTE ROSE
+========================= */
+
+.button--pink {
+    background-color: #ea609f;
+    color: #f7f5eb;
+  }
+  
+  .button--pink:hover {
+    background-color: #828234; 
+    color: #f7f5eb;
+  }
+
+
+
+/* =========================
+   VARIANTE SUBMIT (STRUCTURE)
+   → bouton large formulaire
+========================= */
+
+.button--submit {
+    display: block;
+    width: 100%;
+    max-width: 580px;
+    margin: 40px auto 0;
+  
+    border-radius: 999px;
+  
+    padding: 14px;
+  
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  /* =========================
+     SUBMIT ROSE → HOVER OLIVE
+     → version actuelle (formulaire About)
+  ========================= */
+  
+  .button--submit-pink {
+    background-color: #efb7da; /* rose clair */
+    color: #3c2015;
+  }
+  
+  .button--submit-pink:hover {
+    background-color: #828234; /* vert olive */
+    color: #fff;
+  }
+  
+  /* =========================
+     SUBMIT ROSE → HOVER ROSE FONCÉ
+     → variante future (plus “brand”)
+  ========================= */
+  
+  .button--submit-pink-darkhover {
+    background-color: #efb7da; /* rose clair */
+    color: #3c2015;
+  }
+  
+  .button--submit-pink-darkhover:hover {
+    background-color: #ea609f; /* rose foncé */
+    color: #fff;
+  }
+
+
+
+
+/* =========================
+   SOCIAL : ROSE CLAIR → JAUNE
+========================= */
+
+.button--pink-light {
+    background-color: #fcc5df;
+    color: #3c2015;
+  }
+  
+  .button--pink-light:hover {
+    background-color: #f4edc6;
+    color: #3c2015;
+  }
+  
+  /* =========================
+     JAUNE → ROSE CLAIR
+  ========================= */
+  
+  .button--cream {
+    background-color: #f4edc6;
+    color: #3c2015;
+  }
+  
+  .button--cream:hover {
+    background-color: #fcc5df;
+    color: #3c2015;
+  }
+  
+  /* =========================
+     ROSE FONCÉ → OLIVE
+  ========================= */
+  
+  .button--pink-olive {
+    background-color: #ea609f;
+    color: #ffffff;
+  }
+  
+  .button--pink-olive:hover {
+    background-color: #828234;
+    color: #ffffff;
+  }
+  
+  /* =========================
+     OLIVE → ROSE FONCÉ
+  ========================= */
+  
+  .button--olive-pink {
+    background-color: #828234;
+    color: #ffffff;
+  }
+  
+  .button--olive-pink:hover {
+    background-color: #ea609f;
+    color: #ffffff;
+  }

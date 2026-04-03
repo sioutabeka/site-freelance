@@ -1,5 +1,7 @@
 import "../../styles/sections/AboutSection.css";
 
+import { Link } from "react-router-dom";
+
 function AboutSection() {
     return (
       <section className="about-section">
@@ -26,9 +28,13 @@ function AboutSection() {
               This space is a mix of everything I love working on! Design, content, and products all tied together through one cohesive creative vision. It’s where ideas come to life in a way that feels clean, thoughtful, and a little bit playful.
             </p>
   
-            <button className="about-section__button">
-              MORE ABOUT ME
-            </button>
+            <Link
+              to="/about"
+              className="about-section__button button button--blue"
+            >
+              WORK WITH ME
+            </Link>
+
           </div>
   
         </div>

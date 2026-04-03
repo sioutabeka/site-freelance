@@ -192,32 +192,6 @@
     font-weight: 700;
   }
   
-  /* =========================
-     BUTTON
-  ========================= */
-  
-  .about-inquiry__submit {
-    display: block;
-    width: 100%;
-    max-width: 580px;
-    margin: 40px auto 0;
-    border: none;
-    border-radius: 999px;
-    background-color: #efb7da;
-    color: #3c2015;
-    padding: 14px;
-    font-family: "Public Sans", sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: 0.2s;
-  }
-  
-  .about-inquiry__submit:hover {
-    background-color: #828234;
-    color: #fff;
-  }
   
   /* =========================
      EXTRA BLOCK
@@ -307,8 +281,6 @@
   
     .about-inquiry__submit {
       max-width: 200px;
-      font-size: 10px;
-      padding: 10px;
     }
   
     .about-inquiry__extra {

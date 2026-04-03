@@ -1,6 +1,8 @@
 import "../../styles/sections/WorkSection.css";
 import logoMark from "../../assets/logo-mark.png";
 
+import { Link } from "react-router-dom";
+
 function WorkSection() {
     return (
       <section className="work-section">
@@ -12,8 +14,12 @@ function WorkSection() {
               Working with brands to create content that feels natural,
               creative, and actually fits my style.
             </p>
-            <button className="work-card__button">CONTACT ME</button>
-          </article>
+            <a
+              href="mailto:hello@example.com"
+              className="work-card__button button button--olive"
+            >
+  CONTACT ME
+</a>          </article>
   
           <div className="work-section__center">
           <div className="work-section__badge">
@@ -36,7 +42,12 @@ function WorkSection() {
               Thoughtful, elevated design for your brand — whether it’s
               a one-off project or ongoing support.
             </p>
-            <button className="work-card__button">WORK WITH ME</button>
+            <Link
+              to="/about#work-with-me"
+              className="work-card__button button button--olive"
+            >
+              WORK WITH ME
+            </Link>
           </article>
         </div>
       </section>
