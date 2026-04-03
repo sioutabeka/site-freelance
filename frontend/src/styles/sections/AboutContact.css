@@ -294,3 +294,10 @@
     }
   }
   
+  .about-inquiry__status {
+    margin-top: 18px;
+    text-align: center;
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    color: #3c2015;
+  }
