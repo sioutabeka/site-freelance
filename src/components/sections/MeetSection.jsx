@@ -1,3 +1,5 @@
+import "../../styles/sections/MeetSection.css";
+
 function MeetSection() {
   return (
     <section className="meet-section">

@@ -1,5 +1,6 @@
-
+import "../../styles/sections/Hero.css";
 import heroImage from "../../assets/hero-test.jpg";
+
 
 function Hero() {
     return (

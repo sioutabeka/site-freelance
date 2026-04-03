@@ -1,3 +1,6 @@
+import "../../styles/sections/WorkSection.css";
+import logoMark from "../../assets/logo-mark.png";
+
 function WorkSection() {
     return (
       <section className="work-section">
@@ -13,7 +16,9 @@ function WorkSection() {
           </article>
   
           <div className="work-section__center">
-            <div className="work-section__badge">CM</div>
+          <div className="work-section__badge">
+            <img src={logoMark} alt="Logo mark" />
+          </div>
   
             <p className="work-section__tag">
               GRAPHIC DESIGNER & CONTENT CREATOR

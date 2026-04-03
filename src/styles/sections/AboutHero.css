@@ -1,0 +1,227 @@
+
+/* =========================
+   ABOUT HERO
+========================= */
+
+.about-hero {
+    background-color: #f4edc6;
+    padding: 88px 72px 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 36px;
+  }
+  
+  /* =========================
+     CONTENU TEXTE
+  ========================= */
+  
+  .about-hero__content {
+    width: 100%;
+    max-width: 710px;
+    padding-top: 120px;
+  }
+  
+  .about-hero__tag {
+    font-family: "Public Sans", sans-serif;
+    font-size: 12.8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #3c2015;
+    margin-bottom: 14px;
+  }
+  
+  .about-hero__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 70.4px;
+    line-height: 0.92;
+    color: #3c2015;
+    max-width: 710px;
+    margin-bottom: 18px;
+  }
+  
+  .about-hero__description {
+    font-family: "Public Sans", sans-serif;
+    font-size: 12.8px;
+    line-height: 1.35;
+    color: #3c2015;
+    max-width: 568px;
+    margin-bottom: 22px;
+  }
+  
+  /* =========================
+     BOUTON CTA
+  ========================= */
+  
+  .about-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: #ea609f;
+    color: #f7f5eb;
+  
+    border: none;
+    border-radius: 999px;
+    padding: 5px 15px;
+  
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+  
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .about-hero__button:hover {
+    background-color: #828234;
+    color: #f7f5eb;
+  }
+  
+  /* =========================
+     IMAGE POLAROID
+  ========================= */
+  
+  .about-hero__image {
+    width: 420px;
+    background-color: #fffdf8;
+    padding: 16px 16px 24px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 30px;
+  
+    /* rotation initiale */
+    transform: rotate(6deg);
+    transform-origin: center center;
+  
+    /* animation smooth comme tes cards */
+    transition:
+      transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  }
+  
+  .about-hero__image:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+  }
+  
+  .about-hero__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .about-hero__caption {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    line-height: 1;
+    color: #3c2015;
+  }
+  
+  /* =========================
+     TABLETTE
+  ========================= */
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .about-hero {
+      padding: 92px 32px 56px;
+      gap: 28px;
+      align-items: flex-start;
+    }
+  
+    .about-hero__content {
+      max-width: 52%;
+      padding-top: 80px;
+    }
+  
+    .about-hero__title {
+      font-size: 52px;
+      max-width: 100%;
+    }
+  
+    .about-hero__description {
+      max-width: 100%;
+      font-size: 12px;
+    }
+  
+    .about-hero__image {
+      width: 40%;
+      padding: 14px 14px 20px;
+      margin-top: 10px;
+      transform: rotate(5deg);
+    }
+  
+    .about-hero__caption {
+      font-size: 26px;
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 767px) {
+    .about-hero {
+      padding: 68px 20px 36px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 20px;
+    }
+  
+    .about-hero__content {
+      max-width: 100%;
+      padding-top: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-hero__tag {
+      font-size: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .about-hero__title {
+      font-size: 34px;
+      line-height: 0.95;
+      max-width: 300px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+  
+    .about-hero__description {
+      font-size: 9px;
+      line-height: 1.45;
+      max-width: 285px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+  
+    .about-hero__button {
+      font-size: 9px;
+      padding: 5px 15px;
+    }
+  
+    .about-hero__image {
+      width: 100%;
+      max-width: 230px;
+      padding: 10px 10px 14px;
+      margin: 0 auto;
+      transform: rotate(3deg);
+    }
+  
+    .about-hero__image:hover {
+      transform: rotate(3deg);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    }
+  
+    .about-hero__caption {
+      font-size: 20px;
+    }
+  }
+  

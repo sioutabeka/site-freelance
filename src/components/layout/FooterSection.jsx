@@ -1,3 +1,6 @@
+import "../../styles/layout/FooterSection.css";
+import logoMark from "../../assets/logo-mark.png";
+
 function FooterSection() {
   return (
     <footer className="footer-section">
@@ -10,7 +13,9 @@ function FooterSection() {
           <a href="#">DIGITAL WALLPAPERS</a>
         </div>
 
-        <div className="footer-section__logo">CM</div>
+        <div className="footer-section__logo">
+          <img src={logoMark} alt="Logo mark" />
+        </div>
 
         <div className="footer-section__column footer-section__column--right">
           <h3 className="footer-section__heading">Content & Connect</h3>
@@ -21,9 +26,6 @@ function FooterSection() {
         </div>
       </div>
 
-      <div className="footer-section__big-name">
-        CIERRA MILLER
-      </div>
     </footer>
   );
 }

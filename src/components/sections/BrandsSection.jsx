@@ -1,3 +1,5 @@
+import "../../styles/sections/BrandsSection.css";
+
 function BrandsSection() {
   return (
     <section className="brands-section">

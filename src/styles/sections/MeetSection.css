@@ -1,0 +1,56 @@
+/* =========================
+   MEET SECTION
+========================= */
+
+.meet-section {
+    background-color: #f7f5eb;
+    background-image: url("/pattern.png");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 1200px auto;
+    padding: 80px 40px;  
+  }
+  
+  .meet-section__content {
+    max-width: 1120px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .meet-section__tag {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    color: #3c2015;
+    margin-bottom: 12px;
+  }
+  
+  .meet-section__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 43px;
+    line-height: 1.15;
+    color: #3c2015;
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
+  /* =========================
+     TABLETTE
+  ========================= */
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .meet-section {
+      padding: 60px 28px;
+      background-size: 240px auto;
+    }
+  
+    .meet-section__tag {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  
+    .meet-section__title {
+      font-size: 34px;
+      line-height: 1.18;
+      max-width: 700px;
+    }
+  }

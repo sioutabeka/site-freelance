@@ -1,3 +1,5 @@
+import "../../styles/layout/TopBar.css";
+
 function TopBar() {
     return (
       <div className="topbar">

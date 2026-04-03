@@ -1,0 +1,113 @@
+.portfolio-content-section {
+    padding: 70px 0;
+    background-color: #f7f5eb;
+  }
+  
+  .portfolio-content-section__inner {
+    margin: 0 50px;
+  }
+  
+  /* TAG */
+  
+  .portfolio-content-section__tag {
+    font-family: "Public Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #3c2015;
+    margin-bottom: 8px;
+  }
+  
+  /* TITLE */
+  
+  .portfolio-content-section__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 48px;
+    color: #3c2015;
+    margin-bottom: 30px;
+  }
+  
+  /* GALLERY */
+  
+  .portfolio-content-section__gallery-wrap {
+    position: relative;
+  }
+  
+  .portfolio-content-section__gallery {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-right: 100px;
+  
+    scrollbar-width: none;
+  }
+  
+  .portfolio-content-section__gallery::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* ITEMS */
+  
+  .portfolio-content-section__item {
+    flex: 0 0 auto;
+    width: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .portfolio-content-section__item img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+  }
+  
+  /* effet variation taille (comme ta capture) */
+  
+  .portfolio-content-section__item:nth-child(2) img {
+    height: 420px;
+  }
+  
+  .portfolio-content-section__item:nth-child(4) img {
+    height: 400px;
+  }
+  
+  /* ARROW */
+  
+  .portfolio-content-section__arrow {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+  
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: none;
+  
+    background-color: #828234;
+    color: white;
+    font-size: 22px;
+  
+    cursor: pointer;
+  }
+  
+  /* PAGINATION */
+  
+  .portfolio-content-section__pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .portfolio-content-section__pagination .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: rgba(231, 111, 181, 0.3);
+  }
+  
+  .portfolio-content-section__pagination .active {
+    background-color: #e76fb5;
+  }

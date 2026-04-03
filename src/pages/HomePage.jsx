@@ -13,7 +13,7 @@ function HomePage() {
   return (
     <>
       <TopBar />
-      <Navbar />
+      <Navbar mode="sticky" />
       <Hero />
       <MeetSection />
       <WorkSection />

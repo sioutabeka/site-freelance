@@ -1,3 +1,5 @@
+import "../../styles/layout/BottomBar.css";
+
 function BottomBar() {
     return (
       <div className="bottom-bar">

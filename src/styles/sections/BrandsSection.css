@@ -1,0 +1,123 @@
+/* =========================
+   BRANDS SECTION
+========================= */
+
+.brands-section {
+    position: relative;
+    background-color: #fcc5df;
+    padding: 80px 0 50px;
+    overflow: hidden;
+  }
+  
+  /* =========================
+     TITRE
+  ========================= */
+  
+  .brands-section__title {
+    text-align: center;
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #3c2015;
+    margin-bottom: 40px;
+  }
+  
+  /* =========================
+     SLIDER
+  ========================= */
+  
+  .brands-section__slider {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  /* TRACK (défilement) */
+  .brands-section__track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  
+    width: max-content;
+  
+    animation: scrollBrands 20s linear infinite;
+  }
+  
+  /* =========================
+     LOGOS
+  ========================= */
+  
+  .brands-section__logo {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+  
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+  }
+  
+  .brands-section__logo:hover {
+    opacity: 1;
+  }
+  
+  /* =========================
+     ANIMATION
+  ========================= */
+  
+  @keyframes scrollBrands {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* =========================
+     TABLETTE
+  ========================= */
+  
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .brands-section {
+      padding: 60px 0 40px;
+    }
+  
+    .brands-section__title {
+      font-size: 11px;
+      margin-bottom: 30px;
+    }
+  
+    .brands-section__track {
+      gap: 50px;
+      animation-duration: 18s;
+    }
+  
+    .brands-section__logo {
+      height: 32px;
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 767px) {
+    .brands-section {
+      padding: 50px 0 30px;
+    }
+  
+    .brands-section__title {
+      font-size: 10px;
+      letter-spacing: 0.8px;
+      margin-bottom: 20px;
+      padding: 0 16px;
+    }
+  
+    .brands-section__track {
+      gap: 32px;
+      animation-duration: 16s;
+    }
+  
+    .brands-section__logo {
+      height: 24px;
+    }
+  }

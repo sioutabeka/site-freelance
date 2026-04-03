@@ -1,0 +1,183 @@
+/* =========================
+   HERO
+========================= */
+
+.portfolio-content-hero {
+    background-color: #bfd2ef;
+    padding: 40px 50px 60px;
+  }
+  
+  .portfolio-content-hero__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  /* =========================
+     LEFT CONTENT
+  ========================= */
+  
+  .portfolio-content-hero__content {
+    max-width: 460px;
+  }
+  
+  .portfolio-content-hero__title {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 72px;
+    line-height: 0.9;
+    color: #3c2015;
+    margin-bottom: 16px;
+  }
+  
+  .portfolio-content-hero__description {
+    font-family: "Public Sans", sans-serif;
+    font-size: 12.8px;
+    line-height: 1.45;
+    color: #3c2015;
+    margin-bottom: 20px;
+  }
+  
+  /* =========================
+     CTA (style bouton réel)
+  ========================= */
+  
+  .portfolio-content-hero__cta-grid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 10px 12px;
+  }
+  
+  .portfolio-content-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  
+    border: none;
+    border-radius: 999px;
+    padding: 8px 18px;
+  
+    font-family: "Public Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+  
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  /* COULEURS */
+  
+  .portfolio-content-hero__cta--pink-light {
+    background-color: #fcc5df;
+    color: #3c2015;
+  }
+  
+  .portfolio-content-hero__cta--cream {
+    background-color: #f4edc6;
+    color: #3c2015;
+  }
+  
+  .portfolio-content-hero__cta--pink {
+    background-color: #e76fb5;
+    color: #3c2015;
+  }
+  
+  .portfolio-content-hero__cta--olive {
+    background-color: #828234;
+    color: #3c2015;
+  }
+  
+  /* hover clean */
+  .portfolio-content-hero__cta:hover {
+    background-color: #bfd2ef;
+  }
+  
+  /* =========================
+     RIGHT VISUALS
+  ========================= */
+  
+  .portfolio-content-hero__visuals {
+    display: flex;
+    align-items: flex-end;
+    gap: 18px;
+  }
+  
+  .portfolio-content-hero__image {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* effet incliné */
+  
+  .portfolio-content-hero__image--left {
+    transform: rotate(-5deg) translateY(10px);
+  }
+  
+  .portfolio-content-hero__image--right {
+    transform: rotate(5deg) translateY(-5px);
+  }
+  
+  /* =========================
+     TABLETTE
+  ========================= */
+  
+  @media (max-width: 1023px) {
+    .portfolio-content-hero__inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .portfolio-content-hero__content {
+      max-width: 520px;
+    }
+  
+    .portfolio-content-hero__title {
+      font-size: 64px;
+    }
+  
+    .portfolio-content-hero__cta-grid {
+      justify-content: center;
+    }
+  
+    .portfolio-content-hero__visuals {
+      justify-content: center;
+    }
+  
+    .portfolio-content-hero__image {
+      width: 180px;
+    }
+  }
+  
+  /* =========================
+     MOBILE
+  ========================= */
+  
+  @media (max-width: 767px) {
+    .portfolio-content-hero {
+      padding: 30px 20px 50px;
+    }
+  
+    .portfolio-content-hero__title {
+      font-size: 56px;
+    }
+  
+    .portfolio-content-hero__description {
+      font-size: 11px;
+    }
+  
+    .portfolio-content-hero__cta {
+      font-size: 10px;
+      padding: 6px 16px;
+    }
+  
+    .portfolio-content-hero__image {
+      width: 140px;
+    }
+  }
