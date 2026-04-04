@@ -1,12 +1,25 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/logo-osecom.png";
 import "../../styles/layout/NavBar.css";
 
-
-function Navbar({ mode = "default" }) {
+function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  const navbarVariant =
+    pathname === "/"
+      ? "navbar--home"
+      : pathname === "/about"
+      ? "navbar--about"
+      : pathname === "/portfolio/design"
+      ? "navbar--portfolio-design"
+      : pathname === "/portfolio/content"
+      ? "navbar--portfolio-content"
+      : "navbar--default";
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -22,7 +35,7 @@ function Navbar({ mode = "default" }) {
   };
 
   return (
-    <nav className={`navbar navbar--${mode} ${isOpen ? "navbar--open" : ""}`}>
+    <nav className={`navbar ${navbarVariant} ${isOpen ? "navbar--open" : ""}`}>
       <div className="navbar__top">
         <Link to="/" className="navbar__logo" onClick={closeMenu}>
           <img src={logo} alt="Logo OseCom Freelance Siouta" />
@@ -37,8 +50,7 @@ function Navbar({ mode = "default" }) {
         </button>
 
         <div className="navbar__menu-container">
-
-        <Link to="/" className="navbar__menu-link">
+          <Link to="/" className="navbar__menu-link" onClick={closeMenu}>
             <span>Home</span>
           </Link>
 
@@ -50,7 +62,7 @@ function Navbar({ mode = "default" }) {
               aria-expanded={isPortfolioOpen}
             >
               <span>Portfolio</span>
-              <span className="navbar__arrow">⌄</span>
+              <span className="navbar__arrow" aria-hidden="true"></span>
             </button>
 
             <div
@@ -78,11 +90,15 @@ function Navbar({ mode = "default" }) {
             </div>
           </div>
 
-          <Link to="/about" className="navbar__menu-link">
+          <Link to="/about" className="navbar__menu-link" onClick={closeMenu}>
             <span>About</span>
           </Link>
 
-          <Link to="/about#work-with-me" className="navbar__menu-link">
+          <Link
+            to="/about#work-with-me"
+            className="navbar__menu-link"
+            onClick={closeMenu}
+          >
             <span>Work With Me</span>
           </Link>
         </div>
@@ -98,44 +114,48 @@ function Navbar({ mode = "default" }) {
         </Link>
 
         <div className="navbar__mobile-dropdown">
-  <button
-    type="button"
-    className="navbar__mobile-link navbar__mobile-dropdown-trigger"
-    onClick={togglePortfolioMenu}
-    aria-expanded={isPortfolioOpen}
-  >
-    <span>Portfolio</span>
-    <span className="navbar__arrow">⌄</span>
-  </button>
+          <button
+            type="button"
+            className="navbar__mobile-link navbar__mobile-dropdown-trigger"
+            onClick={togglePortfolioMenu}
+            aria-expanded={isPortfolioOpen}
+          >
+            <span>Portfolio</span>
+            <span className="navbar__arrow" aria-hidden="true"></span>
+          </button>
 
-  {isPortfolioOpen && (
-    <div className="navbar__mobile-submenu">
-    <Link
-  to="/portfolio/design"
-  className="navbar__mobile-sublink"
-  onClick={closeMenu}
->
-  <span className="navbar__flower navbar__flower--olive">✿</span>
-  <span>Design</span>
-</Link>
+          {isPortfolioOpen && (
+            <div className="navbar__mobile-submenu">
+              <Link
+                to="/portfolio/design"
+                className="navbar__mobile-sublink"
+                onClick={closeMenu}
+              >
+                <span className="navbar__flower navbar__flower--olive">✿</span>
+                <span>Community Management</span>
+              </Link>
 
-<Link
-  to="/portfolio/content"
-  className="navbar__mobile-sublink"
-  onClick={closeMenu}
->
-  <span className="navbar__flower navbar__flower--pink">✿</span>
-  <span>Content</span>
-</Link>
-    </div>
-  )}
-</div>
+              <Link
+                to="/portfolio/content"
+                className="navbar__mobile-sublink"
+                onClick={closeMenu}
+              >
+                <span className="navbar__flower navbar__flower--pink">✿</span>
+                <span>UGC</span>
+              </Link>
+            </div>
+          )}
+        </div>
 
         <Link to="/about" className="navbar__mobile-link" onClick={closeMenu}>
           <span>About</span>
         </Link>
 
-        <Link to="/about#work-with-me" className="navbar__mobile-link" onClick={closeMenu}>
+        <Link
+          to="/about#work-with-me"
+          className="navbar__mobile-link"
+          onClick={closeMenu}
+        >
           <span>Work With Me</span>
         </Link>
       </div>
