@@ -64,7 +64,7 @@ function Navbar({ mode = "default" }) {
                 onClick={closeMenu}
               >
                 <span className="navbar__flower navbar__flower--olive">✿</span>
-                <span>Design</span>
+                <span>Community Management</span>
               </Link>
 
               <Link
@@ -73,7 +73,7 @@ function Navbar({ mode = "default" }) {
                 onClick={closeMenu}
               >
                 <span className="navbar__flower navbar__flower--pink">✿</span>
-                <span>Content</span>
+                <span>UGC</span>
               </Link>
             </div>
           </div>

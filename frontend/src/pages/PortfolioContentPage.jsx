@@ -24,25 +24,25 @@ function PortfolioContentPage() {
       <BrandsSection />
 
       <PortfolioContentSection
-        tag="Content portfolio"
-        title="Beauty & Fashion"
-        description="A curated selection of content created around beauty, fashion, lifestyle and visual storytelling."
-        images={testImages}
-      />
+  tag="Portfolio contenu"
+  title="Beauté & Mode"
+  description="Une sélection de contenus créés autour de la beauté, de la mode, du lifestyle et du storytelling visuel."
+  images={testImages}
+/>
 
-      <PortfolioContentSection
-        tag="Creative portfolio"
-        title="Graphic Design"
-        description="Visual concepts, creative layouts and social-first assets designed to build a strong and recognizable brand universe."
-        images={testImages}
-      />
+<PortfolioContentSection
+  tag="Portfolio créatif"
+  title="Design graphique"
+  description="Des concepts visuels, compositions créatives et contenus pensés pour les réseaux sociaux, au service d’un univers de marque fort et reconnaissable."
+  images={testImages}
+/>
 
-      <PortfolioContentSection
-        tag="Brand portfolio"
-        title="Brand Partnerships"
-        description="Selected collaborations and branded content crafted to align storytelling, aesthetics and audience connection."
-        images={testImages}
-      />
+<PortfolioContentSection
+  tag="Portfolio collaborations"
+  title="Collaborations avec des marques"
+  description="Une sélection de collaborations et de contenus de marque pensés pour allier storytelling, esthétique et connexion avec l’audience."
+  images={testImages}
+/>
 
       <PortfolioContentCTASection />
 

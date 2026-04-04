@@ -12,9 +12,7 @@ function PortfolioContentHero() {
           </h1>
 
           <p className="portfolio-content-hero__description">
-            I create content that blends design, lifestyle, and everything in
-            between — elevated, fun, and rooted in visuals that actually
-            connect.
+          Je crée du contenu qui mêle design, lifestyle et tout ce qui gravite autour — esthétique, créatif et pensé pour vraiment capter l’attention.
           </p>
 
           <div className="portfolio-content-hero__cta-grid">

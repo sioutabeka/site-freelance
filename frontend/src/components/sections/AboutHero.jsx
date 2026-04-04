@@ -8,16 +8,15 @@ function AboutHero() {
   return (
     <section className="about-hero">
       <div className="about-hero__content">
-        <p className="about-hero__tag">HI, I&apos;M CIERRA MILLER</p>
+        <p className="about-hero__tag">HI, moi c’est Essia
+        </p>
 
         <h1 className="about-hero__title">
-          NYC-based Graphic Designer & Influencer
+          Paris-based Community Manager & Creator
         </h1>
 
         <p className="about-hero__description">
-          I bring together design, content, and creative direction to build
-          brands that feel cohesive, elevated, and easy to connect with,
-          whether it&apos;s a campaign, a digital experience, or everyday visuals.
+        J’aide les marques à développer leur présence en ligne grâce à une stratégie claire et du contenu qui capte vraiment l’attention.
         </p>
 
         <Link

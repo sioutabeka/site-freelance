@@ -9,17 +9,19 @@ function WorkSection() {
         <div className="work-section__inner">
           <article className="work-card work-card--left">
             <div className="work-card__image-placeholder"></div>
-            <h3 className="work-card__title">Brand Partnerships</h3>
+            <h3 className="work-card__title">Community Management</h3>
             <p className="work-card__text">
-              Working with brands to create content that feels natural,
-              creative, and actually fits my style.
+            Gestion complète de vos réseaux sociaux : Stratégie éditoriale, création de contenus
+publication & animation, analyse des performances
             </p>
-            <a
-              href="mailto:hello@example.com"
+<Link
+              to="/about#work-with-me"
               className="work-card__button button button--olive"
             >
-  CONTACT ME
-</a>          </article>
+              WORK WITH ME
+            </Link>       
+
+</article>
   
           <div className="work-section__center">
           <div className="work-section__badge">
@@ -27,7 +29,7 @@ function WorkSection() {
           </div>
   
             <p className="work-section__tag">
-              GRAPHIC DESIGNER & CONTENT CREATOR
+            SERVICES
             </p>
   
             <h2 className="work-section__title">
@@ -37,17 +39,17 @@ function WorkSection() {
   
           <article className="work-card work-card--right">
             <div className="work-card__image-placeholder"></div>
-            <h3 className="work-card__title">Design Services</h3>
+            <h3 className="work-card__title">UGC (User Generated Content)</h3>
             <p className="work-card__text">
-              Thoughtful, elevated design for your brand — whether it’s
-              a one-off project or ongoing support.
+            Création de contenus authentiques qui convertissent : Vidéos TikTok / Reels, contenus ads, storytelling produit,
+contenu lifestyle & branding
             </p>
-            <Link
-              to="/about#work-with-me"
+            <a
+              href="mailto:hello@example.com"
               className="work-card__button button button--olive"
             >
-              WORK WITH ME
-            </Link>
+  CONTACT ME
+</a>   
           </article>
         </div>
       </section>

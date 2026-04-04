@@ -4,10 +4,10 @@ import "../../styles/sections/AboutMarque.css";
 
 function AboutMarqueeSection() {
   const items = [
-    "Beauty & Fashion, NYC, Graphic Design & Everything In-Between",
-    "Beauty & Fashion, NYC, Graphic Design & Everything In-Between",
-    "Beauty & Fashion, NYC, Graphic Design & Everything In-Between",
-    "Beauty & Fashion, NYC, Graphic Design & Everything In-Between",
+    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
+    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
+    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
+    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
   ];
 
   return (

@@ -14,19 +14,29 @@ function AboutSection() {
   
           {/* TEXTE */}
           <div className="about-section__content">
-            <h2 className="about-section__title">Hi! I’m Cierra</h2>
+            <h2 className="about-section__title">Hello, moi c’est Essia</h2>
   
             <p className="about-section__subtitle">
-              I AM SO GLAD YOU'RE HERE!
+            J’aide les marques à se démarquer sur les réseaux sociaux avec une approche à la fois stratégique et créative.
             </p>
   
             <p className="about-section__text">
-              With a background in graphic design, I’ve learned the best work doesn’t come from playing it safe — it comes from having a strong point of view and actually enjoying the process. I’m all about creating visuals that feel elevated, intentional, and still fun.
             </p>
   
             <p className="about-section__text">
-              This space is a mix of everything I love working on! Design, content, and products all tied together through one cohesive creative vision. It’s where ideas come to life in a way that feels clean, thoughtful, and a little bit playful.
+              Après plusieurs années en marketing digital, growth et acquisition, j’ai compris une chose :
+              publier ne suffit plus ; il faut une stratégie claire et du contenu qui capte l’attention.
             </p>
+
+            <p className="about-section__text">
+              Aujourd’hui, j’accompagne des marques et des entrepreneurs à :
+            </p>
+
+            <div className="about-section__list">
+              <span>→ Clarifier leur positionnement</span>
+              <span>→ Créer du contenu impactant</span>
+              <span>→ Transformer leur audience en clients</span>
+            </div>
   
             <Link
               to="/about"

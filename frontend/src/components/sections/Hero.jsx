@@ -7,16 +7,15 @@ function Hero() {
     <section className="hero">
       <div className="hero__content">
         <p className="hero__tag">
-          GRAPHIC DESIGNER & CONTENT CREATOR
+        Freelance en Community Management, UGC & Stratégie Digitale à Paris
         </p>
 
         <h1 className="hero__title">
-          A personal brand & creative hub centered around the work of Cierra Miller.
+        Je transforme votre présence en ligne en levier de croissance grâce à du contenu engageant et une stratégie digitale performante.
         </h1>
 
         <p className="hero__description">
-          Explore the shop, view my work, and see everything I’m creating in one place.
-          A mix of design, content, and products — all brought together under one creative vision.
+        Création de contenu UGC, gestion des réseaux sociaux et accompagnement stratégique pour les marques ambitieuses.
         </p>
 
         <Link to="/about#work-with-me" className="hero__button button button--blue">

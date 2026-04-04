@@ -7,7 +7,7 @@ function MeetSection() {
         <p className="meet-section__tag">Meet OseCom</p>
 
         <h2 className="meet-section__title">
-          Paris-Based Community Manager and Beauty, Fashion & Lifestyle Creator
+        Basée à Paris, j’accompagne les marques dans leur croissance digitale.
         </h2>
       </div>
     </section>

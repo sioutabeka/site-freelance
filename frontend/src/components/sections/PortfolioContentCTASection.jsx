@@ -11,20 +11,20 @@ function PortfolioContentCTASection() {
   className="portfolio-content-cta-section__logo"
 />
 
-        <p className="portfolio-content-cta-section__tag">
-          LET&apos;S WORK TOGETHER
-        </p>
+<p className="portfolio-content-cta-section__tag">
+  COLLABORONS ENSEMBLE
+</p>
 
-        <h2 className="portfolio-content-cta-section__title">
-          Are you a brand looking to partner?
-        </h2>
+<h2 className="portfolio-content-cta-section__title">
+Vous recherchez une créatrice pour représenter votre marque sur le long terme ?
+</h2>
 
-        <a
-        href="mailto:tonemail@gmail.com"
-        className="portfolio-content-cta-section__button button button--olive"
-      >
-        CONTACT ME
-      </a>
+<a
+  href="mailto:tonemail@gmail.com"
+  className="portfolio-content-cta-section__button button button--olive"
+>
+  ME CONTACTER
+</a>
 
 
       </div>

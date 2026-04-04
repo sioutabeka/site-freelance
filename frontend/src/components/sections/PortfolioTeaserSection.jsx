@@ -29,8 +29,8 @@ function PortfolioTeaserSection() {
   return (
     <section className="portfolio-teaser">
       <div className="portfolio-teaser__inner">
-        <p className="portfolio-teaser__tag">CIERRA MILLER STUDIO</p>
-        <h2 className="portfolio-teaser__title">Browse the Design Portfolio</h2>
+        <p className="portfolio-teaser__tag">OSECOM STUDIO</p>
+        <h2 className="portfolio-teaser__title">Consulte mon Portfolio</h2>
 
         <div className="portfolio-teaser__grid">
           {projects.map((project) => (

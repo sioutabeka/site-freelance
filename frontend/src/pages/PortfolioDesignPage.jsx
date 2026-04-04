@@ -14,7 +14,7 @@ function PortfolioDesignPage() {
       <Navbar mode="sticky" />
       
       <main>
-        <PortfolioHero title="The Design Portfolio" />
+        <PortfolioHero title="The Community Management Portfolio" />
 
         <PortfolioSection
   tag="EMAIL & SMS DESIGN"

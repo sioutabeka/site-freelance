@@ -5,7 +5,7 @@ function BrandsSection() {
     <section className="brands-section">
       
       <p className="brands-section__title">
-        SOME BRANDS I'VE WORKED WITH
+      ELLES M'ONT FAIT CONFIANCE
       </p>
 
       <div className="brands-section__slider">

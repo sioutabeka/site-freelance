@@ -175,3 +175,21 @@
       margin-top: 6px;
     }
   }
+
+  .about-section__list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  
+  .about-section__list span {
+    font-family: "Public Sans", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #f7f5eb;
+  }
+
+  .about-section__list span {
+    opacity: 0.9;
+  }
