@@ -18,7 +18,7 @@ export async function submitContactForm(req, res) {
   if (!name || !email || !service || !project) {
     return res.status(400).json({
       success: false,
-      message: "Please fill in all required fields.",
+      message: "Veuillez remplir tous les champs obligatoires.",
     });
   }
 
@@ -52,14 +52,14 @@ export async function submitContactForm(req, res) {
 
     return res.status(200).json({
       success: true,
-      message: "Contact saved successfully.",
+      message: "Votre demande a bien été enregistrée.",
     });
   } catch (error) {
     console.error("Prisma error:", error);
 
     return res.status(500).json({
       success: false,
-      message: "Server error.",
+      message: "Une erreur serveur est survenue.",
     });
   }
 }
