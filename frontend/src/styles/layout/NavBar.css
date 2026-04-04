@@ -1,27 +1,55 @@
 /* =========================
-   NAVBAR (STRUCTURE GLOBALE)
+   NAVBAR — BASE GLOBALE
+   Structure commune à toutes les pages.
+   Les variantes de couleur / position sont gérées plus bas.
 ========================= */
 
 .navbar {
   width: 100%;
-  position: sticky;
   top: 0;
   left: 0;
   z-index: 1000;
+}
 
-  background: linear-gradient(
-    to bottom,
-    rgba(191, 210, 239, 0.85) 0%,
-    rgba(191, 210, 239, 0.65) 40%,
-    rgba(191, 210, 239, 0.4) 70%,
-    rgba(191, 210, 239, 0.15) 90%,
-    rgba(191, 210, 239, 0) 100%
-  );
+
+/* =========================
+   NAVBAR — VARIANTES PAR PAGE
+   - home : transparente sticky
+   - about : beige non sticky
+   - portfolio design : beige sticky
+   - portfolio content : bleu sticky
+   - default : transparente sticky
+========================= */
+
+.navbar--home {
+  position: sticky;
+  background: transparent;
+}
+
+.navbar--about {
+  position: relative;
+  background: #f4edc6;
+}
+
+.navbar--portfolio-design {
+  position: sticky;
+  background: #f4edc6;
+}
+
+.navbar--portfolio-content {
+  position: sticky;
+  background: #bfd2ef;
+}
+
+.navbar--default {
+  position: sticky;
+  background: transparent;
 }
 
 
 /* =========================
    BARRE DU HAUT
+   Ligne contenant logo + burger / menu desktop
 ========================= */
 
 .navbar__top {
@@ -32,6 +60,7 @@
   justify-content: space-between;
 }
 
+/* Ligne pointillée visible uniquement quand le menu mobile est ouvert */
 .navbar--open .navbar__top {
   border-bottom: 1px dotted #3c2015;
 }
@@ -59,16 +88,16 @@
 ========================= */
 
 .navbar__burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   background: none;
   border: none;
   color: #3c2015;
   font-size: 30px;
   line-height: 1;
   cursor: pointer;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 
   transition: transform 0.28s ease, opacity 0.22s ease;
 }
@@ -79,17 +108,17 @@
 
 
 /* =========================
-   MENU DESKTOP (CACHÉ MOBILE)
+   MENU DESKTOP
+   Caché par défaut, visible uniquement en desktop
 ========================= */
 
 .navbar__menu-container {
   display: none;
-  padding: 7px 7px;
 }
 
 
 /* =========================
-   MENU MOBILE
+   MENU MOBILE — CONTENEUR
 ========================= */
 
 .navbar__mobile-menu {
@@ -104,20 +133,40 @@
   align-items: center;
 }
 
-.navbar__mobile-link {
+
+/* =========================
+   TYPO MOBILE — LIENS PRINCIPAUX
+   Home / Portfolio / About / Work With Me
+   On harmonise ici pour que Link et button aient le même rendu.
+========================= */
+
+.navbar__mobile-link,
+.navbar__mobile-dropdown-trigger {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
+  gap: 6px;
+
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
 
   text-decoration: none;
   color: #3c2015;
+  cursor: pointer;
+
+  appearance: none;
+  -webkit-appearance: none;
 
   font-family: "Cormorant Garamond", serif;
   font-size: 28px;
   font-weight: 600;
+  letter-spacing: 0.2px;
   line-height: 1;
 }
 
+/* Espace entre les liens principaux du menu mobile */
 .navbar__mobile-link + .navbar__mobile-link {
   margin-top: 4px;
 }
@@ -125,6 +174,7 @@
 
 /* =========================
    FLÈCHE GÉNÉRALE
+   Utilisée dans les boutons Portfolio desktop + mobile
 ========================= */
 
 .navbar__arrow {
@@ -135,13 +185,14 @@
   border-bottom: 1.5px solid #3c2015;
 
   transform: rotate(45deg) translateY(1px);
-
   margin-left: -1px;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.navbar__dropdown-trigger[aria-expanded="true"] .navbar__arrow {
+/* Animation légère quand le menu Portfolio est ouvert */
+.navbar__dropdown-trigger[aria-expanded="true"] .navbar__arrow,
+.navbar__mobile-dropdown-trigger[aria-expanded="true"] .navbar__arrow {
   transform: rotate(45deg) translateY(1px) scale(1.1);
 }
 
@@ -156,33 +207,20 @@
   align-items: center;
 }
 
-.navbar__mobile-dropdown-trigger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-
-  appearance: none;
-  -webkit-appearance: none;
-
-  font: inherit;
-  color: inherit;
-}
-
 .navbar__mobile-submenu {
   margin-top: 8px;
-  background-color: #fffdf8;
-  border-radius: 22px;
   padding: 14px 22px;
 
   display: flex;
   flex-direction: column;
   gap: 12px;
 
+  background-color: #fffdf8;
+  border-radius: 22px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
+/* Liens internes du sous-menu mobile */
 .navbar__mobile-sublink {
   display: flex;
   align-items: center;
@@ -196,8 +234,24 @@
   line-height: 1;
 }
 
+/* Taille des fleurs dans le sous-menu mobile */
 .navbar__mobile-sublink .navbar__flower {
   font-size: 22px;
+  line-height: 1;
+}
+
+
+/* =========================
+   FLEURS — COULEURS GLOBALES
+   Doivent être hors media query pour marcher aussi en mobile.
+========================= */
+
+.navbar__flower--olive {
+  color: #828234;
+}
+
+.navbar__flower--pink {
+  color: #ea609f;
 }
 
 
@@ -214,7 +268,8 @@
     height: 44px;
   }
 
-  .navbar__mobile-link {
+  .navbar__mobile-link,
+  .navbar__mobile-dropdown-trigger {
     font-size: 34px;
   }
 
@@ -229,10 +284,7 @@
 ========================= */
 
 @media (min-width: 1024px) {
-  .navbar {
-    background: transparent;
-  }
-
+  /* En desktop, la couleur de fond est gérée par les variantes de page */
   .navbar__top {
     padding: 10px 20px 10px 40px;
   }
@@ -241,47 +293,56 @@
     height: 42px;
   }
 
+  /* Capsule rose du menu desktop */
   .navbar__menu-container {
     display: inline-flex;
     align-items: center;
     gap: 22px;
 
-    background-color: #fcc5df;
     padding: 9px 22px;
+    background-color: #fcc5df;
     border-radius: 999px;
   }
 
+  /* Typo harmonisée des liens principaux desktop */
+  .navbar__menu-link,
+  .navbar__dropdown-trigger,
+  .navbar__dropdown-link {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    line-height: 1;
+    color: #3c2015;
+    text-decoration: none;
+  }
+
+  /* Liens principaux : Home / About / Work With Me */
   .navbar__menu-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-
-    text-decoration: none;
-    color: #3c2015;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 18px;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-    line-height: 1;
     white-space: nowrap;
 
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+
+    transition: transform 0.22s ease, opacity 0.22s ease;
   }
 
+  /* Conteneur du dropdown Portfolio */
   .navbar__dropdown {
     position: relative;
     display: inline-flex;
     align-items: center;
   }
 
+  /* Bouton Portfolio desktop :
+     on lui donne exactement le même rendu qu’un lien */
   .navbar__dropdown-trigger {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    
 
     background: none;
     border: none;
@@ -292,23 +353,19 @@
     appearance: none;
     -webkit-appearance: none;
 
-    font-family: "Cormorant Garamond", serif;
-    font-size: 18px;
+    white-space: nowrap;
     font-weight: 500;
     letter-spacing: 0.3px;
-    line-height: 1;
-    color: #3c2015;
-    text-decoration: none;
-    white-space: nowrap;
 
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: transform 0.22s ease, opacity 0.22s ease;
   }
 
-
+  /* Ajustement visuel fin de la flèche sur desktop */
   .navbar__dropdown-trigger .navbar__arrow {
     margin-top: -2px;
   }
 
+  /* Menu déroulant desktop */
   .navbar__dropdown-menu {
     position: absolute;
     top: calc(100% + 12px);
@@ -319,8 +376,8 @@
     flex-direction: column;
     gap: 10px;
 
-    padding: 15px 18px;
     min-width: 260px;
+    padding: 15px 18px;
 
     background-color: #f7f5eb;
     border-radius: 18px;
@@ -331,36 +388,23 @@
     display: flex;
   }
 
+  /* Liens internes du dropdown desktop */
   .navbar__dropdown-link {
     display: flex;
     align-items: center;
     gap: 10px;
-
-    text-decoration: none;
-    color: #3c2015;
-
-    font-family: "Cormorant Garamond", serif;
-    font-size: 18px;
-    line-height: 1;
     white-space: nowrap;
 
     transition: transform 0.22s ease, opacity 0.22s ease;
   }
 
-
+  /* Taille générale des fleurs en desktop */
   .navbar__flower {
     font-size: 20px;
     line-height: 1;
   }
 
-  .navbar__flower--olive {
-    color: #828234;
-  }
-
-  .navbar__flower--pink {
-    color: #ea609f;
-  }
-
+  /* Cleanup desktop */
   .navbar__burger {
     display: none;
   }
@@ -374,56 +418,15 @@
   }
 }
 
-.navbar__menu-link,
-.navbar__dropdown-trigger,
-.navbar__dropdown-link {
-  transition: transform 0.22s ease, opacity 0.22s ease;
-  font-size: 20px;
 
-
-}
+/* =========================
+   HOVER DESKTOP
+   Même hover pour les liens principaux et les liens dropdown
+========================= */
 
 .navbar__menu-link:hover,
 .navbar__dropdown-trigger:hover,
 .navbar__dropdown-link:hover {
   transform: translateX(3px);
   opacity: 0.8;
-}
-
-
-
-
-
-
-
-.navbar {
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
-
-.navbar--home {
-  position: sticky;
-  background: transparent;
-}
-
-.navbar--about {
-  position: relative;
-  background: #f4edc6;
-}
-
-.navbar--portfolio-design {
-  position: sticky;
-  background: #f4edc6;
-}
-
-.navbar--portfolio-content {
-  position: sticky;
-  background: #bfd2ef;
-}
-
-.navbar--default {
-  position: sticky;
-  background: transparent;
 }
