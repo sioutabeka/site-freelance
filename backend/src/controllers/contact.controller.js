@@ -34,10 +34,12 @@ export async function submitContactForm(req, res) {
         date,
         project,
       },
-      
     });
 
-    await sendContactEmail({
+    console.log("Saved contact:", newContact);
+
+    try {
+      await sendContactEmail({
         name,
         businessName,
         budget,
@@ -48,14 +50,17 @@ export async function submitContactForm(req, res) {
         project,
       });
 
-    console.log("Saved contact:", newContact);
+      console.log("Contact email sent successfully.");
+    } catch (emailError) {
+      console.error("Email sending error:", emailError);
+    }
 
     return res.status(200).json({
       success: true,
       message: "Votre demande a bien été enregistrée.",
     });
-  } catch (error) {
-    console.error("Prisma error:", error);
+  } catch (dbError) {
+    console.error("Database error:", dbError);
 
     return res.status(500).json({
       success: false,
