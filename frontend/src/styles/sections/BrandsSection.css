@@ -3,121 +3,145 @@
 ========================= */
 
 .brands-section {
-    position: relative;
-    background-color: #fcc5df;
-    padding: 80px 0 50px;
-    overflow: hidden;
+  position: relative;
+  background-color: #fcc5df;
+  padding: 50px 0;
+  overflow: visible;
+}
+
+/* =========================
+   SEPARATOR (FULL WIDTH)
+========================= */
+
+.brands-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  border-top: 4px dotted #3c2015;
+  z-index: 3;
+}
+
+/* =========================
+   TITRE
+========================= */
+
+.brands-section__title {
+  text-align: center;
+  font-family: "Public Sans", sans-serif;
+  font-size: 12.8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #3c2015;
+  margin-bottom: 24px;
+}
+
+/* =========================
+   SLIDER
+========================= */
+
+.brands-section__slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* fondu léger sur les côtés */
+
+.brands-section__slider::before,
+.brands-section__slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 48px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.brands-section__slider::before {
+  left: 0;
+  background: linear-gradient(to right, #fcc5df 0%, rgba(252, 197, 223, 0) 100%);
+}
+
+.brands-section__slider::after {
+  right: 0;
+  background: linear-gradient(to left, #fcc5df 0%, rgba(252, 197, 223, 0) 100%);
+}
+
+/* TRACK */
+
+.brands-section__track {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  will-change: transform;
+  animation: scrollBrands 24s linear infinite;
+}
+
+/* =========================
+   LOGOS
+========================= */
+
+.brands-section__logo {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+
+  opacity: 0.9;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.brands-section__logo:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes scrollBrands {
+  from {
+    transform: translate3d(0, 0, 0);
   }
-  
-  /* =========================
-     TITRE
-  ========================= */
-  
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 767px) {
+  .brands-section {
+    padding: 30px 0;
+  }
+
   .brands-section__title {
-    text-align: center;
-    font-family: "Public Sans", sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 1px;
-    color: #3c2015;
-    margin-bottom: 40px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    padding: 0 16px;
   }
-  
-  /* =========================
-     SLIDER
-  ========================= */
-  
-  .brands-section__slider {
-    overflow: hidden;
-    width: 100%;
+
+  .brands-section__slider::before,
+  .brands-section__slider::after {
+    width: 24px;
   }
-  
-  /* TRACK (défilement) */
+
   .brands-section__track {
-    display: flex;
-    align-items: center;
-    gap: 80px;
-  
-    width: max-content;
-  
-    animation: scrollBrands 20s linear infinite;
+    gap: 28px;
+    animation-duration: 20s;
   }
-  
-  /* =========================
-     LOGOS
-  ========================= */
-  
+
   .brands-section__logo {
-    height: 40px;
-    width: auto;
-    object-fit: contain;
-  
-    opacity: 0.9;
-    transition: opacity 0.2s ease;
+    height: 24px;
   }
-  
-  .brands-section__logo:hover {
-    opacity: 1;
-  }
-  
-  /* =========================
-     ANIMATION
-  ========================= */
-  
-  @keyframes scrollBrands {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
-  }
-  
-  /* =========================
-     TABLETTE
-  ========================= */
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .brands-section {
-      padding: 60px 0 40px;
-    }
-  
-    .brands-section__title {
-      font-size: 11px;
-      margin-bottom: 30px;
-    }
-  
-    .brands-section__track {
-      gap: 50px;
-      animation-duration: 18s;
-    }
-  
-    .brands-section__logo {
-      height: 32px;
-    }
-  }
-  
-  /* =========================
-     MOBILE
-  ========================= */
-  
-  @media (max-width: 767px) {
-    .brands-section {
-      padding: 50px 0 30px;
-    }
-  
-    .brands-section__title {
-      font-size: 10px;
-      letter-spacing: 0.8px;
-      margin-bottom: 20px;
-      padding: 0 16px;
-    }
-  
-    .brands-section__track {
-      gap: 32px;
-      animation-duration: 16s;
-    }
-  
-    .brands-section__logo {
-      height: 24px;
-    }
-  }
+}
