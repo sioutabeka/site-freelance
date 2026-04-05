@@ -1,31 +1,43 @@
 import { Link } from "react-router-dom";
 import "../../styles/sections/Hero.css";
 import heroImage from "../../assets/hero-test.jpg";
+import heroImageTest from "../../assets/hero-ciarra.png";
+import heroImageMobile from "../../assets/hero-mobile.jpg";
+
 
 function Hero() {
   return (
     <section className="hero">
       <div className="hero__content">
         <p className="hero__tag">
-        Freelance en Community Management, UGC & Stratégie Digitale à Paris
+        Experte Social Media & Stratégie Digitale à Paris
         </p>
 
         <h1 className="hero__title">
-        Je transforme votre présence en ligne en levier de croissance grâce à du contenu engageant et une stratégie digitale performante.
-        </h1>
+        Transformez vos réseaux sociaux en véritable levier de clients.        </h1>
 
         <p className="hero__description">
-        Création de contenu UGC, gestion des réseaux sociaux et accompagnement stratégique pour les marques ambitieuses.
-        </p>
+        Je vous aide à structurer votre présence, créer du contenu efficace et gagner en visibilité sans y passer des heures.        </p>
 
         <Link to="/about#work-with-me" className="hero__button button button--blue">
-          WORK WITH ME
+        Prendre rendez-vous
         </Link>
       </div>
 
       <div className="hero__image">
-        <img src={heroImage} alt="Hero" />
-      </div>
+  <img
+    src={heroImageTest}
+    alt="Experte en stratégie digitale et community management à Paris"
+    className="hero__img hero__img--desktop"
+  />
+
+  <img
+    src={heroImageMobile}
+    alt="Experte en stratégie digitale et community management à Paris"
+    className="hero__img hero__img--mobile"
+  />
+</div>
+
     </section>
   );
 }

@@ -1,154 +1,156 @@
 /* =========================
-   HERO — DESKTOP PAR DÉFAUT
+   HERO — DESKTOP (BASE)
 ========================= */
 
+/* SECTION PRINCIPALE */
 .hero {
-    padding: 50px 100px 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
+  padding: 50px 100px 60px; 
+  /* haut / côtés / bas */
+
+  display: flex; 
+  /* layout horizontal */
+
+  align-items: center; 
+  /* aligne verticalement texte + image */
+
+  justify-content: space-between; 
+  /* espace entre texte et image */
+
+  gap: 40px; 
+  /* espace entre les 2 blocs */
+}
+
+
+/* BLOC TEXTE */
+.hero__content {
+  max-width: 600px; 
+  /* limite largeur pour lisibilité */
+}
+
+
+/* TAG (petit texte au-dessus du titre) */
+.hero__tag {
+  font-family: "Public Sans", sans-serif;
+  font-size: 12.8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #3c2015;
+  margin-bottom: 15px;
+}
+
+
+/* TITRE PRINCIPAL */
+.hero__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 43px;
+  line-height: 1.1;
+  color: #3c2015;
+  margin-bottom: 20px;
+}
+
+
+/* DESCRIPTION */
+.hero__description {
+  font-family: "Public Sans", sans-serif;
+  font-size: 12.8px;
+  line-height: 1.45;
+  color: #3c2015;
+  margin-bottom: 32px;
+}
+
+
+/* BLOC IMAGE */
+.hero__image {
+  flex: 0 0 auto; 
+  /* empêche l'image de s'étirer */
+}
+
+
+/* STYLE COMMUN AUX DEUX IMAGES */
+.hero__img {
+  width: 400px; 
+  /* taille desktop */
+
+  max-width: 100%; 
+  /* sécurité responsive */
+
+  height: auto;
+
+  border-radius: 20px;
+
+  object-fit: cover;
+}
+
+
+/* IMAGE DESKTOP (VISIBLE PAR DÉFAUT) */
+.hero__img--desktop {
+  display: block;
+}
+
+
+/* IMAGE MOBILE (CACHÉE PAR DÉFAUT) */
+.hero__img--mobile {
+  display: none;
+}
+
+
+/* =========================
+   HERO — MOBILE
+========================= */
+
+@media (max-width: 767px) {
+
+  /* LAYOUT VERTICAL */
+  .hero {
+    padding: 52px 32px 50px;
+
+    flex-direction: column;
+    /* texte au-dessus, image en dessous */
+
+    align-items: flex-start;
+
+    gap: 22px;
   }
-  
+
+
   /* TEXTE */
-  .hero__content {
-    max-width: 600px;
-  }
-  
-  /* TAG */
   .hero__tag {
-    font-family: "Public Sans", sans-serif;
-    font-size: 12.8px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #3c2015;
-    margin-bottom: 15px;
+    font-size: 10px;
   }
-  
-  /* TITRE */
+
   .hero__title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 43px;
-    line-height: 1.1;
-    color: #3c2015;
-    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 1.05;
   }
-  
-  /* PARAGRAPHE */
+
   .hero__description {
-    font-family: "Public Sans", sans-serif;
-    font-size: 12.8px;
-    line-height: 1.45;
-    color: #3c2015;
-    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 30px;
   }
-  
-  /* IMAGE */
-  .hero__image {
-    flex: 0 0 auto;
-  }
-  
-  .hero__image img {
-    display: block;
-    width: 400px;
+
+  .hero__content {
     max-width: 100%;
-    height: auto;
+  }
+
+
+  /* IMAGE WRAPPER */
+  .hero__image {
+    width: 100%;
+  }
+
+
+  /* 🔥 SWITCH DES IMAGES */
+
+  /* on cache l’image desktop */
+  .hero__img--desktop {
+    display: none;
+  }
+
+  /* on affiche l’image mobile */
+  .hero__img--mobile {
+    display: block;
+    width: 100%;
     border-radius: 20px;
-    object-fit: cover;
   }
-  
-  /* =========================
-     TABLETTE
-  ========================= */
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .hero {
-      padding: 36px 32px 56px;
-      gap: 28px;
-      align-items: flex-start;
-    }
-  
-    .hero__content {
-      max-width: 50%;
-    }
-  
-    .hero__tag {
-      font-size: 11px;
-      margin-bottom: 12px;
-    }
-  
-    .hero__title {
-      font-size: 34px;
-      line-height: 1.08;
-      margin-bottom: 16px;
-    }
-  
-    .hero__description {
-      font-size: 11.5px;
-      margin-bottom: 18px;
-    }
-  
-    .hero__button {
-      font-size: 11px;
-      padding: 6px 14px;
-    }
-  
-    .hero__image {
-      width: 42%;
-    }
-  
-    .hero__image img {
-      width: 100%;
-      border-radius: 18px;
-    }
-  }
-  
-  /* =========================
-     MOBILE
-  ========================= */
-  
-  @media (max-width: 767px) {
-    .hero {
-      padding: 32px 20px 50px; /* ⬅️ + d’air en bas */
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 26px; /* ⬅️ + espace global */
-    }
-  
-    .hero__tag {
-      font-size: 10px;
-      margin-bottom: 12px; /* ⬅️ + espace */
-    }
-  
-    .hero__title {
-      font-size: 30px;
-      line-height: 1.05;
-      margin-bottom: 18px; /* ⬅️ + espace */
-    }
-  
-    .hero__description {
-      font-size: 11px;
-      line-height: 1.5;
-      margin-bottom: 22px; /* ⬅️ + espace avant bouton */
-    }
-  
-    .hero__button {
-      margin-bottom: 10px; /* ⬅️ espace avant image */
-    }
-  
-    .hero__image {
-      width: 100%;
-      margin-top: 10px; /* ⬅️ espace image */
-    }
-  
-    .hero__image img {
-      width: 100%;
-      border-radius: 20px;
-    }
-  
-    .hero__content {
-      max-width: 340px;
-    }
-  }
-  
+}
