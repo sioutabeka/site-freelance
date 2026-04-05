@@ -13,37 +13,13 @@
 
 
 /* =========================
-   NAVBAR — VARIANTES PAR PAGE
-   - home : transparente sticky
-   - about : beige non sticky
-   - portfolio design : beige sticky
-   - portfolio content : bleu sticky
-   - default : transparente sticky
+   NAVBAR — MOBILE (DEFAULT)
+   Toujours bleue en mobile
 ========================= */
 
-.navbar--home {
+.navbar {
   position: sticky;
-  background: transparent;
-}
-
-.navbar--about {
-  position: relative;
-  background: #f4edc6;
-}
-
-.navbar--portfolio-design {
-  position: sticky;
-  background: #f4edc6;
-}
-
-.navbar--portfolio-content {
-  position: sticky;
-  background: #bfd2ef;
-}
-
-.navbar--default {
-  position: sticky;
-  background: transparent;
+  background-color: #bfd2ef;
 }
 
 
@@ -62,7 +38,7 @@
 
 /* Ligne pointillée visible uniquement quand le menu mobile est ouvert */
 .navbar--open .navbar__top {
-  border-bottom: 1px dotted #3c2015;
+  border-bottom: 4px dotted #3c2015;
 }
 
 
@@ -124,7 +100,7 @@
 .navbar__mobile-menu {
   display: none;
   background-color: #bfd2ef;
-  padding: 32px 20px;
+  padding: 22px 20px;
 }
 
 .navbar__mobile-menu--open {
@@ -168,7 +144,13 @@
 
 /* Espace entre les liens principaux du menu mobile */
 .navbar__mobile-link + .navbar__mobile-link {
-  margin-top: 4px;
+  margin-top: 16px;
+}
+
+.navbar__mobile-link + .navbar__mobile-link,
+.navbar__mobile-link + .navbar__mobile-dropdown,
+.navbar__mobile-dropdown + .navbar__mobile-link {
+  margin-top: 8px;
 }
 
 
@@ -416,8 +398,41 @@
   .navbar--open .navbar__top {
     border-bottom: none;
   }
-}
 
+  /* =========================
+   NAVBAR — VARIANTES DESKTOP
+========================= */
+
+  /* =========================
+     NAVBAR — VARIANTES DESKTOP
+  ========================= */
+
+  .navbar--home {
+    position: sticky;
+    background-color: transparent;
+  }
+
+  .navbar--about {
+    position: relative;
+    background-color: #f4edc6;
+  }
+
+  .navbar--portfolio-design {
+    position: sticky;
+    background-color: #f4edc6;
+  }
+
+  .navbar--portfolio-content {
+    position: sticky;
+    background-color: #bfd2ef;
+  }
+
+  .navbar--default {
+    position: sticky;
+    background-color: transparent;
+  }
+
+}
 
 /* =========================
    HOVER DESKTOP
@@ -430,3 +445,4 @@
   transform: translateX(3px);
   opacity: 0.8;
 }
+
