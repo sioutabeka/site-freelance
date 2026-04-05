@@ -409,8 +409,9 @@
 
   .navbar--home {
     position: sticky;
-    background-color: transparent;
+    background-color: #f7f5eb;
   }
+  
 
   .navbar--about {
     position: relative;

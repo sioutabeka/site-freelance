@@ -50,7 +50,7 @@
   display: block;
 }
 
-/* TAG (harmonisé avec hero) */
+/* TAG */
 .work-section__tag {
   font-family: "Public Sans", sans-serif;
   font-size: 12.8px;
@@ -67,7 +67,6 @@
   line-height: 1.15;
   color: #3c2015;
   margin: 0 auto;
-
   max-width: 360px;
   white-space: normal;
   text-wrap: balance;
@@ -88,24 +87,39 @@
     0 8px 20px rgba(0, 0, 0, 0.06),
     0 2px 6px rgba(0, 0, 0, 0.04);
 
+  opacity: 0;
+
   transition:
     transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.6s ease;
 }
 
 .work-card--left {
-  transform: rotate(-5deg);
+  transform: translateY(60px) rotate(-5deg);
   justify-self: end;
 }
 
 .work-card--right {
-  transform: rotate(5deg);
+  transform: translateY(60px) rotate(5deg);
   justify-self: start;
+}
+
+/* état visible au scroll */
+.work-section--visible .work-card--left {
+  opacity: 1;
+  transform: translateY(0) rotate(-5deg);
+}
+
+.work-section--visible .work-card--right {
+  opacity: 1;
+  transform: translateY(0) rotate(5deg);
+  transition-delay: 0.15s;
 }
 
 .work-card:hover {
   transform: translateY(-8px) rotate(0deg);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.10);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
 }
 
 .work-card__image-placeholder,
@@ -151,8 +165,6 @@
   .work-section__title {
     font-size: 38px;
     max-width: 320px;
-    white-space: normal;
-    text-wrap: balance;
   }
 
   .work-card {
@@ -185,29 +197,22 @@
     text-align: center;
     padding: 0 20px;
     max-width: 100%;
-
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  /* =========================
-     CARDS ORDER + ROTATION
-  ========================= */
-
   .work-card--left {
     order: 2;
     transform: rotate(-4deg);
+    opacity: 1;
   }
 
   .work-card--right {
     order: 3;
     transform: rotate(4deg);
+    opacity: 1;
   }
-
-  /* =========================
-     LOGO (PLUS GROS)
-  ========================= */
 
   .work-section__badge {
     width: 90px;
@@ -223,10 +228,6 @@
     display: block;
   }
 
-  /* =========================
-     TEXTE
-  ========================= */
-
   .work-section__tag {
     font-size: 10px;
     letter-spacing: 1px;
@@ -239,10 +240,6 @@
     white-space: nowrap;
     margin: 0 auto;
   }
-
-  /* =========================
-     CARDS STYLE
-  ========================= */
 
   .work-card {
     width: 100%;
@@ -279,12 +276,10 @@
     padding: 6px 12px;
   }
 
-  /* HOVER (léger mobile) */
   .work-card:hover {
     transform: translateY(-4px) rotate(0deg);
   }
 
-  /* nettoyage éventuel */
   .work-section::after {
     content: none;
   }
