@@ -8,6 +8,8 @@ import MeetSection from "../components/sections/MeetSection";
 import WorkSection from "../components/sections/WorkSection";
 import BrandsSection from "../components/sections/BrandsSection";
 import AboutSection from "../components/sections/AboutSection";
+import WorksShowcaseSection from "../components/sections/WorksShowcaseSection";
+
 
 function HomePage() {
   return (
@@ -18,6 +20,7 @@ function HomePage() {
       <MeetSection />
       <WorkSection />
       <BrandsSection />
+      <WorksShowcaseSection />
       <AboutSection />
       <FooterSection />
       <BottomBar />
