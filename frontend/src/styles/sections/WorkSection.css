@@ -1,347 +1,286 @@
 /* =========================
+   WORK SECTION — DESKTOP
+========================= */
+
+.work-section {
+  background-color: #f7f5eb;
+  padding: 60px 0 100px;
+  position: relative;
+}
+
+/* CONTENEUR GLOBAL */
+.work-section__inner {
+  margin: 0 40px;
+  display: grid;
+  grid-template-columns: minmax(320px, 400px) auto minmax(320px, 400px);
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+}
+
+/* =========================
+   CENTRE
+========================= */
+
+.work-section__center {
+  text-align: center;
+  padding: 0 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BADGE */
+.work-section__badge {
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 16px;
+}
+
+.work-section__badge img {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* TAG (harmonisé avec hero) */
+.work-section__tag {
+  font-family: "Public Sans", sans-serif;
+  font-size: 12.8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #3c2015;
+  margin-bottom: 15px;
+}
+
+/* TITRE */
+.work-section__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 43px;
+  line-height: 1.15;
+  color: #3c2015;
+  margin: 0 auto;
+
+  max-width: 520px;
+  white-space: nowrap;
+}
+
+/* =========================
+   CARTES
+========================= */
+
+.work-card {
+  background-color: #fffdf8;
+  width: 100%;
+  max-width: 380px;
+  padding: 14px 14px 24px;
+  text-align: center;
+
+  box-shadow: 
+  0 8px 20px rgba(0, 0, 0, 0.06),
+  0 2px 6px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.work-card--left {
+  transform: rotate(-5deg);
+  justify-self: end;
+}
+
+.work-card--right {
+  transform: rotate(5deg);
+  justify-self: start;
+}
+
+.work-card:hover {
+  transform: translateY(-8px) rotate(0deg);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.10);
+}
+
+.work-card__image-placeholder,
+.work-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.work-card__image-placeholder {
+  min-height: 300px;
+  background-color: #e8e1d8;
+}
+
+.work-card__title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  color: #3c2015;
+  margin-bottom: 10px;
+}
+
+.work-card__text {
+  font-family: "Public Sans", sans-serif;
+  font-size: 11.2px;
+  line-height: 1.4;
+  color: #3c2015;
+  max-width: 300px;
+  margin: 0 auto 14px;
+}
+
+/* =========================
+   DESKTOP PLUS ÉTROIT
+========================= */
+
+@media (max-width: 1200px) {
+  .work-section__title {
+    font-size: 38px;
+    max-width: 360px;
+    white-space: normal;
+    text-wrap: balance;
+  }
+
+  .work-section__inner {
+    column-gap: 18px;
+    margin: 0 24px;
+  }
+
+  .work-card {
+    max-width: 340px;
+  }
+}
+
+/* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 767px) {
-    .meet-section {
-      padding: 48px 20px;
-      background-size: 180px auto;
-    }
-  
-    .meet-section__content {
-      max-width: 100%;
-    }
-  
-    .meet-section__tag {
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
-  
-    .meet-section__title {
-      font-size: 30px;
-      line-height: 1.12;
-      max-width: 100%;
-    }
-  }
-  
-  /* =========================
-     WORK SECTION — DESKTOP PAR DÉFAUT
-  ========================= */
-  
   .work-section {
-    background-color: #f7f5eb;
-    padding: 60px 0 100px;
-    position: relative;
+    padding: 20px 0 0;
+    padding-bottom: 90px;
   }
-  
-  /* CONTENEUR GLOBAL */
+
   .work-section__inner {
-    margin: 0 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0;
+    padding: 20px 0 0;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 28px;
   }
-  
-  /* =========================
-     CENTRE
-  ========================= */
-  
+
   .work-section__center {
+    order: 1;
     text-align: center;
     padding: 0 20px;
+    max-width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* BADGE / LOGO */
-  .work-section__badge img {
-    width: 55%; /* 🔥 clé pour garder le logo propre */
-    height: auto;
-    object-fit: contain;
-  }
-  
-  .work-section__badge img {
-    width: 55%; /* 🔥 clé pour garder le logo propre */
-    height: auto;
-    object-fit: contain;
-  }
-  
-  /* PETIT TEXTE */
-  .work-section__tag {
-    font-family: "Public Sans", sans-serif;
-    font-size: 12.8px;
-    letter-spacing: 1px;
-    color: #3c2015;
-    margin-bottom: 10px;
-  }
-  
-  /* TITRE */
-  .work-section__title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 43px;
-    line-height: 1.15;
-    color: #3c2015;
-  }
-  
+
   /* =========================
-     CARTES
+     CARDS ORDER + ROTATION
   ========================= */
-  
-  .work-card {
-    background-color: #fffdf8;
-    width: 420px;
-    padding: 14px 14px 24px;
-    text-align: center;
-  
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-  
-    transition:
-      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-      box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  
-  /* POSITION INITIALE */
+
   .work-card--left {
-    transform: rotate(-5deg);
-    justify-self: start;
+    order: 2;
+    transform: rotate(-4deg);
   }
-  
+
   .work-card--right {
-    transform: rotate(5deg);
-    justify-self: end;
+    order: 3;
+    transform: rotate(4deg);
   }
-  
-  /* HOVER INTERACTION */
-  .work-card:hover {
-    transform: translateY(-8px) rotate(0deg);
-    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.10);
+
+  /* =========================
+     LOGO (PLUS GROS)
+  ========================= */
+
+  .work-section__badge {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 1px;
   }
-  
-  /* IMAGE */
+
+  .work-section__badge img {
+    width: 100%;
+    max-width: 78px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* =========================
+     TEXTE
+  ========================= */
+
+  .work-section__tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+  }
+
+  .work-section__title {
+    font-size: 30px;
+    line-height: 1.08;
+    white-space: nowrap;
+    margin: 0 auto;
+  }
+
+  /* =========================
+     CARDS STYLE
+  ========================= */
+
+  .work-card {
+    width: 100%;
+    max-width: 260px;
+    padding: 10px 10px 16px;
+  }
+
   .work-card__image-placeholder,
   .work-card__image img {
     width: 100%;
     height: auto;
     display: block;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
-  
+
   .work-card__image-placeholder {
-    min-height: 300px;
-    background-color: #e8e1d8;
+    min-height: 180px;
   }
-  
-  /* TITRE CARD */
+
   .work-card__title {
-    font-family: "Cormorant Garamond", serif;
-    font-size: 24px;
-    color: #3c2015;
-    margin-bottom: 10px;
+    font-size: 16px;
+    margin-bottom: 6px;
   }
-  
-  /* TEXTE */
+
   .work-card__text {
-    font-family: "Public Sans", sans-serif;
-    font-size: 11.2px;
-    line-height: 1.4;
-    color: #3c2015;
-    max-width: 300px;
-    margin: 0 auto 14px;
+    font-size: 8px;
+    line-height: 1.35;
+    max-width: 190px;
+    margin: 0 auto 10px;
   }
-  
-  
-  /* =========================
-     TABLETTE (CORRIGÉE PROPRE)
-  ========================= */
-  
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .work-section {
-      padding: 50px 20px 30px;
-      padding-bottom: 80px;
-    }
-  
-    .work-section__inner {
-      margin: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      align-items: center;
-      gap: 20px;
-    }
-  
-    /* =========================
-       CENTRE (PLUS AÉRÉ)
-    ========================= */
-  
-    .work-section__center {
-      text-align: center;
-      padding: 0 10px;
-      max-width: 240px;
-      margin: 0 auto;
-    }
-  
-    .work-section__badge {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 16px;
-    }
-  
-    .work-section__tag {
-      font-size: 10px;
-      margin-bottom: 8px;
-    }
-  
-    .work-section__title {
-      font-size: 30px;
-      line-height: 1.15;
-    }
-  
-    /* =========================
-       CARTES (PLUS PETITES)
-    ========================= */
-  
-    .work-card {
-      width: 100%;
-      max-width: 260px; /* ✅ clé du problème */
-      padding: 12px 12px 18px;
-    }
-  
-    .work-card--left {
-      transform: rotate(-4deg);
-      justify-self: end;
-    }
-  
-    .work-card--right {
-      transform: rotate(4deg);
-      justify-self: start;
-    }
-  
-    .work-card__image-placeholder {
-      min-height: 200px;
-    }
-  
-    .work-card__title {
-      font-size: 18px;
-    }
-  
-    .work-card__text {
-      font-size: 10px;
-      max-width: 200px;
-    }
-  
-    .work-card__button {
-      font-size: 10px;
-      padding: 6px 14px;
-    }
+
+  .work-card__button {
+    font-size: 9px;
+    padding: 6px 12px;
   }
-  
-  /* =========================
-     MOBILE
-  ========================= */
-  
-  @media (max-width: 767px) {
-    .work-section {
-      padding: 20px 0 0;
-          padding-bottom: 90px;
-  
-    }
-  
-    .work-section__inner {
-      margin: 0;
-      padding: 20px 0 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 18px;
-    }
-  
-    .work-section__center {
-      order: 1;
-      text-align: center;
-      padding: 0 20px;
-      max-width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .work-card--left {
-      order: 2;
-      justify-self: unset;
-      transform: rotate(-4deg);
-    }
-  
-    .work-card--right {
-      order: 3;
-      justify-self: unset;
-      transform: rotate(-4deg);
-    }
-  
-    .work-section__badge {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 14px;
-    }
-  
-    .work-section__badge img {
-      width: 60%;
-      height: auto;
-      object-fit: contain;
-    }
-  
-    .work-section__tag {
-      font-size: 10px;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
-  
-    .work-section__title {
-      font-size: 30px;
-      line-height: 1.08;
-      white-space: nowrap; /* ✅ reste sur une ligne */
-      max-width: none;
-      margin: 0 auto;
-    }
-  
-    .work-card {
-      width: 100%;
-      max-width: 260px;
-      padding: 10px 10px 16px;
-      box-shadow: none;
-    }
-  
-    .work-card__image-placeholder,
-    .work-card__image img {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 12px;
-    }
-  
-    .work-card__image-placeholder {
-      min-height: 180px;
-    }
-  
-    .work-card__title {
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-  
-    .work-card__text {
-      font-size: 8px;
-      line-height: 1.35;
-      max-width: 190px;
-      margin: 0 auto 10px;
-    }
-  
-    .work-card__button {
-      font-size: 9px;
-      padding: 6px 12px;
-    }
-  
-    .work-card:hover {
-      transform: translateY(-4px) rotate(0deg);
-    }
-  
-    /* ✅ vague rose supprimée */
-    .work-section::after {
-      content: none;
-    }
+
+  /* HOVER (léger mobile) */
+  .work-card:hover {
+    transform: translateY(-4px) rotate(0deg);
   }
+
+  /* nettoyage éventuel */
+  .work-section::after {
+    content: none;
+  }
+}
