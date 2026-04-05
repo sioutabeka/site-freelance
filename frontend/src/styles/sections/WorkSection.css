@@ -258,12 +258,12 @@
   }
 
   .work-card__title {
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 6px;
   }
 
   .work-card__text {
-    font-size: 8px;
+    font-size: 12px;
     line-height: 1.35;
     max-width: 190px;
     margin: 0 auto 10px;
