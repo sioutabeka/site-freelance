@@ -1,8 +1,9 @@
 .portfolio-hero {
   background-color: #f7f5eb;
-  background-image: url("/pattern-test-1.png");  background-repeat: repeat;
+  background-image: url("/vicky-mobile.webp");
+  background-repeat: repeat;
   background-position: center;
-  background-size: 1200px auto;
+  background-size: 800px auto;
   padding: 150px 20px 90px;
   position: relative;
   z-index: 1;
@@ -38,7 +39,7 @@
 
 @media (max-width: 767px) {
   .portfolio-hero {
-    padding: 120px 20px 60px;
+    padding: 60px 20px 60px;
     background-size: 160px auto;
   }
 

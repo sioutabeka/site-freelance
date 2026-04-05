@@ -1,24 +1,55 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../../styles/sections/PortfolioSection.css";
 
-function PortfolioSection({ tag, title, description, images }) {
+function PortfolioSection({
+  tag = "Selected work",
+  title = "A few ways I create impact for brands",
+  description = "",
+  images = [],
+}) {
+  const safeImages = Array.isArray(images) ? images.filter(Boolean) : [];
   const galleryRef = useRef(null);
+  const [activePage, setActivePage] = useState(0);
 
-  const scrollGallery = () => {
-    if (galleryRef.current) {
-      galleryRef.current.scrollBy({
-        left: galleryRef.current.clientWidth * 0.7,
-        behavior: "smooth",
-      });
-    }
-  };
+  const dotsCount = Math.min(3, Math.max(1, safeImages.length));
+
+  useEffect(() => {
+    const gallery = galleryRef.current;
+    if (!gallery) return;
+
+    const handleScroll = () => {
+      const maxScrollLeft = gallery.scrollWidth - gallery.clientWidth;
+
+      if (maxScrollLeft <= 0) {
+        setActivePage(0);
+        return;
+      }
+
+      const scrollRatio = gallery.scrollLeft / maxScrollLeft;
+      const nextPage = Math.min(
+        dotsCount - 1,
+        Math.round(scrollRatio * (dotsCount - 1))
+      );
+
+      setActivePage(nextPage);
+    };
+
+    handleScroll();
+    gallery.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      gallery.removeEventListener("scroll", handleScroll);
+    };
+  }, [dotsCount, safeImages.length]);
 
   return (
-    <section className="portfolio-section">
+    <section className="portfolio-section" aria-labelledby="portfolio-title">
       <div className="portfolio-section__top">
         <div className="portfolio-section__heading">
           <p className="portfolio-section__tag">{tag}</p>
-          <h2 className="portfolio-section__title">{title}</h2>
+          <h2 id="portfolio-title" className="portfolio-section__title">
+            {title}
+          </h2>
         </div>
 
         <div className="portfolio-section__text">
@@ -26,30 +57,41 @@ function PortfolioSection({ tag, title, description, images }) {
         </div>
       </div>
 
-      <div className="portfolio-section__gallery-wrap">
-        <div ref={galleryRef} className="portfolio-section__grid">
-          {images.map((img, index) => (
-            <div key={index} className="portfolio-section__item">
-              <img src={img} alt={`${title} project ${index + 1}`} />
+      {safeImages.length > 0 && (
+        <>
+          <div className="portfolio-section__gallery-wrap">
+            <div
+              ref={galleryRef}
+              className="portfolio-section__grid"
+              role="list"
+              aria-label={`${title} gallery`}
+            >
+              {safeImages.map((img, index) => (
+                <div
+                  key={`${img}-${index}`}
+                  className="portfolio-section__item"
+                  role="listitem"
+                >
+                  <img
+                    src={img}
+                    alt={`${title} project ${index + 1}`}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
 
-        <button
-          type="button"
-          className="portfolio-section__arrow"
-          onClick={scrollGallery}
-          aria-label="Voir plus de projets"
-        >
-          ›
-        </button>
-      </div>
-
-      <div className="portfolio-section__pagination" aria-hidden="true">
-        <span className="dot active"></span>
-        <span className="dot"></span>
-        <span className="dot"></span>
-      </div>
+          <div className="portfolio-section__pagination" aria-hidden="true">
+            {Array.from({ length: dotsCount }).map((_, index) => (
+              <span
+                key={index}
+                className={`dot ${index === activePage ? "active" : ""}`}
+              ></span>
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }
