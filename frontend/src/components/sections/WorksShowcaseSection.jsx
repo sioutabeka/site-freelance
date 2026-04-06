@@ -46,9 +46,7 @@ function WorksShowcaseSection() {
           <p className="works-showcase__tag">SELECTED WORK</p>
 
           <h2 className="works-showcase__heading">
-            A few ways I create
-            <br />
-            impact for brands
+            A few ways I create impact for brands
           </h2>
         </div>
 
