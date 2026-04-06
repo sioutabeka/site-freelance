@@ -1,5 +1,5 @@
 /* =========================
-   MEET SECTION
+   MEET SECTION — DESKTOP
 ========================= */
 
 .meet-section {
@@ -8,43 +8,57 @@
   background-repeat: repeat;
   background-position: center;
   background-size: 1200px auto;
-  padding: 80px 40px;
+
+  padding: 100px 0;
 }
 
+/* CONTAINER */
 .meet-section__content {
-  max-width: 1120px;
+  width: min(1040px, calc(100% - 160px));
   margin: 0 auto;
   text-align: center;
 }
 
+/* TAG */
 .meet-section__tag {
   font-family: "Public Sans", sans-serif;
   font-size: 12.8px;
-  font-weight: 400;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #3c2015;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   line-height: 1;
+  display: inline-block;
 }
 
+/* TITLE */
 .meet-section__title {
   font-family: "Cormorant Garamond", serif;
   font-size: 43px;
-  line-height: 1.15;
+  line-height: 1.1;
   color: #3c2015;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 780px;
+  text-wrap: balance;
 }
 
-.meet-section__content {
-  max-width: 1120px;
-  margin: 0 auto;
-  text-align: center;
-}
+/* =========================
+   DESKTOP MEDIUM
+========================= */
 
-.meet-section__tag {
-  display: inline-block;
+@media (max-width: 1200px) {
+  .meet-section {
+    padding: 104px 0;
+  }
+
+  .meet-section__content {
+    width: min(980px, calc(100% - 120px));
+  }
+
+  .meet-section__title {
+    font-size: 38px;
+    max-width: 700px;
+  }
 }
 
 /* =========================
@@ -52,13 +66,17 @@
 ========================= */
 
 @media (max-width: 767px) {
-  @media (max-width: 767px) {
-    .meet-section {
-      background-image: url("/vicky-mobile.webp");
-      background-repeat: repeat;
-      background-position: center;
-      background-size: cover;
-    }
+  .meet-section {
+    background-image: url("/vicky-mobile.webp");
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+
+    padding: 72px 0;
+  }
+
+  .meet-section__content {
+    width: calc(100% - 40px);
   }
 
   .meet-section__tag {
@@ -67,8 +85,9 @@
   }
 
   .meet-section__title {
-    font-size: 32px;
-    line-height: 1.12;
+    font-size: 30px;
+    line-height: 1.08;
     max-width: 100%;
+    text-wrap: balance;
   }
 }

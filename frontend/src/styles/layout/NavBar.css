@@ -1,7 +1,5 @@
 /* =========================
    NAVBAR — BASE GLOBALE
-   Structure commune à toutes les pages.
-   Les variantes de couleur / position sont gérées plus bas.
 ========================= */
 
 .navbar {
@@ -11,10 +9,8 @@
   z-index: 1000;
 }
 
-
 /* =========================
    NAVBAR — MOBILE (DEFAULT)
-   Toujours bleue en mobile
 ========================= */
 
 .navbar {
@@ -22,10 +18,8 @@
   background-color: #bfd2ef;
 }
 
-
 /* =========================
-   BARRE DU HAUT
-   Ligne contenant logo + burger / menu desktop
+   TOP BAR
 ========================= */
 
 .navbar__top {
@@ -36,11 +30,9 @@
   justify-content: space-between;
 }
 
-/* Ligne pointillée visible uniquement quand le menu mobile est ouvert */
 .navbar--open .navbar__top {
   border-bottom: 4px dotted #3c2015;
 }
-
 
 /* =========================
    LOGO
@@ -58,9 +50,8 @@
   width: auto;
 }
 
-
 /* =========================
-   BURGER (MOBILE)
+   BURGER
 ========================= */
 
 .navbar__burger {
@@ -82,19 +73,16 @@
   transform: rotate(90deg) scale(1.08);
 }
 
-
 /* =========================
-   MENU DESKTOP
-   Caché par défaut, visible uniquement en desktop
+   MENU DESKTOP (HIDDEN BASE)
 ========================= */
 
 .navbar__menu-container {
   display: none;
 }
 
-
 /* =========================
-   MENU MOBILE — CONTENEUR
+   MOBILE MENU
 ========================= */
 
 .navbar__mobile-menu {
@@ -109,11 +97,8 @@
   align-items: center;
 }
 
-
 /* =========================
-   TYPO MOBILE — LIENS PRINCIPAUX
-   Home / Portfolio / About / Work With Me
-   On harmonise ici pour que Link et button aient le même rendu.
+   MOBILE TYPO
 ========================= */
 
 .navbar__mobile-link,
@@ -132,9 +117,6 @@
   color: #3c2015;
   cursor: pointer;
 
-  appearance: none;
-  -webkit-appearance: none;
-
   font-family: "Cormorant Garamond", serif;
   font-size: 28px;
   font-weight: 600;
@@ -142,7 +124,6 @@
   line-height: 1;
 }
 
-/* Espace entre les liens principaux du menu mobile */
 .navbar__mobile-link + .navbar__mobile-link {
   margin-top: 16px;
 }
@@ -153,10 +134,8 @@
   margin-top: 8px;
 }
 
-
 /* =========================
-   FLÈCHE GÉNÉRALE
-   Utilisée dans les boutons Portfolio desktop + mobile
+   ARROW
 ========================= */
 
 .navbar__arrow {
@@ -169,15 +148,13 @@
   transform: rotate(45deg) translateY(1px);
   margin-left: -1px;
 
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.25s ease;
 }
 
-/* Animation légère quand le menu Portfolio est ouvert */
 .navbar__dropdown-trigger[aria-expanded="true"] .navbar__arrow,
 .navbar__mobile-dropdown-trigger[aria-expanded="true"] .navbar__arrow {
   transform: rotate(45deg) translateY(1px) scale(1.1);
 }
-
 
 /* =========================
    DROPDOWN MOBILE
@@ -202,7 +179,6 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
 }
 
-/* Liens internes du sous-menu mobile */
 .navbar__mobile-sublink {
   display: flex;
   align-items: center;
@@ -214,18 +190,16 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 22px;
   line-height: 1;
+  white-space: nowrap;
 }
 
-/* Taille des fleurs dans le sous-menu mobile */
 .navbar__mobile-sublink .navbar__flower {
   font-size: 22px;
   line-height: 1;
 }
 
-
 /* =========================
-   FLEURS — COULEURS GLOBALES
-   Doivent être hors media query pour marcher aussi en mobile.
+   FLOWERS
 ========================= */
 
 .navbar__flower--olive {
@@ -236,121 +210,68 @@
   color: #ea609f;
 }
 
-
 /* =========================
-   TABLETTE
-========================= */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .navbar__top {
-    padding: 10px 20px;
-  }
-
-  .navbar__logo img {
-    height: 44px;
-  }
-
-  .navbar__mobile-link,
-  .navbar__mobile-dropdown-trigger {
-    font-size: 34px;
-  }
-
-  .navbar__mobile-sublink .navbar__flower {
-    font-size: 24px;
-  }
-}
-
-
-/* =========================
-   DESKTOP
+   DESKTOP — VERSION AJUSTÉE
 ========================= */
 
 @media (min-width: 1024px) {
-  /* En desktop, la couleur de fond est gérée par les variantes de page */
   .navbar__top {
-    padding: 10px 20px 10px 40px;
+    padding: 20px 28px 16px 40px;
   }
 
   .navbar__logo img {
-    height: 42px;
+    height: 48px;
   }
 
-  /* Capsule rose du menu desktop */
   .navbar__menu-container {
     display: inline-flex;
     align-items: center;
-    gap: 22px;
+    gap: 24px;
 
-    padding: 9px 22px;
+    padding: 12px 24px;
     background-color: #fcc5df;
     border-radius: 999px;
   }
 
-  /* Typo harmonisée des liens principaux desktop */
   .navbar__menu-link,
   .navbar__dropdown-trigger,
   .navbar__dropdown-link {
     font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
+    font-size: 21px;
     line-height: 1;
     color: #3c2015;
     text-decoration: none;
+    letter-spacing: -0.1px;
   }
 
-  /* Liens principaux : Home / About / Work With Me */
   .navbar__menu-link {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
     white-space: nowrap;
-
     font-weight: 500;
-    letter-spacing: 0.3px;
-
-    transition: transform 0.22s ease, opacity 0.22s ease;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
-  /* Conteneur du dropdown Portfolio */
   .navbar__dropdown {
     position: relative;
     display: inline-flex;
     align-items: center;
   }
 
-  /* Bouton Portfolio desktop :
-     on lui donne exactement le même rendu qu’un lien */
   .navbar__dropdown-trigger {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
-
     background: none;
     border: none;
-    padding: 0;
-    margin: 0;
     cursor: pointer;
-
-    appearance: none;
-    -webkit-appearance: none;
-
     white-space: nowrap;
-    font-weight: 500;
-    letter-spacing: 0.3px;
-
-    transition: transform 0.22s ease, opacity 0.22s ease;
   }
 
-  /* Ajustement visuel fin de la flèche sur desktop */
-  .navbar__dropdown-trigger .navbar__arrow {
-    margin-top: -2px;
-  }
-
-  /* Menu déroulant desktop */
   .navbar__dropdown-menu {
     position: absolute;
-    top: calc(100% + 12px);
+    top: calc(100% + 16px);
     left: 50%;
     transform: translateX(-50%);
 
@@ -359,7 +280,7 @@
     gap: 10px;
 
     min-width: 260px;
-    padding: 15px 18px;
+    padding: 16px 18px;
 
     background-color: #f7f5eb;
     border-radius: 18px;
@@ -370,23 +291,13 @@
     display: flex;
   }
 
-  /* Liens internes du dropdown desktop */
   .navbar__dropdown-link {
     display: flex;
     align-items: center;
     gap: 10px;
     white-space: nowrap;
-
-    transition: transform 0.22s ease, opacity 0.22s ease;
   }
 
-  /* Taille générale des fleurs en desktop */
-  .navbar__flower {
-    font-size: 20px;
-    line-height: 1;
-  }
-
-  /* Cleanup desktop */
   .navbar__burger {
     display: none;
   }
@@ -399,30 +310,17 @@
     border-bottom: none;
   }
 
-  /* =========================
-   NAVBAR — VARIANTES DESKTOP
-========================= */
-
-  /* =========================
-     NAVBAR — VARIANTES DESKTOP
-  ========================= */
-
   .navbar--home {
     position: sticky;
-    background-color: #f7f5eb;
+    background-color: transparent;
   }
-  
 
   .navbar--about {
     position: relative;
     background-color: #f4edc6;
   }
 
-  .navbar--portfolio-design {
-    position: sticky;
-    background-color: #bfd2ef;
-  }
-
+  .navbar--portfolio-design,
   .navbar--portfolio-content {
     position: sticky;
     background-color: #bfd2ef;
@@ -432,18 +330,15 @@
     position: sticky;
     background-color: transparent;
   }
-
 }
 
 /* =========================
-   HOVER DESKTOP
-   Même hover pour les liens principaux et les liens dropdown
+   HOVER
 ========================= */
 
 .navbar__menu-link:hover,
 .navbar__dropdown-trigger:hover,
 .navbar__dropdown-link:hover {
-  transform: translateX(3px);
-  opacity: 0.8;
+  transform: translateX(2px);
+  opacity: 0.85;
 }
-
