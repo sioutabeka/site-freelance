@@ -137,7 +137,7 @@
   
   @media (max-width: 767px) {
     .about-hero {
-      padding: 68px 20px 36px;
+      padding: 42px 20px 36px;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;

@@ -140,7 +140,6 @@
   /* =========================
      MOBILE
   ========================= */
-  
   @media (max-width: 767px) {
     .about-story {
       padding: 0 20px 54px;
@@ -149,8 +148,7 @@
     .about-story__scallop {
       margin: 0 -20px 40px;
       height: 22px;
-      border-bottom-left-radius: 18px;
-      border-bottom-right-radius: 18px;
+      border-radius: 0;
     }
   
     .about-story__inner {
@@ -201,4 +199,3 @@
       padding: 10px 0;
     }
   }
-  
