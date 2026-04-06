@@ -9,7 +9,7 @@ function AboutSection() {
   
           {/* IMAGE */}
           <div className="about-section__image">
-            <img src="/about-img.png" alt="Cierra" />
+            <img src="/about-img.png" alt="OseCom" />
           </div>
   
           {/* TEXTE */}
