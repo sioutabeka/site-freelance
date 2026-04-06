@@ -23,6 +23,16 @@
   border-top: 4px dotted #3c2015;
   z-index: 3;
 }
+.brands-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: translateY(50%);
+  border-top: 4px dotted #3c2015;
+  z-index: 3;
+}
 
 /* =========================
    TITRE
