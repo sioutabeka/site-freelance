@@ -71,14 +71,25 @@
   }
   
   @media (max-width: 767px) {
+
     .portfolio-cta {
-      padding: 36px 16px 48px;
+      padding: 36px 0 48px; /* ❌ plus de padding horizontal */
+      margin-bottom: 32px;
+
     }
   
     .portfolio-cta__inner {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+  
       min-height: 320px;
-      padding: 54px 22px;
+      padding: 54px 20px;
+  
       background-size: cover;
+      background-position: center;
+  
+      /* optionnel selon rendu */
+      border-radius: 0;
     }
   
     .portfolio-cta__tag {
