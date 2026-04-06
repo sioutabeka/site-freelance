@@ -63,18 +63,35 @@
   position: relative;
 }
 
+.portfolio-section__gallery-wrap::before,
 .portfolio-section__gallery-wrap::after {
   content: "";
   position: absolute;
   top: 0;
-  right: 0;
-  width: 104px;
+  width: 44px;
   height: 100%;
   pointer-events: none;
+  z-index: 2;
+}
+
+/* Fade gauche */
+.portfolio-section__gallery-wrap::before {
+  left: 0;
+  background: linear-gradient(
+    to left,
+    rgba(247, 245, 235, 0),
+    rgba(247, 245, 235, 0.5) 70%,
+    #f7f5eb 100%
+  );
+}
+
+/* Fade droite */
+.portfolio-section__gallery-wrap::after {
+  right: 0;
   background: linear-gradient(
     to right,
     rgba(247, 245, 235, 0),
-    rgba(247, 245, 235, 0.9) 72%,
+    rgba(247, 245, 235, 0.5) 70%,
     #f7f5eb 100%
   );
 }
@@ -168,8 +185,8 @@
   gap: 6px;
   width: fit-content;
   margin: 18px auto 0;
-  padding: 5px 10px;
-  background-color: #efb7da;
+  padding: 6px 12px;
+  background-color: #bfd2ef;
   border-radius: 999px;
 }
 
@@ -177,14 +194,14 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #f7ddea;
+  background-color: rgba(255, 255, 255, 0.5);
   display: block;
-  transition: background-color 0.25s ease, transform 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .portfolio-section__pagination .dot.active {
-  background-color: #fffafc;
-  transform: scale(1.08);
+  background-color: #ffffff;
+  transform: scale(1.1);
 }
 
 /* =========================
@@ -192,6 +209,12 @@
 ========================= */
 
 @media (max-width: 767px) {
+
+  .portfolio-section__gallery-wrap::before,
+  .portfolio-section__gallery-wrap::after {
+    display: none;
+  }
+
   .portfolio-section {
     padding: 42px 20px 54px;
   }
@@ -230,18 +253,10 @@
     text-align: center;
   }
 
-  .portfolio-section__gallery-wrap::after {
-    width: 44px;
-  }
-
   .portfolio-section__grid {
     gap: 12px;
     padding: 6px 28px 10px 0;
     scroll-snap-type: x mandatory;
-  }
-
-  .portfolio-section__item {
-    scroll-snap-align: start;
   }
 
   .portfolio-section__item img {
@@ -250,23 +265,16 @@
     box-shadow: 0 5px 14px rgba(60, 32, 21, 0.04);
   }
 
-  .portfolio-section__item:nth-child(4n + 1),
-  .portfolio-section__item:nth-child(4n + 2),
-  .portfolio-section__item:nth-child(4n + 3),
-  .portfolio-section__item:nth-child(4n + 4) {
+  .portfolio-section__item:nth-child(n) {
     padding-top: 0;
   }
 
-  .portfolio-section__item:nth-child(4n + 1) img,
-  .portfolio-section__item:nth-child(4n + 2) img,
-  .portfolio-section__item:nth-child(4n + 3) img,
-  .portfolio-section__item:nth-child(4n + 4) img {
+  .portfolio-section__item:nth-child(n) img {
     height: 210px;
   }
 
   .portfolio-section__item:hover img {
     transform: none;
-    box-shadow: 0 5px 14px rgba(60, 32, 21, 0.04);
   }
 
   .portfolio-section__pagination {

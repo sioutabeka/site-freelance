@@ -49,10 +49,19 @@
 .footer-section__heading {
   margin: 0 0 14px 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1;
   color: #3c2015;
 }
+
+.footer-section__column--left .footer-section__heading {
+  font-size: 32px;
+}
+
+.footer-section__column--right .footer-section__heading {
+  font-size: 29px;
+}
+
 
 /* =========================
    LIENS
