@@ -1,5 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import { sendContactEmail } from "../services/email.service.js";
+import { createOrUpdateHubspotContact } from "../services/hubspot.service.js";
 
 const prisma = new PrismaClient();
 
@@ -53,6 +54,18 @@ export async function submitContactForm(req, res) {
       console.log("Contact email sent successfully.");
     } catch (emailError) {
       console.error("Email sending error:", emailError);
+    }
+
+    try {
+      await createOrUpdateHubspotContact({
+        name,
+        email,
+        website,
+      });
+
+      console.log("HubSpot contact synced successfully.");
+    } catch (hubspotError) {
+      console.error("HubSpot sync error:", hubspotError);
     }
 
     return res.status(200).json({
