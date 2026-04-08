@@ -4,10 +4,10 @@ import "../../styles/sections/AboutMarque.css";
 
 function AboutMarqueeSection() {
   const items = [
-    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
-    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
-    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
-    "Community Management, UGC, Stratégie digitale & tout ce qui fait grandir votre marque",
+    "Stratégie, contenu, acquisition & tout ce qu’il faut pour faire rentrer des clients",
+    "Stratégie, contenu, acquisition & tout ce qu’il faut pour faire rentrer des clients",
+    "Stratégie, contenu, acquisition & tout ce qu’il faut pour faire rentrer des clients",
+    "Stratégie, contenu, acquisition & tout ce qu’il faut pour faire rentrer des clients",
   ];
 
   return (

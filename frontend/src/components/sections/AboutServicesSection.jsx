@@ -18,7 +18,7 @@ function AboutServicesSection() {
             <span className="about-services__item">UGC Content</span>
             <span className="about-services__flower about-services__flower--blue">✿</span>
 
-            <span className="about-services__item">Personal Branding</span>
+            <span className="about-services__item">Acquisition</span>
             <span className="about-services__flower about-services__flower--burgundy">✿</span>
           </div>
 

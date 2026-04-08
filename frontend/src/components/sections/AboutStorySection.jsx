@@ -4,10 +4,10 @@ import "../../styles/sections/AboutStory.css";
 function AboutStorySection() {
   const funFacts = [
     "Basée à Paris 🇫🇷",
-    "Passionnée par le contenu et les stratégies qui convertissent ✨",
-    "Background en marketing digital, growth et acquisition 📈",
-    "Toujours entre créativité, performance et image de marque 💻",
-    "Obsédée par les contenus qui captent vraiment l’attention 🎥",
+    "Marketing, growth & acquisition en background ✨",
+    "Entre stratégie et contenu (et un peu obsédée par les deux) 💻",
+    "J’aime autant analyser qu’exécuter 🧠",
+    "Le contenu, c’est bien. Le contenu qui convertit, c’est mieux 🎥",
   ];
 
   return (

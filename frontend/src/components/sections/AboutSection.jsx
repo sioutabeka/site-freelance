@@ -17,33 +17,30 @@ function AboutSection() {
             <h2 className="about-section__title">Hello, moi c’est Essia</h2>
   
             <p className="about-section__subtitle">
-            J’aide les marques à se démarquer sur les réseaux sociaux avec une approche à la fois stratégique et créative.
-            </p>
+            Je ne crée pas du contenu pour remplir un feed. Je crée du contenu qui sert votre business.            </p>
   
             <p className="about-section__text">
             </p>
   
             <p className="about-section__text">
-              Après plusieurs années en marketing digital, growth et acquisition, j’ai compris une chose :
-              publier ne suffit plus ; il faut une stratégie claire et du contenu qui capte l’attention.
+            Après plusieurs années en marketing digital, growth et acquisition, j’ai constaté un problème simple :
+Beaucoup de marques sont visibles… mais peu transforment réellement cette visibilité en clients.
             </p>
 
             <p className="about-section__text">
-              Aujourd’hui, j’accompagne des marques et des entrepreneurs à :
-            </p>
+            Aujourd’hui, j’accompagne les entreprises à :            </p>
 
             <div className="about-section__list">
-              <span>→ Clarifier leur positionnement</span>
-              <span>→ Créer du contenu impactant</span>
-              <span>→ Transformer leur audience en clients</span>
+              <span>→ Clarifier leur positionnement </span>
+              <span>→ Structurer leur contenu </span>
+              <span>→ Transformer une audience en opportunités</span>
             </div>
   
             <Link
               to="/about"
               className="about-section__button button button--blue"
             >
-              WORK WITH ME
-            </Link>
+Travailler ensemble            </Link>
 
           </div>
   

@@ -6,8 +6,9 @@ function MeetSection() {
       <div className="meet-section__content">
 
         <h2 className="meet-section__title">
-        Basée à Paris, j’accompagne les marques dans leur croissance digitale.
+        Basée à Paris, j’aide les marques à transformer leur présence en ligne en levier de croissance.
         </h2>
+      
       </div>
     </section>
   );

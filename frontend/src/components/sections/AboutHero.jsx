@@ -12,8 +12,7 @@ function AboutHero() {
         </p>
 
         <h1 className="about-hero__title">
-          Paris-based Community Manager & Creator
-        </h1>
+        I help brands grow through content </h1>
 
         <p className="about-hero__description">
         J’aide les marques à développer leur présence en ligne grâce à une stratégie claire et du contenu qui capte vraiment l’attention.

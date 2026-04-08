@@ -14,18 +14,16 @@ function Hero() {
           </p>
 
           <h1 className="hero__title">
-            Transformez vos réseaux sociaux en véritable levier de clients.
+          Transformez votre contenu en clients.
           </h1>
 
           <p className="hero__description">
-            Je vous aide à structurer votre présence, créer du contenu efficace et gagner en visibilité sans y passer des heures.
+          Je structure votre présence digitale pour attirer les bonnes personnes, renforcer votre crédibilité et générer des opportunités concrètes.
           </p>
 
           <Link
             to="/about#work-with-me"
-            className="hero__button button button--blue"
-          >
-            Prendre rendez-vous
+            className="hero__button button button--blue"> Réserver un appel 
           </Link>
         </div>
 

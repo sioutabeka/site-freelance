@@ -72,8 +72,7 @@ function ContactSection() {
         <h2 className="about-inquiry__title">Parlons de votre projet</h2>
 
         <div className="about-inquiry__notice">
-          Je travaille avec un nombre limité de clients chaque mois et privilégie
-          les collaborations sur le long terme.
+        Je travaille avec un nombre limité de marques chaque mois pour garantir un accompagnement efficace et des résultats concrets.
         </div>
 
         <form className="about-inquiry__form" onSubmit={handleSubmit}>
@@ -115,7 +114,7 @@ function ContactSection() {
                     onChange={handleChange}
                   >
                     <option value="" disabled>
-                      Sélectionner
+                    Choisissez une fourchette
                     </option>
                     <option value="Moins de 500 €">Moins de 500 €</option>
                     <option value="500 € – 1 500 €">500 € – 1 500 €</option>
@@ -146,7 +145,7 @@ function ContactSection() {
                       checked={formData.service === "Community Management"}
                       onChange={handleChange}
                     />
-                    <span>Community Management</span>
+                    <span>Community Management (gestion & optimisation)</span>
                   </label>
 
                   <label className="about-inquiry__option">
@@ -157,7 +156,7 @@ function ContactSection() {
                       checked={formData.service === "Création UGC"}
                       onChange={handleChange}
                     />
-                    <span>Création UGC</span>
+                    <span>Créer du contenu pour ma marque</span>
                   </label>
 
                   <label className="about-inquiry__option">
@@ -168,7 +167,7 @@ function ContactSection() {
                       checked={formData.service === "Stratégie digitale"}
                       onChange={handleChange}
                     />
-                    <span>Stratégie digitale</span>
+                    <span>Structurer mon contenu pour attirer des clients</span>
                   </label>
 
                   <label className="about-inquiry__option">
@@ -179,7 +178,7 @@ function ContactSection() {
                       checked={formData.service === "Audit réseaux sociaux"}
                       onChange={handleChange}
                     />
-                    <span>Audit réseaux sociaux</span>
+                    <span>Améliorer ma présence sur les réseaux</span>
                   </label>
 
                   <label className="about-inquiry__option">
@@ -234,12 +233,12 @@ function ContactSection() {
               </div>
 
               <div className="about-inquiry__field about-inquiry__field--textarea">
-                <label htmlFor="project">Parlez-moi de votre projet</label>
+                <label htmlFor="project">Décrivez votre besoin…</label>
                 <textarea
                   id="project"
                   name="project"
                   rows="5"
-                  placeholder="Décrivez votre besoin, vos objectifs, vos livrables ou le contexte de votre projet"
+                  placeholder="Expliquez-moi votre situation actuelle, vos objectifs et ce que vous attendez concrètement."
                   value={formData.project}
                   onChange={handleChange}
                 />
