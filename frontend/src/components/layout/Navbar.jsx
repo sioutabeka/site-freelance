@@ -61,7 +61,7 @@ function Navbar() {
               onClick={togglePortfolioMenu}
               aria-expanded={isPortfolioOpen}
             >
-              <span>Portfolio</span>
+              <span>Services</span>
               <span className="navbar__arrow" aria-hidden="true"></span>
             </button>
 
@@ -71,12 +71,12 @@ function Navbar() {
               }`}
             >
               <Link
-                to="/portfolio/design"
+                to="/social-growth"
                 className="navbar__dropdown-link"
                 onClick={closeMenu}
               >
                 <span className="navbar__flower navbar__flower--olive">✿</span>
-                <span>Community Management</span>
+                <span>Social Growth</span>
               </Link>
 
               <Link
@@ -120,19 +120,19 @@ function Navbar() {
             onClick={togglePortfolioMenu}
             aria-expanded={isPortfolioOpen}
           >
-            <span>Portfolio</span>
+            <span>Services</span>
             <span className="navbar__arrow" aria-hidden="true"></span>
           </button>
 
           {isPortfolioOpen && (
             <div className="navbar__mobile-submenu">
               <Link
-                to="/portfolio/design"
+                to="/social-growth"
                 className="navbar__mobile-sublink"
                 onClick={closeMenu}
               >
                 <span className="navbar__flower navbar__flower--olive">✿</span>
-                <span>Community Management</span>
+                <span>Social Growth</span>
               </Link>
 
               <Link
