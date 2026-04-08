@@ -10,8 +10,7 @@ import TermsPage from "./pages/legal/TermsPage";
 import ReturnPolicyPage from "./pages/legal/ReturnPolicyPage";
 
 import SocialGrowthPage from "./pages/SocialGrowthPage";
-import StrategyPage from "./pages/landingPages/StrategyPage.jsx";
-
+import StrategyPage from "./pages/landingPages/StrategyPage";
 
 
 function App() {
