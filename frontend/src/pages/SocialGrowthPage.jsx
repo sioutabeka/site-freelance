@@ -6,6 +6,7 @@ import SocialGrowthHero from "../components/sections/SocialGrowth/SocialGrowthHe
 import SocialGrowthIntro from "../components/sections/SocialGrowth/SocialGrowthIntro";
 import SocialGrowthServices from "../components/sections/SocialGrowth/SocialGrowthServices";
 import SocialGrowthCTA from "../components/sections/SocialGrowth/SocialGrowthCTA";
+import "../styles/sections/SocialGrowth/SocialGrowthPage.css";
 
 const SocialGrowthPage = () => {
   return (
