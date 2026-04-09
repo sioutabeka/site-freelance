@@ -1,25 +1,29 @@
-const ProblemSection = ({ title, points, results, extraText }) => {
-    return (
-      <section className="problem-section">
-        <div className="problem-container">
+import "./ProblemSection.css";
+
+const ProblemSection = ({ title, blocks }) => {
+  return (
+    <section className="problem-section">
+      <div className="problem-container">
+        <div className="problem-header">
           <h2>{title}</h2>
-  
-          <div className="problem-points">
-            {points.map((point, index) => (
-              <p key={index}>👉 {point}</p>
-            ))}
-          </div>
-  
-          <div className="problem-results">
-            {results.map((result, index) => (
-              <p key={index}>→ {result}</p>
-            ))}
-          </div>
-  
-          {extraText && <p className="problem-extra">{extraText}</p>}
         </div>
-      </section>
-    );
-  };
-  
-  export default ProblemSection;
+
+        <div className="problem-grid">
+          {blocks.map((block, index) => (
+            <article key={index} className="problem-block">
+              {block.subtitle && <h3>{block.subtitle}</h3>}
+
+              <div className="problem-text">
+                {block.text.map((paragraph, i) => (
+                  <p key={i}>{paragraph}</p>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProblemSection;

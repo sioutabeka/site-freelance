@@ -1,35 +1,28 @@
-const ResultsSection = ({ title, intro, points, before, after }) => {
-    return (
-      <section className="results-section">
-        <div className="results-container">
+import "./ResultsSection.css";
+
+const ResultsSection = ({ title, intro, points, closing }) => {
+  return (
+    <section className="results-section">
+      <div className="results-container">
+        <div className="results-header">
           <h2>{title}</h2>
-  
-          <p className="results-intro">{intro}</p>
-  
+          {intro && <p className="results-intro">{intro}</p>}
+        </div>
+
+        <div className="results-card">
           <div className="results-points">
             {points.map((point, index) => (
-              <p key={index}>→ {point}</p>
+              <p key={index} className="results-point">
+                {point}
+              </p>
             ))}
           </div>
-  
-          <div className="results-comparison">
-            <div className="before">
-              <h3>Avant</h3>
-              {before.map((item, index) => (
-                <p key={index}>- {item}</p>
-              ))}
-            </div>
-  
-            <div className="after">
-              <h3>Après</h3>
-              {after.map((item, index) => (
-                <p key={index}>- {item}</p>
-              ))}
-            </div>
-          </div>
+
+          {closing && <p className="results-closing">{closing}</p>}
         </div>
-      </section>
-    );
-  };
-  
-  export default ResultsSection;
+      </div>
+    </section>
+  );
+};
+
+export default ResultsSection;

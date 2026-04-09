@@ -1,36 +1,27 @@
 .strategy-page {
-  background-color: #fffdf8;
-  color: #3c2015;
-  --landing-accent: #bfd2ef;
-  --landing-accent-strong: #8d9333;
-}
-
-/* navbar transparente sur cette page */
-
-.strategy-page .navbar,
-.strategy-page .topbar {
-  background: transparent !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-}
-
-.strategy-page .navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 30;
-}
-
-.strategy-page .topbar {
   position: relative;
-  z-index: 31;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(191, 210, 239, 0.18), transparent 32%),
+    radial-gradient(circle at 88% 82%, rgba(141, 147, 51, 0.08), transparent 28%),
+    linear-gradient(180deg, #fffdf8 0%, #f3f0e8 100%);
 }
 
-/* si tes liens de nav deviennent illisibles, garde ça */
-.strategy-page .navbar a,
-.strategy-page .navbar button,
-.strategy-page .topbar,
-.strategy-page .topbar a {
-  color: #3c2015;
+/* grille subtile */
+.strategy-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(60, 32, 21, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(60, 32, 21, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* évite que la grille passe sur certains blocs si besoin */
+.strategy-page > * {
+  position: relative;
+  z-index: 1;
 }
