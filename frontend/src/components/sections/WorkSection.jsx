@@ -36,56 +36,60 @@ function WorkSection() {
       className={`work-section ${isVisible ? "work-section--visible" : ""}`}
     >
       <div className="work-section__inner">
-        <article className="work-card work-card--left">
-          <div className="work-card__image-placeholder"></div>
-
-          <h3 className="work-card__title">Social Growth</h3>
-
-          <p className="work-card__text">
-            Une approche stratégique pour transformer votre contenu en levier de
-            croissance. Positionnement, contenu, conversion : tout fonctionne
-            ensemble.
-          </p>
-
-          <Link
-            to="/social-growth"
-            className="work-card__button button button--olive"
-          >
-            Trouver l’offre adaptée
-          </Link>
-        </article>
-
         <div className="work-section__center">
           <div className="work-section__badge">
-            <img src={logoMark} alt="Logo OseCom" />
+            <img src={logoMark} alt="Logo Osecom" />
           </div>
 
-          <p className="work-section__tag">WORK WITH OSECOM</p>
+          <p className="work-section__tag">OFFRE SIGNATURE</p>
 
           <h2 className="work-section__title">
-            Ways to work with me
+            Community Management, version stratégique
           </h2>
-          
+
+          <p className="work-section__intro">
+            Une offre pensée pour déléguer vos réseaux sociaux avec exigence.
+          </p>
         </div>
 
-        <article className="work-card work-card--right">
-          <div className="work-card__image-placeholder"></div>
+        <div className="work-section__grid">
+          <article className="work-card">
+            <h3 className="work-card__title">Stratégie</h3>
+            <p className="work-card__text">
+              Benchmark, positionnement, ligne éditoriale et direction visuelle.
+            </p>
+          </article>
 
-          <h3 className="work-card__title">UGC Portfolio</h3>
+          <article className="work-card">
+            <h3 className="work-card__title">Pilotage éditorial</h3>
+            <p className="work-card__text">
+              Calendrier, formats, rythme et organisation des prises de parole.
+            </p>
+          </article>
 
-          <p className="work-card__text">
-            Des contenus pensés pour capter l’attention, incarner votre marque
-            et performer sur les plateformes. Explorez les formats déjà
-            réalisés.
-          </p>
+          <article className="work-card">
+            <h3 className="work-card__title">Animation & modération</h3>
+            <p className="work-card__text">
+              Publication, gestion des interactions et engagement des communautés.
+            </p>
+          </article>
 
+          <article className="work-card">
+            <h3 className="work-card__title">Visibilité & performance</h3>
+            <p className="work-card__text">
+              Boosts, campagnes paid, suivi des résultats et optimisation.
+            </p>
+          </article>
+        </div>
+
+        <div className="work-section__cta">
           <Link
-            to="/portfolio"
+            to="/about#work-with-me"
             className="work-card__button button button--olive"
           >
-            Consulter le portfolio
+            Parler de votre projet
           </Link>
-        </article>
+        </div>
       </div>
     </section>
   );

@@ -12,36 +12,36 @@ function AboutSection() {
 
       <div className="about-section__inner">
         <div className="about-section__image">
-          <img src="/about-img.png" alt="OseCom" />
+          <img src="/about-img.png" alt="Essia, fondatrice de OSECOM" />
         </div>
 
         <div className="about-section__content">
-          <h2 className="about-section__title">Hello, moi c’est Essia</h2>
+          <h2 className="about-section__title">Derrière OSECOM</h2>
 
           <p className="about-section__subtitle">
-            Je ne crée pas du contenu pour remplir un feed. Je crée du contenu qui sert votre business.
+            Je suis créatrice et stratège social media basée à Paris.
           </p>
 
           <p className="about-section__text">
-            Après plusieurs années en marketing digital, growth et acquisition, j’ai constaté un problème simple :
-            Beaucoup de marques sont visibles… mais peu transforment réellement cette visibilité en clients.
+            J’aide les marques à construire une présence plus forte, plus cohérente et plus impactante.
           </p>
 
           <p className="about-section__text">
-            Aujourd’hui, j’accompagne les entreprises à :
+            OSECOM est né d’une conviction simple :
+            ce qui fonctionne, c’est l’alignement entre stratégie, contenu et constance.
           </p>
 
           <div className="about-section__list">
-            <span>→ Clarifier leur positionnement</span>
-            <span>→ Structurer leur contenu</span>
-            <span>→ Transformer une audience en opportunités</span>
+            <span>→ Une vision claire</span>
+            <span>→ Un contenu pensé pour votre image</span>
+            <span>→ Une présence structurée pour performer</span>
           </div>
 
           <Link
             to="/about"
             className="about-section__button button button--blue"
           >
-            Travailler ensemble
+            Découvrir mon approche
           </Link>
         </div>
       </div>

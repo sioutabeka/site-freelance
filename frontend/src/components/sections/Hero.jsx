@@ -10,34 +10,37 @@ function Hero() {
       <div className="hero__inner">
         <div className="hero__content">
           <p className="hero__tag">
-            Experte Social Media & Stratégie Digitale à Paris
+            Social Growth isn’t an option
           </p>
 
           <h1 className="hero__title">
-            Transformez votre contenu en{" "}
-            <span className="hero__title-accent">clients.</span>
+            Je transforme vos contenus en{" "}
+            <span className="hero__title-accent">en client.</span>
           </h1>
 
           <p className="hero__description">
-          Je structure votre présence digitale pour attirer les bonnes personnes, renforcer votre crédibilité et générer des opportunités concrètes.
+            Stratégie, contenu, community management et performance.
+            J’aide les marques à construire une présence claire, cohérente et désirable.
           </p>
 
           <Link
             to="/about#work-with-me"
-            className="hero__button button button--lg button--hero-pink"> Réserver un appel 
+            className="hero__button button button--lg button--hero-pink"
+          >
+            Prendre rendez-vous
           </Link>
         </div>
 
         <div className="hero__image">
           <img
             src={heroImageTest}
-            alt="Experte en stratégie digitale et community management à Paris"
+            alt="OSECOM, studio de social media et de growth à Paris"
             className="hero__img hero__img--desktop"
           />
 
           <img
             src={heroImageMobile}
-            alt="Experte en stratégie digitale et community management à Paris"
+            alt="OSECOM, studio de social media et de growth à Paris"
             className="hero__img hero__img--mobile"
           />
         </div>

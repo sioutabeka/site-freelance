@@ -14,8 +14,10 @@
 .meet-section__content {
   width: min(1120px, calc(100% - 140px));
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  align-items: stretch;
 }
 
 /* CARD */
@@ -24,8 +26,7 @@
   position: relative;
   overflow: hidden;
 
-  width: min(1000px, 100%);
-  padding: 64px 60px;
+  padding: 56px 44px;
   border-radius: 28px;
 
   background-image: url("/pattern-vicky.webp");
@@ -36,7 +37,7 @@
     0 18px 50px rgba(60, 32, 21, 0.05),
     0 4px 18px rgba(60, 32, 21, 0.03);
 
-  text-align: center;
+  text-align: left;
 }
 
 /* OVERLAY POUR LISIBILITÉ */
@@ -49,7 +50,7 @@
   background: linear-gradient(
     180deg,
     rgba(247, 245, 235, 0.72) 0%,
-    rgba(247, 245, 235, 0.86) 100%
+    rgba(247, 245, 235, 0.88) 100%
   );
 
   backdrop-filter: blur(2px);
@@ -62,11 +63,11 @@
   position: relative;
   z-index: 2;
 
-  margin: 0 auto;
-  max-width: 760px;
+  margin: 0 0 20px 0;
+  max-width: 100%;
 
   font-family: "Public Sans", sans-serif;
-  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-size: clamp(1.9rem, 2.5vw, 2.6rem);
   font-weight: 400;
 
   line-height: 1.08;
@@ -74,6 +75,24 @@
 
   color: #3c2015;
   text-wrap: balance;
+}
+
+/* TEXT */
+
+.meet-section__text {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+  max-width: 520px;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+
+  color: rgba(60, 32, 21, 0.9);
 }
 
 /* ACCENT */
@@ -100,15 +119,15 @@
 
   .meet-section__content {
     width: min(980px, calc(100% - 96px));
+    gap: 24px;
   }
 
   .meet-section__card {
-    width: min(780px, 100%);
-    padding: 56px 48px;
+    padding: 48px 36px;
   }
 
   .meet-section__title {
-    font-size: clamp(2.2rem, 4.2vw, 3rem);
+    font-size: clamp(1.8rem, 3vw, 2.3rem);
   }
 }
 
@@ -123,16 +142,23 @@
 
   .meet-section__content {
     width: calc(100% - 64px);
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .meet-section__card {
-    padding: 48px 36px;
+    padding: 44px 32px;
     border-radius: 26px;
   }
 
   .meet-section__title {
-    font-size: clamp(2rem, 5.5vw, 2.8rem);
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
     line-height: 1.1;
+  }
+
+  .meet-section__text {
+    font-size: 0.98rem;
+    line-height: 1.7;
   }
 }
 
@@ -147,11 +173,13 @@
 
   .meet-section__content {
     width: calc(100% - 40px);
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .meet-section__card {
     width: 100%;
-    padding: 36px 24px;
+    padding: 32px 24px;
     border-radius: 24px;
 
     background-image: url("/vicky-mobile.webp");
@@ -159,8 +187,14 @@
   }
 
   .meet-section__title {
-    font-size: clamp(1.9rem, 8vw, 2.5rem);
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
     line-height: 1.1;
     letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  .meet-section__text {
+    font-size: 0.96rem;
+    line-height: 1.65;
   }
 }
