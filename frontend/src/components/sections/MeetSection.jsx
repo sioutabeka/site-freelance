@@ -5,10 +5,13 @@ function MeetSection() {
     <section className="meet-section">
       <div className="meet-section__content">
 
-        <div className="meet-section__card">
+        <div className="meet-section__card meet-section__card--negative">
+          <div className="meet-section__icon">–</div>
+
           <h2 className="meet-section__title">
             Publier ne suffit plus.
           </h2>
+
           <p className="meet-section__text">
             Beaucoup d’entreprises sont présentes sur les réseaux…
             mais sans réelle stratégie.
@@ -17,10 +20,13 @@ function MeetSection() {
           </p>
         </div>
 
-        <div className="meet-section__card">
+        <div className="meet-section__card meet-section__card--positive">
+          <div className="meet-section__icon">+</div>
+
           <h2 className="meet-section__title">
             Une présence structurée change tout.
           </h2>
+
           <p className="meet-section__text">
             Je construis une stratégie social media claire et performante
             pour transformer vos réseaux en levier de visibilité,

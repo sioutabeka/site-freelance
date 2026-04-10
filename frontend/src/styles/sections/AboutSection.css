@@ -1,49 +1,67 @@
 /* =========================
-   ABOUT SECTION — VERSION COHÉRENTE SITE
+   ABOUT SECTION — ÉDITORIAL / SIGNATURE
 ========================= */
 
 .about-section {
   position: relative;
   overflow: hidden;
-  padding: 128px 0;
-  background: linear-gradient(180deg, #3c2015 0%, #2f180f 100%);
+  padding: 120px 0;
+  background: linear-gradient(180deg, #3c2015 0%, #2b160f 100%);
 }
 
-.about-section::before,
-.about-section::after {
-  content: "";
+/* BG LAYERS */
+
+.about-section__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-section__orb {
   position: absolute;
   border-radius: 999px;
-  filter: blur(90px);
-  pointer-events: none;
-  z-index: 0;
+  filter: blur(100px);
+  opacity: 0.9;
 }
 
-.about-section::before {
-  top: 12%;
+.about-section__orb--pink {
+  top: 10%;
   left: -6%;
+  width: 340px;
+  height: 340px;
+  background: rgba(232, 166, 176, 0.14);
+}
+
+.about-section__orb--blue {
+  right: -5%;
+  bottom: 10%;
   width: 320px;
   height: 320px;
-  background: rgba(234, 96, 159, 0.16);
+  background: rgba(191, 210, 239, 0.12);
 }
 
-.about-section::after {
-  right: -4%;
-  bottom: 8%;
-  width: 300px;
-  height: 300px;
-  background: rgba(191, 210, 239, 0.14);
+.about-section__grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image:
+    linear-gradient(rgba(247, 245, 235, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(247, 245, 235, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+  -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
 }
 
 .about-section__inner {
   position: relative;
   z-index: 2;
-  width: min(1120px, calc(100% - 128px));
+  width: min(1120px, calc(100% - 96px));
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: minmax(320px, 430px) minmax(0, 620px);
-  gap: 72px;
+  gap: 64px;
   align-items: center;
 }
 
@@ -55,13 +73,16 @@
 
 .about-section__image img {
   width: 100%;
-  height: 580px;
+  height: 600px;
   object-fit: cover;
   display: block;
   border-radius: 32px;
+
   box-shadow:
-    0 24px 54px rgba(0, 0, 0, 0.14),
-    0 6px 18px rgba(0, 0, 0, 0.1);
+    0 28px 64px rgba(0, 0, 0, 0.18),
+    0 8px 22px rgba(0, 0, 0, 0.12);
+
+  border: 1px solid rgba(247, 245, 235, 0.08);
 }
 
 /* CONTENT */
@@ -71,25 +92,34 @@
 }
 
 .about-section__title {
-  margin: 0 0 20px;
+  margin: 0 0 24px;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-size: clamp(3.1rem, 5vw, 4.8rem);
   font-weight: 500;
-  line-height: 0.96;
-  letter-spacing: -0.04em;
+  line-height: 0.92;
+  letter-spacing: -0.045em;
   color: #f7f5eb;
   text-wrap: balance;
 }
 
+/* pour styliser uniquement OSECOM si on wrappe le mot */
+.about-section__title-brand {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #f4edc6;
+}
+
 .about-section__subtitle {
-  margin: 0 0 26px;
+  margin: 0 0 30px;
   max-width: 560px;
 
   font-family: "Public Sans", sans-serif;
-  font-size: 1.04rem;
+  font-size: 1.05rem;
   line-height: 1.72;
-  color: rgba(247, 245, 235, 0.9);
+  color: rgba(247, 245, 235, 0.92);
 }
 
 .about-section__text {
@@ -97,33 +127,71 @@
   max-width: 580px;
 
   font-family: "Public Sans", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.78;
-  color: rgba(247, 245, 235, 0.8);
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: rgba(247, 245, 235, 0.78);
 }
 
 .about-section__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin: 28px 0 34px;
+  gap: 12px;
+  margin: 30px 0 36px;
 }
 
 .about-section__list span {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.72;
+  color: rgba(247, 245, 235, 0.96);
+}
+
+.about-section__list span::before {
+  content: "✿";
+  flex: 0 0 auto;
+
+  transform: translateY(6px); /* 🔥 ajuste ici */
 
   font-family: "Public Sans", sans-serif;
   font-size: 0.95rem;
-  line-height: 1.72;
-  color: rgba(247, 245, 235, 0.94);
+  line-height: 1;
+  color: #f4edc6;
 }
 
-/* BUTTON
-   on laisse le design venir du composant .button
-   ici on gère seulement son placement */
+/* BOUTON — HARMONISÉ AVEC HERO / WORK */
 
 .about-section__button {
   margin-top: 2px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 54px;
+  padding: 0.95rem 1.55rem;
+  border-radius: 999px;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1;
+
+  text-transform: none;
+  letter-spacing: -0.01em;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.about-section__button:hover {
+  transform: translateY(-3px);
 }
 
 /* =========================
@@ -132,13 +200,13 @@
 
 @media (max-width: 1200px) {
   .about-section {
-    padding: 112px 0;
+    padding: 108px 0;
   }
 
   .about-section__inner {
-    width: min(1040px, calc(100% - 96px));
+    width: min(1040px, calc(100% - 72px));
     grid-template-columns: minmax(300px, 390px) minmax(0, 560px);
-    gap: 56px;
+    gap: 52px;
   }
 
   .about-section__image img {
@@ -147,22 +215,22 @@
   }
 
   .about-section__title {
-    font-size: clamp(2.5rem, 4.6vw, 4rem);
-    margin-bottom: 18px;
+    font-size: clamp(2.8rem, 4.6vw, 4.2rem);
+    margin-bottom: 20px;
   }
 
   .about-section__subtitle {
     font-size: 1rem;
-    margin-bottom: 22px;
+    margin-bottom: 26px;
   }
 
   .about-section__text,
   .about-section__list span {
-    font-size: 0.92rem;
+    font-size: 0.93rem;
   }
 
   .about-section__list {
-    margin: 24px 0 30px;
+    margin: 26px 0 32px;
   }
 }
 
@@ -197,27 +265,27 @@
   }
 
   .about-section__title {
-    font-size: clamp(2.5rem, 6vw, 3.6rem);
-    line-height: 1;
-    margin: 0 0 16px;
+    font-size: clamp(2.8rem, 6vw, 3.9rem);
+    line-height: 0.96;
+    margin: 0 0 18px;
   }
 
   .about-section__subtitle {
     font-size: 1rem;
     line-height: 1.68;
-    margin: 0 0 22px;
+    margin: 0 0 24px;
     max-width: 100%;
   }
 
   .about-section__text {
     font-size: 0.94rem;
-    line-height: 1.72;
+    line-height: 1.74;
     margin: 0 0 16px;
     max-width: 100%;
   }
 
   .about-section__list {
-    gap: 9px;
+    gap: 10px;
     margin: 24px 0 30px;
   }
 
@@ -236,16 +304,21 @@
     padding: 76px 0 82px;
   }
 
-  .about-section::before {
+  .about-section__orb--pink {
     width: 220px;
     height: 220px;
     top: 10%;
   }
 
-  .about-section::after {
+  .about-section__orb--blue {
     width: 220px;
     height: 220px;
     bottom: 8%;
+  }
+
+  .about-section__grid {
+    opacity: 0.035;
+    background-size: 24px 24px;
   }
 
   .about-section__inner {
@@ -264,8 +337,8 @@
   }
 
   .about-section__title {
-    font-size: 34px;
-    line-height: 1;
+    font-size: 38px;
+    line-height: 0.98;
     letter-spacing: -0.02em;
     margin: 0 0 14px;
   }
@@ -273,13 +346,13 @@
   .about-section__subtitle {
     font-size: 0.95rem;
     line-height: 1.62;
-    margin: 0 0 18px;
+    margin: 0 0 20px;
     max-width: 100%;
   }
 
   .about-section__text {
-    font-size: 0.86rem;
-    line-height: 1.68;
+    font-size: 0.87rem;
+    line-height: 1.7;
     margin: 0 0 14px;
     max-width: 100%;
   }
@@ -290,7 +363,18 @@
   }
 
   .about-section__list span {
-    font-size: 0.86rem;
+    font-size: 0.87rem;
     line-height: 1.64;
+    gap: 8px;
+  }
+
+  .about-section__list span::before {
+    font-size: 0.88rem;
+  }
+
+  .about-section__button {
+    min-height: 52px;
+    padding: 0.9rem 1.4rem;
+    font-size: 0.96rem;
   }
 }

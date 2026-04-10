@@ -44,7 +44,7 @@ function WorkSection() {
           <p className="work-section__tag">OFFRE SIGNATURE</p>
 
           <h2 className="work-section__title">
-            Community Management, version stratégique
+            Community Management Stratégique
           </h2>
 
           <p className="work-section__intro">
@@ -85,8 +85,7 @@ function WorkSection() {
         <div className="work-section__cta">
           <Link
             to="/about#work-with-me"
-            className="work-card__button button button--olive"
-          >
+            className="button button--lg button--primary"                      >
             Parler de votre projet
           </Link>
         </div>

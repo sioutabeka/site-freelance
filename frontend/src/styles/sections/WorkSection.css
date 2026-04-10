@@ -4,14 +4,14 @@
 
 .work-section {
   background-color: #f7f5eb;
-  padding: 110px 0 138px;
+  padding: 100px 0 124px;
   position: relative;
 }
 
 /* CONTENEUR GLOBAL */
 .work-section__inner {
   margin: 0 auto;
-  width: min(1120px, calc(100% - 128px));
+  width: min(1120px, calc(100% - 96px));
 
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 .work-section__center {
   text-align: center;
   padding: 0 10px;
-  margin-bottom: 52px;
+  margin-bottom: 48px;
 
   display: flex;
   flex-direction: column;
@@ -50,38 +50,41 @@
   display: block;
 }
 
-/* TAG */
+/* TAG — ALIGNÉ HERO */
 .work-section__tag {
+  margin: 0 0 18px;
+
   font-family: "Public Sans", sans-serif;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(60, 32, 21, 0.72);
-  margin-bottom: 14px;
+  color: rgba(60, 32, 21, 0.78);
 }
 
 /* TITRE */
 .work-section__title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.5rem, 4vw, 4rem);
-  font-weight: 500;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
+  margin: 0 auto 28px;
+  max-width: 720px;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
   color: #3c2015;
-  margin: 0 auto 18px;
-  max-width: 620px;
   text-wrap: balance;
 }
 
 /* INTRO */
 .work-section__intro {
+  margin: 0 auto;
+  max-width: 560px;
+
   font-family: "Public Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: rgba(60, 32, 21, 0.82);
-  margin: 0 auto;
-  max-width: 560px;
   text-wrap: balance;
 }
 
@@ -93,8 +96,8 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, minmax(260px, 1fr));
-  gap: 28px;
-  margin-bottom: 34px;
+  gap: 24px;
+  margin-bottom: 36px;
 }
 
 /* =========================
@@ -102,15 +105,19 @@
 ========================= */
 
 .work-card {
-  background: #f7f5eb;
   width: 100%;
-  padding: 30px 28px 32px;
+  padding: 32px 30px 34px;
   text-align: left;
   border-radius: 24px;
 
-  box-shadow:
-    0 14px 36px rgba(60, 32, 21, 0.05),
-    0 4px 14px rgba(60, 32, 21, 0.03);
+  background-color: #f4f1e6;
+  border: 1px solid rgba(60, 32, 21, 0.08);
+
+  box-shadow: 0 10px 30px rgba(60, 32, 21, 0.045);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   opacity: 0;
   transform: translateY(56px);
@@ -119,6 +126,7 @@
   transition:
     transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease,
     opacity 0.7s ease;
 }
 
@@ -132,6 +140,7 @@
 .work-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 40px rgba(60, 32, 21, 0.07);
+  border-color: rgba(60, 32, 21, 0.12);
 }
 
 /* OPTION : si tu gardes l'image placeholder */
@@ -146,36 +155,32 @@
 
 .work-card__image-placeholder {
   min-height: 220px;
-  background: linear-gradient(
-    180deg,
-    rgba(244, 237, 198, 0.55) 0%,
-    rgba(191, 210, 239, 0.38) 100%
-  );
+  background: #ece7d6;
 }
 
 /* TEXTES */
 
 .work-card__title {
+  margin: 0 0 12px;
+  min-height: 2.5em;
+
   font-family: "Public Sans", sans-serif;
-  font-size: 1.28rem;
+  font-size: 1.42rem;
   font-weight: 600;
   line-height: 1.12;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   color: #3c2015;
-  margin-bottom: 12px;
+  text-wrap: balance;
 }
 
 .work-card__text {
+  margin: 0;
+
   font-family: "Public Sans", sans-serif;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
   line-height: 1.7;
   color: rgba(60, 32, 21, 0.84);
   max-width: 100%;
-  margin: 0;
-}
-
-.work-card__button {
-  align-self: center;
 }
 
 /* =========================
@@ -194,23 +199,27 @@
 
 @media (max-width: 1200px) {
   .work-section {
-    padding: 96px 0 124px;
+    padding: 92px 0 112px;
   }
 
   .work-section__inner {
-    width: min(1020px, calc(100% - 96px));
+    width: min(1080px, calc(100% - 72px));
   }
 
   .work-section__title {
-    max-width: 560px;
+    max-width: 640px;
   }
 
   .work-section__grid {
-    gap: 24px;
+    gap: 22px;
   }
 
   .work-card {
-    padding: 26px 24px 28px;
+    padding: 28px 26px 30px;
+  }
+
+  .work-card__title {
+    font-size: 1.34rem;
   }
 }
 
@@ -231,9 +240,16 @@
     margin-bottom: 40px;
   }
 
+  .work-section__tag {
+    margin-bottom: 16px;
+    font-size: 11px;
+  }
+
   .work-section__title {
-    max-width: 520px;
-    font-size: clamp(2.2rem, 5.4vw, 3.2rem);
+    max-width: 620px;
+    font-size: clamp(2.3rem, 5.4vw, 3.4rem);
+    line-height: 1;
+    margin-bottom: 24px;
   }
 
   .work-section__grid {
@@ -243,8 +259,13 @@
 
   .work-card {
     max-width: 100%;
-    padding: 24px 22px 26px;
+    padding: 26px 24px 28px;
     transform: translateY(42px);
+  }
+
+  .work-card__title {
+    min-height: auto;
+    font-size: 1.24rem;
   }
 
   .work-section--visible .work-card {
@@ -259,7 +280,7 @@
 
 @media (max-width: 767px) {
   .work-section {
-    padding: 76px 0 96px;
+    padding: 72px 0 92px;
   }
 
   .work-section__inner {
@@ -270,9 +291,15 @@
     margin-bottom: 32px;
   }
 
-  .work-section__title {
-    font-size: clamp(2rem, 8vw, 2.7rem);
+  .work-section__tag {
     margin-bottom: 14px;
+    font-size: 10px;
+  }
+
+  .work-section__title {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 22px;
+    line-height: 1.02;
   }
 
   .work-section__intro {
@@ -288,7 +315,7 @@
 
   .work-card {
     width: 100%;
-    padding: 22px 18px 24px;
+    padding: 22px 20px 24px;
     border-radius: 20px;
     transform: translateY(34px);
   }
@@ -299,7 +326,8 @@
   }
 
   .work-card__title {
-    font-size: 1.15rem;
+    min-height: auto;
+    font-size: 1.18rem;
   }
 
   .work-card__text {
@@ -308,7 +336,8 @@
   }
 
   .work-card__button {
-    font-size: 9px;
-    padding: 6px 12px;
+    min-height: 52px;
+    padding: 0.9rem 1.4rem;
+    font-size: 0.96rem;
   }
 }

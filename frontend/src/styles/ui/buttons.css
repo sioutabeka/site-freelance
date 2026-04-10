@@ -271,3 +271,55 @@
 
   box-shadow: 0 18px 42px rgba(60, 32, 21, 0.12);
 }
+
+
+
+
+
+.button--blue-soft {
+  background-color: #bfd2ef; /* bleu poudre DS */
+  color: #3c2015;
+}
+
+.button--blue-soft:hover {
+  background-color: #f4edc6; /* jaune DS */
+  color: #3c2015;
+}
+
+
+
+.button--primary {
+  background-color: #828234;
+  color: #f7f5eb;
+
+  box-shadow: 0 14px 34px rgba(130, 130, 52, 0.22);
+}
+
+.button--primary:hover {
+  background-color: #f4edc6;
+  color: #3c2015;
+
+  box-shadow: 0 18px 42px rgba(60, 32, 21, 0.12);
+}
+
+
+
+
+/* =========================
+   SECONDARY BUTTON
+   (JAUNE → BLEU)
+========================= */
+
+.button--secondary {
+  background-color: #f4edc6; /* jaune */
+  color: #3c2015;
+
+  box-shadow: 0 12px 28px rgba(60, 32, 21, 0.08);
+}
+
+.button--secondary:hover {
+  background-color: #bfd2ef; /* bleu */
+  color: #3c2015;
+
+  box-shadow: 0 16px 36px rgba(60, 32, 21, 0.12);
+}

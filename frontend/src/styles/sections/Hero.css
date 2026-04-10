@@ -55,9 +55,9 @@
 
   background: linear-gradient(
     90deg,
-    #ea609f 0%,
-    #d86aa0 40%,
-    #3c2015 100%
+    #828234 0%,   /* vert olive */
+    #a0a05a 40%,  /* transition douce */
+    #3c2015 100%  /* marron */
   );
 
   -webkit-background-clip: text;
@@ -88,6 +88,20 @@
   align-items: center;
   gap: 0.9rem;
   flex-wrap: wrap;
+}
+
+.button--hero-override {
+  background-color: #828234; /* vert olive */
+  color: #f7f5eb;
+
+  box-shadow: 0 14px 34px rgba(130, 130, 52, 0.22);
+}
+
+.button--hero-override:hover {
+  background-color: #f4edc6; /* jaune cream */
+  color: #3c2015;
+
+  box-shadow: 0 18px 42px rgba(60, 32, 21, 0.12);
 }
 
 /* 
@@ -284,3 +298,5 @@ Le vrai style doit être dans buttons.css
     display: block;
   }
 }
+
+

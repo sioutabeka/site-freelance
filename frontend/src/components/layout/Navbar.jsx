@@ -5,7 +5,6 @@ import "../../styles/layout/NavBar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
 
   const location = useLocation();
   const pathname = location.pathname;
@@ -27,20 +26,19 @@ function Navbar() {
 
   const closeMenu = () => {
     setIsOpen(false);
-    setIsPortfolioOpen(false);
-  };
-
-  const togglePortfolioMenu = () => {
-    setIsPortfolioOpen(!isPortfolioOpen);
   };
 
   return (
     <nav className={`navbar ${navbarVariant} ${isOpen ? "navbar--open" : ""}`}>
+      
       <div className="navbar__top">
+        
+        {/* LOGO */}
         <Link to="/" className="navbar__logo" onClick={closeMenu}>
           <img src={logo} alt="Logo OseCom Freelance Siouta" />
         </Link>
 
+        {/* BURGER */}
         <button
           className="navbar__burger"
           aria-label={isOpen ? "Fermer le menu" : "Ouvrir le menu"}
@@ -49,48 +47,30 @@ function Navbar() {
           {isOpen ? "×" : "☰"}
         </button>
 
+        {/* DESKTOP MENU */}
         <div className="navbar__menu-container">
-          <Link to="/" className="navbar__menu-link" onClick={closeMenu}>
-            <span>Home</span>
+
+          <Link
+            to="/social-growth"
+            className="navbar__menu-link"
+            onClick={closeMenu}
+          >
+            <span>Social Growth</span>
           </Link>
 
-          <div className="navbar__dropdown">
-            <button
-              type="button"
-              className="navbar__menu-link navbar__dropdown-trigger"
-              onClick={togglePortfolioMenu}
-              aria-expanded={isPortfolioOpen}
-            >
-              <span>Services</span>
-              <span className="navbar__arrow" aria-hidden="true"></span>
-            </button>
+          <Link
+            to="/portfolio/content"
+            className="navbar__menu-link"
+            onClick={closeMenu}
+          >
+            <span>UGC</span>
+          </Link>
 
-            <div
-              className={`navbar__dropdown-menu ${
-                isPortfolioOpen ? "navbar__dropdown-menu--open" : ""
-              }`}
-            >
-              <Link
-                to="/social-growth"
-                className="navbar__dropdown-link"
-                onClick={closeMenu}
-              >
-                <span className="navbar__flower navbar__flower--olive">✿</span>
-                <span>Social Growth</span>
-              </Link>
-
-              <Link
-                to="/portfolio/content"
-                className="navbar__dropdown-link"
-                onClick={closeMenu}
-              >
-                <span className="navbar__flower navbar__flower--pink">✿</span>
-                <span>UGC</span>
-              </Link>
-            </div>
-          </div>
-
-          <Link to="/about" className="navbar__menu-link" onClick={closeMenu}>
+          <Link
+            to="/about"
+            className="navbar__menu-link"
+            onClick={closeMenu}
+          >
             <span>About</span>
           </Link>
 
@@ -101,53 +81,38 @@ function Navbar() {
           >
             <span>Work With Me</span>
           </Link>
+
         </div>
       </div>
 
+      {/* MOBILE MENU */}
       <div
         className={`navbar__mobile-menu ${
           isOpen ? "navbar__mobile-menu--open" : ""
         }`}
       >
-        <Link to="/" className="navbar__mobile-link" onClick={closeMenu}>
-          <span>Home</span>
+
+        <Link
+          to="/social-growth"
+          className="navbar__mobile-link"
+          onClick={closeMenu}
+        >
+          <span>Social Growth</span>
         </Link>
 
-        <div className="navbar__mobile-dropdown">
-          <button
-            type="button"
-            className="navbar__mobile-link navbar__mobile-dropdown-trigger"
-            onClick={togglePortfolioMenu}
-            aria-expanded={isPortfolioOpen}
-          >
-            <span>Services</span>
-            <span className="navbar__arrow" aria-hidden="true"></span>
-          </button>
+        <Link
+          to="/portfolio/content"
+          className="navbar__mobile-link"
+          onClick={closeMenu}
+        >
+          <span>UGC</span>
+        </Link>
 
-          {isPortfolioOpen && (
-            <div className="navbar__mobile-submenu">
-              <Link
-                to="/social-growth"
-                className="navbar__mobile-sublink"
-                onClick={closeMenu}
-              >
-                <span className="navbar__flower navbar__flower--olive">✿</span>
-                <span>Social Growth</span>
-              </Link>
-
-              <Link
-                to="/portfolio/content"
-                className="navbar__mobile-sublink"
-                onClick={closeMenu}
-              >
-                <span className="navbar__flower navbar__flower--pink">✿</span>
-                <span>UGC</span>
-              </Link>
-            </div>
-          )}
-        </div>
-
-        <Link to="/about" className="navbar__mobile-link" onClick={closeMenu}>
+        <Link
+          to="/about"
+          className="navbar__mobile-link"
+          onClick={closeMenu}
+        >
           <span>About</span>
         </Link>
 
@@ -158,6 +123,7 @@ function Navbar() {
         >
           <span>Work With Me</span>
         </Link>
+
       </div>
     </nav>
   );

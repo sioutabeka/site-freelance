@@ -12,11 +12,14 @@ function AboutSection() {
 
       <div className="about-section__inner">
         <div className="about-section__image">
-          <img src="/about-img.png" alt="Essia, fondatrice de OSECOM" />
+          <img src="/about-img.png" alt="Essia, fondatrice d'OseCom" />
         </div>
 
         <div className="about-section__content">
-          <h2 className="about-section__title">Derrière OSECOM</h2>
+          <h2 className="about-section__title">
+            Derrière{" "}
+            <span className="about-section__title-brand">OseCom</span>
+          </h2>
 
           <p className="about-section__subtitle">
             Je suis créatrice et stratège social media basée à Paris.
@@ -27,20 +30,19 @@ function AboutSection() {
           </p>
 
           <p className="about-section__text">
-            OSECOM est né d’une conviction simple :
+            OseCom est né d’une conviction simple :
             ce qui fonctionne, c’est l’alignement entre stratégie, contenu et constance.
           </p>
 
           <div className="about-section__list">
-            <span>→ Une vision claire</span>
-            <span>→ Un contenu pensé pour votre image</span>
-            <span>→ Une présence structurée pour performer</span>
+            <span>Une vision claire</span>
+            <span>Un contenu pensé pour votre image</span>
+            <span>Une présence structurée pour performer</span>
           </div>
 
           <Link
             to="/about"
-            className="about-section__button button button--blue"
-          >
+            className="button button--lg button--secondary"          >
             Découvrir mon approche
           </Link>
         </div>

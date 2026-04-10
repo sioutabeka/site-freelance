@@ -25,8 +25,7 @@ function Hero() {
 
           <Link
             to="/about#work-with-me"
-            className="hero__button button button--lg button--hero-pink"
-          >
+            className="button button--lg button--primary"            >
             Prendre rendez-vous
           </Link>
         </div>
