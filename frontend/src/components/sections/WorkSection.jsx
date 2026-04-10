@@ -15,11 +15,11 @@ function WorkSection() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(section); // 👈 important : déclenche une seule fois
+          observer.unobserve(section);
         }
       },
       {
-        threshold: 0.2, // un peu plus naturel que 0.15
+        threshold: 0.2,
       }
     );
 
@@ -36,57 +36,56 @@ function WorkSection() {
       className={`work-section ${isVisible ? "work-section--visible" : ""}`}
     >
       <div className="work-section__inner">
-
-        {/* LEFT CARD */}
         <article className="work-card work-card--left">
           <div className="work-card__image-placeholder"></div>
 
           <h3 className="work-card__title">Social Growth</h3>
 
           <p className="work-card__text">
-          On structure votre contenu pour en faire un levier de croissance.
-Stratégie, contenu, acquisition : Tout fonctionne ensemble ! </p>
+            Une approche stratégique pour transformer votre contenu en levier de
+            croissance. Positionnement, contenu, conversion : tout fonctionne
+            ensemble.
+          </p>
 
           <Link
-            to="/about#work-with-me"
+            to="/social-growth"
             className="work-card__button button button--olive"
           >
-            Voir les offres 
+            Trouver l’offre adaptée
           </Link>
         </article>
 
-        {/* CENTER */}
         <div className="work-section__center">
           <div className="work-section__badge">
             <img src={logoMark} alt="Logo OseCom" />
           </div>
 
-          <p className="work-section__tag">SERVICES</p>
+          <p className="work-section__tag">WORK WITH OSECOM</p>
 
           <h2 className="work-section__title">
-            Ways to Work with Me
+            Ways to work with me
           </h2>
+          
         </div>
 
-        {/* RIGHT CARD */}
         <article className="work-card work-card--right">
           <div className="work-card__image-placeholder"></div>
 
-          <h3 className="work-card__title">
-          UGC CONTENT</h3>
+          <h3 className="work-card__title">UGC Portfolio</h3>
 
           <p className="work-card__text">
-          Des contenus pensés pour capter l’attention et rester en tête.
-Storytelling, direct, créatif ou proof.             </p>
+            Des contenus pensés pour capter l’attention, incarner votre marque
+            et performer sur les plateformes. Explorez les formats déjà
+            réalisés.
+          </p>
 
-          <a
-            href="mailto:hello@example.com"
+          <Link
+            to="/portfolio"
             className="work-card__button button button--olive"
           >
-            Créer du contenu
-          </a>
+            Consulter le portfolio
+          </Link>
         </article>
-
       </div>
     </section>
   );

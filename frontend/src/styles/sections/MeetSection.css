@@ -1,45 +1,92 @@
 /* =========================
-   MEET SECTION — DESKTOP
+   MEET SECTION
 ========================= */
 
 .meet-section {
+  position: relative;
+  overflow: hidden;
   background-color: #f7f5eb;
-  background-image: url("/pattern-vicky.webp");
-  background-repeat: repeat;
-  background-position: center;
-  background-size: 1200px auto;
-
-  padding: 100px 0;
+  padding: 128px 0;
 }
 
 /* CONTAINER */
+
 .meet-section__content {
-  width: min(1040px, calc(100% - 160px));
+  width: min(1120px, calc(100% - 140px));
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* CARD */
+
+.meet-section__card {
+  position: relative;
+  overflow: hidden;
+
+  width: min(1000px, 100%);
+  padding: 64px 60px;
+  border-radius: 28px;
+
+  background-image: url("/pattern-vicky.webp");
+  background-size: cover;
+  background-position: center;
+
+  box-shadow:
+    0 18px 50px rgba(60, 32, 21, 0.05),
+    0 4px 18px rgba(60, 32, 21, 0.03);
+
   text-align: center;
 }
 
-/* TAG */
-.meet-section__tag {
-  font-family: "Public Sans", sans-serif;
-  font-size: 12.8px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #3c2015;
-  margin-bottom: 18px;
-  line-height: 1;
-  display: inline-block;
+/* OVERLAY POUR LISIBILITÉ */
+
+.meet-section__card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    180deg,
+    rgba(247, 245, 235, 0.72) 0%,
+    rgba(247, 245, 235, 0.86) 100%
+  );
+
+  backdrop-filter: blur(2px);
+  z-index: 0;
 }
 
 /* TITLE */
+
 .meet-section__title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 43px;
-  line-height: 1.1;
-  color: #3c2015;
+  position: relative;
+  z-index: 2;
+
   margin: 0 auto;
-  max-width: 780px;
+  max-width: 760px;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 400;
+
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+
+  color: #3c2015;
   text-wrap: balance;
+}
+
+/* ACCENT */
+
+.meet-section__title-accent {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-weight: 600;
+
+  background: linear-gradient(90deg, #3c2015, #ea609f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* =========================
@@ -48,16 +95,44 @@
 
 @media (max-width: 1200px) {
   .meet-section {
-    padding: 104px 0;
+    padding: 112px 0;
   }
 
   .meet-section__content {
-    width: min(980px, calc(100% - 120px));
+    width: min(980px, calc(100% - 96px));
+  }
+
+  .meet-section__card {
+    width: min(780px, 100%);
+    padding: 56px 48px;
   }
 
   .meet-section__title {
-    font-size: 38px;
-    max-width: 700px;
+    font-size: clamp(2.2rem, 4.2vw, 3rem);
+  }
+}
+
+/* =========================
+   TABLETTE
+========================= */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .meet-section {
+    padding: 92px 0;
+  }
+
+  .meet-section__content {
+    width: calc(100% - 64px);
+  }
+
+  .meet-section__card {
+    padding: 48px 36px;
+    border-radius: 26px;
+  }
+
+  .meet-section__title {
+    font-size: clamp(2rem, 5.5vw, 2.8rem);
+    line-height: 1.1;
   }
 }
 
@@ -67,11 +142,6 @@
 
 @media (max-width: 767px) {
   .meet-section {
-    background-image: url("/vicky-mobile.webp");
-    background-repeat: repeat;
-    background-position: center;
-    background-size: cover;
-
     padding: 72px 0;
   }
 
@@ -79,15 +149,18 @@
     width: calc(100% - 40px);
   }
 
-  .meet-section__tag {
-    font-size: 10px;
-    margin-bottom: 12px;
+  .meet-section__card {
+    width: 100%;
+    padding: 36px 24px;
+    border-radius: 24px;
+
+    background-image: url("/vicky-mobile.webp");
+    background-size: cover;
   }
 
   .meet-section__title {
-    font-size: 30px;
-    line-height: 1.08;
-    max-width: 100%;
-    text-wrap: balance;
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
   }
 }

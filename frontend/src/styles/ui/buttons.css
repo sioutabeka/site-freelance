@@ -1,176 +1,273 @@
 /* =========================
-   BASE BUTTON
+   BASE BUTTON (FIN)
 ========================= */
 
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  
-    border: none;
-    border-radius: 20px;
-    text-decoration: none;
-  
-    font-family: "Public Sans", sans-serif;
-    font-size: 12px;
-    line-height: 1;
-    text-transform: uppercase;
-  
-    padding: 5px 15px;
-  
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  /* =========================
-     VARIANTE BLEUE
-  ========================= */
-  
-  .button--blue {
-    background-color: #bfd2ef;
-    color: #3c2015;
-  }
-  
-  .button--blue:hover {
-    background-color: #f4edc6;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
 
-  /* =========================
+  font-family: "Public Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  padding: 6px 16px;
+
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 2px solid rgba(60, 32, 21, 0.2);
+  outline-offset: 3px;
+}
+
+/* =========================
+   SIZE LARGE (SOCIAL GROWTH)
+========================= */
+
+.button--lg {
+  min-height: 54px;
+  padding: 0.95rem 1.55rem;
+
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-transform: none;
+
+  letter-spacing: -0.01em;
+}
+
+/* =========================
+   MAIN PINK (CTA PRINCIPAL)
+========================= */
+
+.button--main-pink {
+  background: #ea609f;
+  color: #fffdf8;
+
+  box-shadow: 0 14px 34px rgba(234, 96, 159, 0.24);
+}
+
+.button--main-pink:hover {
+  background: #ea609f;
+  color: #fffdf8;
+
+  box-shadow: 0 18px 42px rgba(234, 96, 159, 0.3);
+}
+
+/* =========================
+   VARIANTE BLEUE
+========================= */
+
+.button--blue {
+  background-color: #bfd2ef;
+  color: #3c2015;
+}
+
+.button--blue:hover {
+  background-color: #f4edc6;
+  color: #3c2015;
+}
+
+/* =========================
    VARIANTE OLIVE
 ========================= */
 
 .button--olive {
-    background-color: #828234;
-    color: #f7f5eb;
-  }
-  
-  .button--olive:hover {
-    background-color: #bfd2ef;
-    color: #3c2015;
-  }
+  background-color: #828234;
+  color: #f7f5eb;
+}
 
+.button--olive:hover {
+  background-color: #bfd2ef;
+  color: #3c2015;
+}
 
-  /* =========================
-   VARIANTE ROSE
+/* =========================
+   VARIANTE ROSE (LEGACY)
 ========================= */
 
 .button--pink {
-    background-color: #ea609f;
-    color: #f7f5eb;
-  }
-  
-  .button--pink:hover {
-    background-color: #828234; 
-    color: #f7f5eb;
-  }
+  background-color: #ea609f;
+  color: #f7f5eb;
+}
 
-
+.button--pink:hover {
+  background-color: #828234;
+  color: #f7f5eb;
+}
 
 /* =========================
-   VARIANTE SUBMIT (STRUCTURE)
-   → bouton large formulaire
+   GHOST BUTTON (SECONDARY)
+========================= */
+
+.button--ghost {
+  border: 1px solid rgba(60, 32, 21, 0.12);
+  background: rgba(255, 253, 248, 0.72);
+  color: #3c2015;
+
+  box-shadow: 0 10px 26px rgba(60, 32, 21, 0.06);
+}
+
+.button--ghost:hover {
+  background: #fffaf2;
+  border-color: rgba(60, 32, 21, 0.22);
+  color: #3c2015;
+}
+
+/* =========================
+   SUBMIT (FORMULAIRE)
 ========================= */
 
 .button--submit {
-    display: block;
-    width: 100%;
-    max-width: 580px;
-    margin: 40px auto 0;
-  
-    border-radius: 999px;
-  
-    padding: 14px;
-  
-    font-size: 12px;
-    letter-spacing: 1px;
+  display: flex;
+  width: 100%;
+  max-width: 580px;
+  margin: 40px auto 0;
+
+  border-radius: 999px;
+
+  min-height: 56px;
+  padding: 0.95rem 1.4rem;
+
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* SUBMIT ROSE */
+
+.button--submit-pink {
+  background-color: #efb7da;
+  color: #3c2015;
+}
+
+.button--submit-pink:hover {
+  background-color: #828234;
+  color: #fff;
+}
+
+/* SUBMIT ROSE → DARK */
+
+.button--submit-pink-darkhover {
+  background-color: #efb7da;
+  color: #3c2015;
+}
+
+.button--submit-pink-darkhover:hover {
+  background-color: #ea609f;
+  color: #fff;
+}
+
+/* =========================
+   SOCIAL VARIANTS
+========================= */
+
+/* ROSE CLAIR → JAUNE */
+
+.button--pink-light {
+  background-color: #fcc5df;
+  color: #3c2015;
+}
+
+.button--pink-light:hover {
+  background-color: #f4edc6;
+}
+
+/* JAUNE → ROSE */
+
+.button--cream {
+  background-color: #f4edc6;
+  color: #3c2015;
+}
+
+.button--cream:hover {
+  background-color: #fcc5df;
+}
+
+/* ROSE → OLIVE */
+
+.button--pink-olive {
+  background-color: #ea609f;
+  color: #ffffff;
+}
+
+.button--pink-olive:hover {
+  background-color: #828234;
+}
+
+/* OLIVE → ROSE */
+
+.button--olive-pink {
+  background-color: #828234;
+  color: #ffffff;
+}
+
+.button--olive-pink:hover {
+  background-color: #ea609f;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 767px) {
+  .button {
+    padding: 6px 14px;
+    font-size: 11px;
   }
-  
-  /* =========================
-     SUBMIT ROSE → HOVER OLIVE
-     → version actuelle (formulaire About)
-  ========================= */
-  
-  .button--submit-pink {
-    background-color: #efb7da; /* rose clair */
-    color: #3c2015;
+
+  .button--lg {
+    min-height: 50px;
+    padding: 0.9rem 1.3rem;
+    font-size: 0.92rem;
   }
-  
-  .button--submit-pink:hover {
-    background-color: #828234; /* vert olive */
-    color: #fff;
+
+  .button--submit {
+    min-height: 52px;
+    padding: 0.9rem 1.2rem;
+    font-size: 0.82rem;
   }
-  
-  /* =========================
-     SUBMIT ROSE → HOVER ROSE FONCÉ
-     → variante future (plus “brand”)
-  ========================= */
-  
-  .button--submit-pink-darkhover {
-    background-color: #efb7da; /* rose clair */
-    color: #3c2015;
-  }
-  
-  .button--submit-pink-darkhover:hover {
-    background-color: #ea609f; /* rose foncé */
-    color: #fff;
-  }
+}
+
+
+
+
+
+
+
 
 
 
 
 /* =========================
-   SOCIAL : ROSE CLAIR → JAUNE
+   HERO PINK → YELLOW
 ========================= */
 
-.button--pink-light {
-    background-color: #fcc5df;
-    color: #3c2015;
-  }
-  
-  .button--pink-light:hover {
-    background-color: #f4edc6;
-    color: #3c2015;
-  }
-  
-  /* =========================
-     JAUNE → ROSE CLAIR
-  ========================= */
-  
-  .button--cream {
-    background-color: #f4edc6;
-    color: #3c2015;
-  }
-  
-  .button--cream:hover {
-    background-color: #fcc5df;
-    color: #3c2015;
-  }
-  
-  /* =========================
-     ROSE FONCÉ → OLIVE
-  ========================= */
-  
-  .button--pink-olive {
-    background-color: #ea609f;
-    color: #ffffff;
-  }
-  
-  .button--pink-olive:hover {
-    background-color: #828234;
-    color: #ffffff;
-  }
-  
-  /* =========================
-     OLIVE → ROSE FONCÉ
-  ========================= */
-  
-  .button--olive-pink {
-    background-color: #828234;
-    color: #ffffff;
-  }
-  
-  .button--olive-pink:hover {
-    background-color: #ea609f;
-    color: #ffffff;
-  }
+.button--hero-pink {
+  background: #ea609f;
+  color: #fffdf8;
+
+  box-shadow: 0 14px 34px rgba(234, 96, 159, 0.24);
+}
+
+.button--hero-pink:hover {
+  background: #f4edc6; /* jaune */
+  color: #3c2015;
+
+  box-shadow: 0 18px 42px rgba(60, 32, 21, 0.12);
+}

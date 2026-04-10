@@ -1,33 +1,67 @@
 /* =========================
-   ABOUT SECTION — DESKTOP FIRST
+   ABOUT SECTION — VERSION COHÉRENTE SITE
 ========================= */
 
 .about-section {
-  background-color: #3c2015;
-  padding: 110px 90px;
+  position: relative;
+  overflow: hidden;
+  padding: 128px 0;
+  background: linear-gradient(180deg, #3c2015 0%, #2f180f 100%);
+}
+
+.about-section::before,
+.about-section::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.about-section::before {
+  top: 12%;
+  left: -6%;
+  width: 320px;
+  height: 320px;
+  background: rgba(234, 96, 159, 0.16);
+}
+
+.about-section::after {
+  right: -4%;
+  bottom: 8%;
+  width: 300px;
+  height: 300px;
+  background: rgba(191, 210, 239, 0.14);
 }
 
 .about-section__inner {
-  max-width: 1280px;
+  position: relative;
+  z-index: 2;
+  width: min(1120px, calc(100% - 128px));
   margin: 0 auto;
-  display: flex;
+
+  display: grid;
+  grid-template-columns: minmax(320px, 430px) minmax(0, 620px);
+  gap: 72px;
   align-items: center;
-  gap: 88px;
 }
 
 /* IMAGE */
 
 .about-section__image {
-  width: 460px;
-  flex-shrink: 0;
+  width: 100%;
 }
 
 .about-section__image img {
   width: 100%;
-  height: 600px;
+  height: 580px;
   object-fit: cover;
   display: block;
-  border-radius: 48px;
+  border-radius: 32px;
+  box-shadow:
+    0 24px 54px rgba(0, 0, 0, 0.14),
+    0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 /* CONTENT */
@@ -37,34 +71,35 @@
 }
 
 .about-section__title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 56px;
-  line-height: 0.98;
-  letter-spacing: -0.5px;
-  color: #f7f5eb;
   margin: 0 0 20px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.8rem, 5vw, 4.4rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  color: #f7f5eb;
+  text-wrap: balance;
 }
 
 .about-section__subtitle {
-  font-family: "Public Sans", sans-serif;
-  font-size: 18px;
-  line-height: 1.55;
-  color: #f7f5eb;
-  opacity: 0.92;
-  margin: 0 0 28px;
+  margin: 0 0 26px;
   max-width: 560px;
-  text-transform: none;
-  letter-spacing: 0;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.72;
+  color: rgba(247, 245, 235, 0.9);
 }
 
 .about-section__text {
-  font-family: "Public Sans", sans-serif;
-  font-size: 15px;
-  line-height: 1.75;
-  color: #f7f5eb;
-  opacity: 0.88;
   margin: 0 0 18px;
-  max-width: 560px;
+  max-width: 580px;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.78;
+  color: rgba(247, 245, 235, 0.8);
 }
 
 .about-section__list {
@@ -75,58 +110,55 @@
 }
 
 .about-section__list span {
-  font-family: "Public Sans", sans-serif;
-  font-size: 15px;
-  line-height: 1.7;
-  color: #f7f5eb;
-  opacity: 0.96;
   display: block;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.72;
+  color: rgba(247, 245, 235, 0.94);
 }
 
+/* BUTTON
+   on laisse le design venir du composant .button
+   ici on gère seulement son placement */
+
 .about-section__button {
-  margin-top: 0;
-  align-self: flex-start;
+  margin-top: 2px;
 }
 
 /* =========================
    DESKTOP MEDIUM
 ========================= */
 
-@media (min-width: 1024px) and (max-width: 1259px) {
+@media (max-width: 1200px) {
   .about-section {
-    padding: 96px 56px;
+    padding: 112px 0;
   }
 
   .about-section__inner {
-    gap: 64px;
-  }
-
-  .about-section__image {
-    width: 400px;
+    width: min(1040px, calc(100% - 96px));
+    grid-template-columns: minmax(300px, 390px) minmax(0, 560px);
+    gap: 56px;
   }
 
   .about-section__image img {
     height: 540px;
-    border-radius: 40px;
-  }
-
-  .about-section__content {
-    max-width: 560px;
+    border-radius: 28px;
   }
 
   .about-section__title {
-    font-size: 50px;
+    font-size: clamp(2.5rem, 4.6vw, 4rem);
     margin-bottom: 18px;
   }
 
   .about-section__subtitle {
-    font-size: 17px;
-    margin-bottom: 24px;
+    font-size: 1rem;
+    margin-bottom: 22px;
   }
 
   .about-section__text,
   .about-section__list span {
-    font-size: 14px;
+    font-size: 0.92rem;
   }
 
   .about-section__list {
@@ -140,27 +172,24 @@
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .about-section {
-    padding: 72px 32px 80px;
+    padding: 92px 0 96px;
   }
 
   .about-section__inner {
-    flex-direction: column;
-    align-items: flex-start;
+    width: calc(100% - 64px);
+    grid-template-columns: 1fr;
     gap: 40px;
-    max-width: 760px;
+    align-items: start;
   }
 
   .about-section__image {
-    width: 100%;
-    max-width: 460px;
+    max-width: 520px;
     margin: 0 auto;
   }
 
   .about-section__image img {
-    width: 100%;
     height: 560px;
-    object-fit: cover;
-    border-radius: 36px;
+    border-radius: 28px;
   }
 
   .about-section__content {
@@ -168,20 +197,20 @@
   }
 
   .about-section__title {
-    font-size: 46px;
+    font-size: clamp(2.5rem, 6vw, 3.6rem);
     line-height: 1;
-    margin: 0 0 18px;
+    margin: 0 0 16px;
   }
 
   .about-section__subtitle {
-    font-size: 17px;
-    line-height: 1.55;
-    margin: 0 0 24px;
+    font-size: 1rem;
+    line-height: 1.68;
+    margin: 0 0 22px;
     max-width: 100%;
   }
 
   .about-section__text {
-    font-size: 15px;
+    font-size: 0.94rem;
     line-height: 1.72;
     margin: 0 0 16px;
     max-width: 100%;
@@ -193,12 +222,8 @@
   }
 
   .about-section__list span {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
-  .about-section__button {
-    margin-top: 0;
+    font-size: 0.94rem;
+    line-height: 1.68;
   }
 }
 
@@ -208,24 +233,30 @@
 
 @media (max-width: 767px) {
   .about-section {
-    padding: 56px 20px 64px;
+    padding: 76px 0 82px;
+  }
+
+  .about-section::before {
+    width: 220px;
+    height: 220px;
+    top: 10%;
+  }
+
+  .about-section::after {
+    width: 220px;
+    height: 220px;
+    bottom: 8%;
   }
 
   .about-section__inner {
-    flex-direction: column;
-    align-items: flex-start;
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr;
     gap: 28px;
   }
 
-  .about-section__image {
-    width: 100%;
-  }
-
   .about-section__image img {
-    width: 100%;
     height: 420px;
-    object-fit: cover;
-    border-radius: 28px;
+    border-radius: 24px;
   }
 
   .about-section__content {
@@ -235,22 +266,20 @@
   .about-section__title {
     font-size: 34px;
     line-height: 1;
-    letter-spacing: -0.3px;
+    letter-spacing: -0.02em;
     margin: 0 0 14px;
   }
 
   .about-section__subtitle {
-    font-size: 15px;
-    line-height: 1.55;
-    margin: 0 0 20px;
+    font-size: 0.95rem;
+    line-height: 1.62;
+    margin: 0 0 18px;
     max-width: 100%;
-    text-transform: none;
-    letter-spacing: 0;
   }
 
   .about-section__text {
-    font-size: 13px;
-    line-height: 1.7;
+    font-size: 0.86rem;
+    line-height: 1.68;
     margin: 0 0 14px;
     max-width: 100%;
   }
@@ -261,12 +290,7 @@
   }
 
   .about-section__list span {
-    font-size: 13px;
-    line-height: 1.65;
-  }
-
-  .about-section__button {
-    margin-top: 0;
-    width: auto;
+    font-size: 0.86rem;
+    line-height: 1.64;
   }
 }

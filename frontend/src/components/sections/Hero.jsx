@@ -14,7 +14,8 @@ function Hero() {
           </p>
 
           <h1 className="hero__title">
-          Transformez votre contenu en clients.
+            Transformez votre contenu en{" "}
+            <span className="hero__title-accent">clients.</span>
           </h1>
 
           <p className="hero__description">
@@ -23,7 +24,7 @@ function Hero() {
 
           <Link
             to="/about#work-with-me"
-            className="hero__button button button--blue"> Réserver un appel 
+            className="hero__button button button--lg button--hero-pink"> Réserver un appel 
           </Link>
         </div>
 
