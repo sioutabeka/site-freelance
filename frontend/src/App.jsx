@@ -43,6 +43,8 @@ function App() {
         <Route path="/growth" element={<GrowthPage />} />
         <Route path="/ugc" element={<UGCPage />} />
 
+        <Route path="/contact" element={<ContactPage />} />
+
       </Routes>
     </BrowserRouter>
   );
