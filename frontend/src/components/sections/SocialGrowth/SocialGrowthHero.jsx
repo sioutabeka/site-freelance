@@ -13,24 +13,20 @@ const SocialGrowthHero = () => {
         <div className="sg-hero__eyebrow">Social Growth isn’t an option</div>
 
         <h1 className="sg-hero__title">
-          Des offres pensées pour faire grandir votre présence
-          <span> avec plus d’intention.</span>
+        Accélérez votre croissance en utilisant <span> les réseaux sociaux !</span>
         </h1>
 
         <p className="sg-hero__subtitle">
-          Stratégie, contenu, acquisition, présence :
-          <br />
-          <strong>Explorer le bon levier</strong> according to your needs.
+        La stratégie d'image, de communication et de marketing digital est le coeur de tout business qui fonctionne aujourd’hui.
+
+        <br />
+          <strong>Explorer le bon levier</strong> selon vos objectifs et vos besoins.
         </p>
 
         <div className="sg-hero__actions">
           <button className="sg-hero__btn sg-hero__btn--primary">
             Discuter de mon projet
           </button>
-
-          <a href="/contact" className="sg-hero__btn sg-hero__btn--ghost">
-            Prendre rendez-vous
-          </a>
         </div>
       </div>
     </section>

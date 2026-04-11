@@ -5,11 +5,11 @@ const SocialGrowthIntro = () => {
     <section className="sg-intro">
       <div className="sg-intro__container">
         <p className="sg-intro__line">
-          Vous n’avez pas tous le même problème.
+          Mes offres de services sont à titre indicatif,
         </p>
 
         <p className="sg-intro__line">
-          Donc vous n’avez pas besoin de la même solution.
+          le mieux c'est qu'on en discute.
         </p>
       </div>
     </section>

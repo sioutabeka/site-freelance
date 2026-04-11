@@ -55,7 +55,7 @@ function Navbar() {
             className="navbar__menu-link"
             onClick={closeMenu}
           >
-            <span>Social Growth</span>
+            <span>Mes Services</span>
           </Link>
 
           <Link
@@ -63,7 +63,7 @@ function Navbar() {
             className="navbar__menu-link"
             onClick={closeMenu}
           >
-            <span>UGC</span>
+            <span>UGC Content</span>
           </Link>
 
           <Link

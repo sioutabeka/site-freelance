@@ -12,7 +12,7 @@ function AboutSection() {
 
       <div className="about-section__inner">
         <div className="about-section__image">
-          <img src="/about-img.png" alt="Essia, fondatrice d'OseCom" />
+          <img src="/essiahome.png" alt="Essia, fondatrice d'OseCom" />
         </div>
 
         <div className="about-section__content">

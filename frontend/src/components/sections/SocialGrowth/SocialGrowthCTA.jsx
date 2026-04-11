@@ -13,12 +13,12 @@ const SocialGrowthCTA = () => {
         <div className="sg-cta__eyebrow">Need clarity before scaling ?</div>
 
         <h2 className="sg-cta__title">
-          Vous ne savez pas encore exactement
-          <span> ce qu’il vous faut.</span>
+          Vous ne savez pas encore exactement ce qu'il vous faut ?
+          <span> Et c'est OK.</span>
         </h2>
 
         <p className="sg-cta__text">
-          C’est normal. On regarde ensemble où vous en êtes, ce qui bloque
+          On regarde ensemble où vous en êtes, ce qui bloque
           aujourd’hui, et quel levier activer en priorité.
         </p>
 

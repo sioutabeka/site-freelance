@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import "../../styles/sections/Hero.css";
-import heroImage from "../../assets/hero-test.jpg";
-import heroImageTest from "../../assets/hero-ciarra.png";
-import heroImageMobile from "../../assets/hero-mobile.jpg";
+import heroImage from "../../assets/essiahome.png";
+
 
 function Hero() {
   return (
@@ -10,7 +9,7 @@ function Hero() {
       <div className="hero__inner">
         <div className="hero__content">
           <p className="hero__tag">
-            Social Growth isn’t an option
+            Hi ! Moi c'est Essia
           </p>
 
           <h1 className="hero__title">
@@ -19,7 +18,7 @@ function Hero() {
           </h1>
 
           <p className="hero__description">
-            Stratégie, contenu, community management et performance.
+            Community management, stratégie, production de contenus orienté performance.
             J’aide les marques à construire une présence claire, cohérente et désirable.
           </p>
 
@@ -31,17 +30,17 @@ function Hero() {
         </div>
 
         <div className="hero__image">
-          <img
-            src={heroImageTest}
-            alt="OSECOM, studio de social media et de growth à Paris"
-            className="hero__img hero__img--desktop"
-          />
+        <img
+  src={heroImage}
+  alt="OSECOM, studio de social media et de growth à Paris"
+  className="hero__img hero__img--desktop"
+/>
 
-          <img
-            src={heroImageMobile}
-            alt="OSECOM, studio de social media et de growth à Paris"
-            className="hero__img hero__img--mobile"
-          />
+<img
+  src={heroImage}
+  alt="OSECOM, studio de social media et de growth à Paris"
+  className="hero__img hero__img--mobile"
+/>
         </div>
       </div>
     </section>
