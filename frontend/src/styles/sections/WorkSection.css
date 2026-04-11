@@ -298,13 +298,76 @@
 ========================= */
 
 @media (max-width: 767px) {
+  .work-section {
+    padding: 72px 0 84px;
+  }
+
   .work-section::before,
   .work-section::after {
     font-size: 90px;
     opacity: 0.03;
   }
 
+  .work-section__inner {
+    width: calc(100% - 32px);
+  }
+
+  .work-section__center {
+    padding: 0;
+    margin-bottom: 32px;
+  }
+
+  .work-section__badge {
+    width: 72px;
+    margin: 0 auto 12px;
+  }
+
+  .work-section__badge img {
+    max-width: 54px;
+  }
+
+  .work-section__tag {
+    margin: 0 0 14px;
+    font-size: 11px;
+  }
+
+  .work-section__title {
+    margin: 0 auto 18px;
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .work-section__intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .work-section__grid {
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .work-card {
+    padding: 20px 18px 22px;
+    border-radius: 18px;
+  }
+
+  .work-card__title {
+    gap: 10px;
+    margin: 0 0 8px;
+    min-height: auto;
+    font-size: 1.12rem;
+  }
+
   .work-card__flower {
     font-size: 1.2rem;
+  }
+
+  .work-card__text {
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  .work-section__cta {
+    margin-top: 8px;
   }
 }

@@ -12,15 +12,10 @@
   overflow: hidden;
 
   background: linear-gradient(
-    to bottom,
-    #efe6d0 0%,
-    #f0e2c8 18%,
-    #f2e7c1 38%,
-    #f4edc6 52%,
-    #f5efd2 68%,
-    #f6f1dc 82%,
-    #f7f3e6 92%,
-    #f7f5eb 100%
+    to top,
+    #f3efe3 0%,
+    #f2ead9 60%,
+    #efe6d0 100%
   );
 }
 

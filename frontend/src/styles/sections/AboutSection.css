@@ -1,56 +1,27 @@
 /* =========================
-   ABOUT SECTION — ÉDITORIAL / SIGNATURE
+   ABOUT SECTION — CLEAN
 ========================= */
 
 .about-section {
   position: relative;
   overflow: hidden;
   padding: 120px 0;
-  background: linear-gradient(180deg, #3c2015 0%, #2b160f 100%);
+  background-color: #3c2015;
 }
 
-/* BG LAYERS */
-
-.about-section__bg {
+.about-section::before {
+  content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
   pointer-events: none;
-}
-
-.about-section__orb {
-  position: absolute;
-  border-radius: 999px;
-  filter: blur(100px);
-  opacity: 0.9;
-}
-
-.about-section__orb--pink {
-  top: 10%;
-  left: -6%;
-  width: 340px;
-  height: 340px;
-  background: rgba(232, 166, 176, 0.14);
-}
-
-.about-section__orb--blue {
-  right: -5%;
-  bottom: 10%;
-  width: 320px;
-  height: 320px;
-  background: rgba(191, 210, 239, 0.12);
-}
-
-.about-section__grid {
-  position: absolute;
-  inset: 0;
-  opacity: 0.05;
-  background-image:
-    linear-gradient(rgba(247, 245, 235, 0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(247, 245, 235, 0.08) 1px, transparent 1px);
-  background-size: 32px 32px;
-  mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
-  -webkit-mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
+  z-index: 1;
+  background: repeating-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 10px
+  );
 }
 
 .about-section__inner {
@@ -58,7 +29,6 @@
   z-index: 2;
   width: min(1120px, calc(100% - 96px));
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: minmax(320px, 430px) minmax(0, 620px);
   gap: 64px;
@@ -77,11 +47,9 @@
   object-fit: cover;
   display: block;
   border-radius: 32px;
-
   box-shadow:
     0 28px 64px rgba(0, 0, 0, 0.18),
     0 8px 22px rgba(0, 0, 0, 0.12);
-
   border: 1px solid rgba(247, 245, 235, 0.08);
 }
 
@@ -93,7 +61,6 @@
 
 .about-section__title {
   margin: 0 0 24px;
-
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(3.1rem, 5vw, 4.8rem);
   font-weight: 500;
@@ -103,7 +70,6 @@
   text-wrap: balance;
 }
 
-/* pour styliser uniquement OSECOM si on wrappe le mot */
 .about-section__title-brand {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
@@ -112,9 +78,7 @@
   color: #f4edc6;
 }
 
-/* =========================
-   CORPS DE TEXTE UNIFIÉ
-========================= */
+/* TEXTE */
 
 .about-section__subtitle,
 .about-section__text,
@@ -134,6 +98,8 @@
   margin: 0 0 18px;
   max-width: 580px;
 }
+
+/* LISTE */
 
 .about-section__list {
   display: flex;
@@ -295,23 +261,6 @@
 @media (max-width: 767px) {
   .about-section {
     padding: 76px 0 82px;
-  }
-
-  .about-section__orb--pink {
-    width: 220px;
-    height: 220px;
-    top: 10%;
-  }
-
-  .about-section__orb--blue {
-    width: 220px;
-    height: 220px;
-    bottom: 8%;
-  }
-
-  .about-section__grid {
-    opacity: 0.035;
-    background-size: 24px 24px;
   }
 
   .about-section__inner {
