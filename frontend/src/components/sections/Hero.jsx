@@ -14,7 +14,7 @@ function Hero() {
           </p>
 
           <h1 className="hero__title">
-            Je transforme vos contenus en{" "}
+            Je transforme vos contenus {" "}
             <span className="hero__title-accent">en client.</span>
           </h1>
 

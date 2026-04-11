@@ -46,7 +46,8 @@ function WorksShowcaseSection() {
           <p className="works-showcase__tag">SELECTED WORK</p>
 
           <h2 className="works-showcase__heading">
-            A few ways I create impact for brands
+            A few ways I create{" "}
+            <span className="works-showcase__heading-accent">impact</span> for brands
           </h2>
         </div>
 
@@ -83,7 +84,10 @@ function WorksShowcaseSection() {
                     <span className="works-showcase__title-category">
                       {work.category}
                     </span>
-                    <h3 className="works-showcase__title">{work.title}</h3>
+
+                    <h3 className="works-showcase__title">
+                      {work.title}
+                    </h3>
                   </button>
                 );
               })}

@@ -49,24 +49,28 @@
 /* MOT ACCENT — FIX COMPLET */
 
 .hero__title-accent {
+  position: relative;
+  display: inline-block;
   font-family: inherit;
   font-weight: 600;
   font-style: italic;
+  color: #3c2015;
+  z-index: 1;
+}
 
-  background: linear-gradient(
-    90deg,
-    #828234 0%,   /* vert olive */
-    #a0a05a 40%,  /* transition douce */
-    #3c2015 100%  /* marron */
-  );
+.hero__title-accent::after {
+  content: "";
+  position: absolute;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 0.05em;
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  height: 0.5em;
 
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-
-  display: inline-block;
+  background-color: #f4edc6;
+  border-radius: 999px;
+  z-index: -1;
+  opacity: 0.95;
 }
 
 /* DESCRIPTION */

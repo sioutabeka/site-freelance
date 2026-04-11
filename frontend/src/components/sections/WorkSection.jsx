@@ -44,7 +44,8 @@ function WorkSection() {
           <p className="work-section__tag">OFFRE SIGNATURE</p>
 
           <h2 className="work-section__title">
-            Community Management Stratégique
+            Community Management{" "}
+            <span className="work-section__title-accent">Stratégique</span>
           </h2>
 
           <p className="work-section__intro">
@@ -53,29 +54,41 @@ function WorkSection() {
         </div>
 
         <div className="work-section__grid">
-          <article className="work-card">
-            <h3 className="work-card__title">Stratégie</h3>
+          <article className="work-card work-card--olive">
+            <h3 className="work-card__title">
+              <span className="work-card__flower" aria-hidden="true">✿</span>
+              <span>Stratégie</span>
+            </h3>
             <p className="work-card__text">
               Benchmark, positionnement, ligne éditoriale et direction visuelle.
             </p>
           </article>
 
-          <article className="work-card">
-            <h3 className="work-card__title">Pilotage éditorial</h3>
+          <article className="work-card work-card--blue">
+            <h3 className="work-card__title">
+              <span className="work-card__flower" aria-hidden="true">✿</span>
+              <span>Pilotage éditorial</span>
+            </h3>
             <p className="work-card__text">
               Calendrier, formats, rythme et organisation des prises de parole.
             </p>
           </article>
 
-          <article className="work-card">
-            <h3 className="work-card__title">Animation & modération</h3>
+          <article className="work-card work-card--pink">
+            <h3 className="work-card__title">
+              <span className="work-card__flower" aria-hidden="true">✿</span>
+              <span>Animation & modération</span>
+            </h3>
             <p className="work-card__text">
               Publication, gestion des interactions et engagement des communautés.
             </p>
           </article>
 
-          <article className="work-card">
-            <h3 className="work-card__title">Visibilité & performance</h3>
+          <article className="work-card work-card--yellow">
+            <h3 className="work-card__title">
+              <span className="work-card__flower" aria-hidden="true">✿</span>
+              <span>Visibilité & performance</span>
+            </h3>
             <p className="work-card__text">
               Boosts, campagnes paid, suivi des résultats et optimisation.
             </p>
@@ -85,7 +98,8 @@ function WorkSection() {
         <div className="work-section__cta">
           <Link
             to="/about#work-with-me"
-            className="button button--lg button--primary"                      >
+            className="button button--lg button--primary"
+          >
             Parler de votre projet
           </Link>
         </div>

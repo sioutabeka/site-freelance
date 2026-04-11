@@ -42,7 +42,7 @@ function AboutSection() {
 
           <Link
             to="/about"
-            className="button button--lg button--secondary"          >
+            className="button button--lg button--cream-blue"          >
             Découvrir mon approche
           </Link>
         </div>

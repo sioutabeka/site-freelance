@@ -11,7 +11,12 @@
   padding: 96px 0;
   overflow: hidden;
 
-  background: transparent;
+  /* 🔥 FOND JAUNE ÉDITORIAL */
+  background: linear-gradient(
+    to bottom,
+    #f4edc6 0%,
+    #f2e8bc 100%
+  );
 }
 
 /* CONTAINER */
@@ -24,7 +29,7 @@
 }
 
 /* =========================
-   TAG — ALIGNÉ AVEC LE RESTE DU SITE
+   TAG / TITLE
 ========================= */
 
 .brands-section__title {
@@ -39,8 +44,6 @@
   color: rgba(60, 32, 21, 0.78);
 
   margin: 0 0 36px;
-
-  /* 🔥 force l'application */
   line-height: 1;
 }
 
@@ -57,14 +60,15 @@
   width: 100%;
 }
 
-/* FADES LATÉRAUX */
-
+/* =========================
+   FADES LATÉRAUX (FIX JAUNE)
+========================= */
 .brands-section__slider::before,
 .brands-section__slider::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 80px;
+  width: 48px;
   height: 100%;
   z-index: 2;
   pointer-events: none;
@@ -74,8 +78,8 @@
   left: 0;
   background: linear-gradient(
     to right,
-    #f7f5eb 0%,
-    rgba(247, 245, 235, 0) 100%
+    rgba(244, 237, 198, 0.55) 0%,
+    rgba(244, 237, 198, 0) 100%
   );
 }
 
@@ -83,12 +87,14 @@
   right: 0;
   background: linear-gradient(
     to left,
-    #f7f5eb 0%,
-    rgba(247, 245, 235, 0) 100%
+    rgba(244, 237, 198, 0.55) 0%,
+    rgba(244, 237, 198, 0) 100%
   );
 }
 
-/* TRACK */
+/* =========================
+   TRACK
+========================= */
 
 .brands-section__track {
   display: flex;
@@ -98,18 +104,23 @@
   will-change: transform;
 }
 
-/* ITEM */
+/* =========================
+   ITEM
+========================= */
 
 .brands-section__item {
   width: var(--brands-item-width);
   flex: 0 0 var(--brands-item-width);
   min-height: 56px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* LOGOS */
+/* =========================
+   LOGOS
+========================= */
 
 .brands-section__logo {
   max-width: 100%;
@@ -168,7 +179,7 @@
 
   .brands-section__title {
     margin-bottom: 28px;
-    letter-spacing: 0.12em; /* 🔥 corrigé ici aussi */
+    letter-spacing: 0.12em;
   }
 
   .brands-section__slider::before,
@@ -189,7 +200,7 @@
   }
 
   .brands-section__title {
-    font-size: 11px; /* 🔥 cohérent mobile */
+    font-size: 11px;
     margin: 0 0 22px;
   }
 
