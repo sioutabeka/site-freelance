@@ -248,7 +248,7 @@ function ContactSection() {
 
           <button
             type="submit"
-            className="about-inquiry__submit button button--submit button--submit-pink"
+            className="about-inquiry__submit"
             disabled={isSubmitting}
           >
             {isSubmitting ? "ENVOI EN COURS..." : "ENVOYER LA DEMANDE"}

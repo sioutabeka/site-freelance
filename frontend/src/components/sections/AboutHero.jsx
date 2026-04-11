@@ -20,7 +20,7 @@ function AboutHero() {
 
         <Link
           to="/about#work-with-me"
-          className="about-hero__button button button--pink"
+          className="about-hero__button"
         >
           WORK WITH ME
         </Link>

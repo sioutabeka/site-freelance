@@ -110,7 +110,7 @@
 }
 
 /* =========================
-   SELECT CUSTOM
+   SELECT
 ========================= */
 
 .about-inquiry__select-wrap {
@@ -164,14 +164,11 @@
   appearance: none;
   width: 12px;
   height: 12px;
-  min-width: 12px;
-  min-height: 12px;
   margin-top: 3px;
   border-radius: 50%;
   background-color: #dbe2eb;
   border: 1px solid transparent;
   position: relative;
-  flex: 0 0 12px;
 }
 
 .about-inquiry__option input[type="radio"]:checked {
@@ -190,45 +187,46 @@
 }
 
 /* =========================
-   SUBMIT BUTTON (VERSION ZIP CLEAN)
+   SUBMIT BUTTON
 ========================= */
 
 .about-inquiry__submit {
   display: block;
+
   width: 100%;
   max-width: 580px;
   margin: 40px auto 0;
 
-  border: none;
-  border-radius: 999px;
-
   padding: 14px;
+  border-radius: 999px;
+  border: none;
 
-  background-color: #efb7da;
+  background-color: #fcc5df;
   color: #3c2015;
 
   font-family: "Public Sans", sans-serif;
   font-size: 12px;
-  line-height: 1;
   letter-spacing: 1px;
   text-transform: uppercase;
 
   cursor: pointer;
 
   transition:
-    background-color 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .about-inquiry__submit:hover {
   background-color: #828234;
-  color: #fff;
-  transform: translateY(-1px);
+  color: #f7f5eb;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(130, 130, 52, 0.25);
 }
 
 /* =========================
-   EXTRA BLOCK
+   EXTRA
 ========================= */
 
 .about-inquiry__extra {
@@ -258,7 +256,7 @@
 }
 
 /* =========================
-   TABLETTE
+   RESPONSIVE
 ========================= */
 
 @media (max-width: 1023px) {
@@ -279,10 +277,6 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 767px) {
   .about-inquiry {
     padding: 40px 20px;
@@ -302,17 +296,6 @@
   .about-inquiry__option {
     font-size: 11px;
   }
-
-  .about-inquiry__option input[type="radio"] {
-    width: 10px;
-    height: 10px;
-  }
-
-  .about-inquiry__option input[type="radio"]:checked::after {
-    font-size: 6px;
-  }
-
-  /* 👇 bouton compact comme dans le zip */
 
   .about-inquiry__submit {
     max-width: 320px;

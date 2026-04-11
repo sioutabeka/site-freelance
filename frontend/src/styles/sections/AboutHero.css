@@ -1,20 +1,46 @@
-/* =========================
-   ABOUT HERO
-========================= */
-
 .about-hero {
-  background-color: #f4edc6;
-  padding: 88px 72px 64px;
-
   display: flex;
   align-items: flex-start;
   justify-content: center;
   gap: 32px;
+  padding: 88px 72px 64px;
+  background-color: #f4edc6;
 }
 
-/* =========================
-   CONTENU TEXTE
-========================= */
+.about-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: none;
+
+  background-color: #fcc5df;
+  color: #3c2015;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about-hero__button:hover {
+  background-color: #828234;
+  color: #f7f5eb;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(130, 130, 52, 0.25);
+}
 
 .about-hero__content {
   flex: 1 1 0;
@@ -23,63 +49,51 @@
 }
 
 .about-hero__tag {
+  margin: 0 0 14px;
   font-family: "Public Sans", sans-serif;
-  font-size: 12.8px;
+  font-size: 13px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #3c2015;
-  margin: 0 0 14px;
 }
 
 .about-hero__title {
+  margin: 0 0 18px;
+  max-width: 680px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 70.4px;
+  font-size: 70px;
   line-height: 0.92;
   color: #3c2015;
-  max-width: 680px;
-  margin: 0 0 18px;
 }
 
 .about-hero__description {
+  margin: 0 0 22px;
+  max-width: 568px;
   font-family: "Public Sans", sans-serif;
-  font-size: 12.8px;
+  font-size: 13px;
   line-height: 1.35;
   color: #3c2015;
-  max-width: 568px;
-  margin: 0 0 22px;
 }
-
-/* =========================
-   WRAPPER IMAGE
-========================= */
 
 .about-hero__image-wrapper {
   flex: 0 0 420px;
   display: flex;
-  justify-content: center;
   align-items: flex-start;
+  justify-content: center;
 }
-
-/* =========================
-   IMAGE POLAROID
-========================= */
 
 .about-hero__image {
   width: 100%;
   max-width: 420px;
-
-  background-color: #fffdf8;
   padding: 16px 16px 24px;
+  background-color: #fffdf8;
   text-align: center;
-
   transform: rotate(6deg);
-  transform-origin: center center;
-
+  transform-origin: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   transition:
     transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
     box-shadow 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 .about-hero__image:hover {
@@ -88,10 +102,10 @@
 }
 
 .about-hero__image img {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
-  margin: 0 0 10px;
+  margin-bottom: 10px;
 }
 
 .about-hero__caption {
@@ -101,25 +115,20 @@
   color: #3c2015;
 }
 
-/* =========================
-   TABLETTE
-========================= */
-
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .about-hero {
     padding: 84px 32px 56px;
     gap: 24px;
   }
 
   .about-hero__content {
-    flex: 1 1 0;
     max-width: 52%;
     padding-top: 56px;
   }
 
   .about-hero__title {
-    font-size: 52px;
     max-width: 100%;
+    font-size: 52px;
   }
 
   .about-hero__description {
@@ -129,11 +138,9 @@
 
   .about-hero__image-wrapper {
     flex: 0 0 40%;
-    justify-content: center;
   }
 
   .about-hero__image {
-    width: 100%;
     max-width: 100%;
     padding: 14px 14px 20px;
     transform: rotate(5deg);
@@ -144,58 +151,51 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 767px) {
   .about-hero {
-    padding: 42px 20px 36px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
+    padding: 42px 20px 36px;
   }
 
   .about-hero__content {
-    max-width: 100%;
-    padding-top: 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 100%;
+    padding-top: 0;
     text-align: center;
   }
 
   .about-hero__tag {
+    margin-bottom: 10px;
     font-size: 10px;
-    margin: 0 0 10px;
   }
 
   .about-hero__title {
+    max-width: 300px;
+    margin-bottom: 14px;
     font-size: 34px;
     line-height: 0.95;
-    max-width: 300px;
-    margin: 0 0 14px;
     text-align: center;
   }
 
   .about-hero__description {
+    max-width: 285px;
+    margin-bottom: 16px;
     font-size: 9px;
     line-height: 1.45;
-    max-width: 285px;
-    margin: 0 0 16px;
     text-align: center;
   }
 
   .about-hero__image-wrapper {
     width: 100%;
     flex: none;
-    justify-content: center;
   }
 
   .about-hero__image {
-    width: 100%;
     max-width: 230px;
     padding: 10px 10px 14px;
     transform: rotate(3deg);
