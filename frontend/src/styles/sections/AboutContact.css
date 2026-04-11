@@ -190,6 +190,44 @@
 }
 
 /* =========================
+   SUBMIT BUTTON (VERSION ZIP CLEAN)
+========================= */
+
+.about-inquiry__submit {
+  display: block;
+  width: 100%;
+  max-width: 580px;
+  margin: 40px auto 0;
+
+  border: none;
+  border-radius: 999px;
+
+  padding: 14px;
+
+  background-color: #efb7da;
+  color: #3c2015;
+
+  font-family: "Public Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.about-inquiry__submit:hover {
+  background-color: #828234;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* =========================
    EXTRA BLOCK
 ========================= */
 
@@ -241,19 +279,6 @@
   }
 }
 
-/* 👉 AJUSTEMENT TABLETTE TEXTE EXTRA */
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .about-inquiry__extra span,
-  .about-inquiry__extra a {
-    font-size: 20px;
-  }
-
-  .about-inquiry__extra-flower {
-    font-size: 24px;
-  }
-}
-
 /* =========================
    MOBILE
 ========================= */
@@ -281,15 +306,18 @@
   .about-inquiry__option input[type="radio"] {
     width: 10px;
     height: 10px;
-    flex: 0 0 10px;
   }
 
   .about-inquiry__option input[type="radio"]:checked::after {
     font-size: 6px;
   }
 
+  /* 👇 bouton compact comme dans le zip */
+
   .about-inquiry__submit {
-    max-width: 200px;
+    max-width: 320px;
+    padding: 12px;
+    font-size: 11px;
   }
 
   .about-inquiry__extra {

@@ -72,12 +72,7 @@ const services = [
       "Les gens regardent, mais ne passent pas à l’action",
       "Il manque un lien entre vos réseaux et votre business",
     ],
-    focus: [
-      "Hooks",
-      "Messages",
-      "CTA",
-      "Logique de conversion",
-    ],
+    focus: ["Hooks", "Messages", "CTA", "Logique de conversion"],
     theme: "warm",
     link: "/acquisition",
     calendarLink: "/contact",
@@ -145,14 +140,14 @@ const SocialGrowthServices = () => {
               <div className="sg-service__actions">
                 <Link
                   to={service.link}
-                  className="sg-service__btn sg-service__btn--primary"
+                  className="sg-service__btn sg-service__btn--secondary"
                 >
                   Plus de détails
                 </Link>
 
                 <Link
                   to={service.calendarLink}
-                  className="sg-service__btn sg-service__btn--secondary"
+                  className="sg-service__btn sg-service__btn--primary"
                 >
                   Prendre rendez-vous
                 </Link>

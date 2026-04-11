@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1.5rem 6rem;
+  padding: 1rem 1.5rem 10rem;
 }
 
 .sg-hero__bg {
@@ -82,21 +82,32 @@
 .sg-hero__title {
   max-width: 920px;
   margin: 0 auto 1.25rem;
-  font-size: clamp(3rem, 7vw, 6.4rem);
+  font-size: clamp(2.6rem, 6vw, 5.4rem);
   line-height: 0.94;
   letter-spacing: -0.05em;
   color: #3c2015;
 }
 
 .sg-hero__title span {
-  display: block;
+  position: relative;
+  display: inline-block;
   margin-top: 0.35rem;
   font-style: italic;
   font-weight: 500;
-  background: linear-gradient(90deg, #ea609f 0%, #c97aa1 45%, #3c2015 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #3c2015;
+  z-index: 1;
+}
+
+.sg-hero__title span::after {
+  content: "";
+  position: absolute;
+  left: -0.1em;
+  right: -0.1em;
+  bottom: 0.08em;
+  height: 0.48em;
+  background: rgba(234, 96, 159, 0.42);
+  border-radius: 999px;
+  z-index: -1;
 }
 
 .sg-hero__subtitle {
@@ -208,7 +219,7 @@
 @media (max-width: 768px) {
   .sg-hero {
     min-height: auto;
-    padding: 5.2rem 1.2rem 4.8rem;
+    padding: 4.4rem 1.2rem 4rem;
   }
 
   .sg-hero__eyebrow {

@@ -7,10 +7,6 @@
   position: relative;
   overflow: hidden;
   padding: 96px 0;
-  background:
-    radial-gradient(circle at 12% 20%, rgba(232, 166, 176, 0.18), transparent 20rem),
-    radial-gradient(circle at 88% 30%, rgba(191, 210, 239, 0.18), transparent 20rem),
-    linear-gradient(180deg, #f7f5eb 0%, #f6efe4 100%);
 }
 
 .portfolio-content-section__inner {

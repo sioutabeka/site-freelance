@@ -3,7 +3,6 @@ import Navbar from "../components/layout/Navbar";
 import FooterSection from "../components/layout/FooterSection";
 import BottomBar from "../components/layout/BottomBar";
 import PortfolioContentHero from "../components/sections/PortfolioContentHero";
-import BrandsSection from "../components/sections/BrandsSection";
 import PortfolioContentSection from "../components/sections/PortfolioContentSection";
 import PortfolioContentCTASection from "../components/sections/PortfolioContentCTASection";
 
@@ -21,7 +20,6 @@ function PortfolioContentPage() {
       <TopBar />
       <Navbar variant="transparent" mode="sticky" />
       <PortfolioContentHero />
-      <BrandsSection />
 
       <PortfolioContentSection
   tag="Portfolio contenu"

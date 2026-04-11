@@ -112,24 +112,27 @@
   color: #f4edc6;
 }
 
-.about-section__subtitle {
-  margin: 0 0 30px;
-  max-width: 560px;
+/* =========================
+   CORPS DE TEXTE UNIFIÉ
+========================= */
 
+.about-section__subtitle,
+.about-section__text,
+.about-section__list span {
   font-family: "Public Sans", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.72;
-  color: rgba(247, 245, 235, 0.92);
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: rgba(247, 245, 235, 0.82);
+}
+
+.about-section__subtitle {
+  margin: 0 0 18px;
+  max-width: 580px;
 }
 
 .about-section__text {
   margin: 0 0 18px;
   max-width: 580px;
-
-  font-family: "Public Sans", sans-serif;
-  font-size: 0.96rem;
-  line-height: 1.8;
-  color: rgba(247, 245, 235, 0.78);
 }
 
 .about-section__list {
@@ -143,46 +146,34 @@
   display: flex;
   align-items: flex-start;
   gap: 10px;
-
-  font-family: "Public Sans", sans-serif;
-  font-size: 0.96rem;
-  line-height: 1.72;
-  color: rgba(247, 245, 235, 0.96);
 }
 
 .about-section__list span::before {
   content: "✿";
   flex: 0 0 auto;
-
-  transform: translateY(6px); /* 🔥 ajuste ici */
-
+  transform: translateY(6px);
   font-family: "Public Sans", sans-serif;
   font-size: 0.95rem;
   line-height: 1;
   color: #f4edc6;
 }
 
-/* BOUTON — HARMONISÉ AVEC HERO / WORK */
+/* BOUTON */
 
 .about-section__button {
   margin-top: 2px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 54px;
   padding: 0.95rem 1.55rem;
   border-radius: 999px;
-
   font-family: "Public Sans", sans-serif;
   font-size: 0.98rem;
   font-weight: 600;
   line-height: 1;
-
   text-transform: none;
   letter-spacing: -0.01em;
-
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease,
@@ -219,14 +210,19 @@
     margin-bottom: 20px;
   }
 
-  .about-section__subtitle {
-    font-size: 1rem;
-    margin-bottom: 26px;
-  }
-
+  .about-section__subtitle,
   .about-section__text,
   .about-section__list span {
     font-size: 0.93rem;
+    line-height: 1.74;
+  }
+
+  .about-section__subtitle {
+    margin-bottom: 18px;
+  }
+
+  .about-section__text {
+    margin-bottom: 16px;
   }
 
   .about-section__list {
@@ -270,28 +266,25 @@
     margin: 0 0 18px;
   }
 
-  .about-section__subtitle {
-    font-size: 1rem;
-    line-height: 1.68;
-    margin: 0 0 24px;
+  .about-section__subtitle,
+  .about-section__text,
+  .about-section__list span {
+    font-size: 0.94rem;
+    line-height: 1.74;
     max-width: 100%;
   }
 
-  .about-section__text {
-    font-size: 0.94rem;
-    line-height: 1.74;
+  .about-section__subtitle {
     margin: 0 0 16px;
-    max-width: 100%;
+  }
+
+  .about-section__text {
+    margin: 0 0 16px;
   }
 
   .about-section__list {
     gap: 10px;
     margin: 24px 0 30px;
-  }
-
-  .about-section__list span {
-    font-size: 0.94rem;
-    line-height: 1.68;
   }
 }
 
@@ -343,18 +336,20 @@
     margin: 0 0 14px;
   }
 
-  .about-section__subtitle {
-    font-size: 0.95rem;
-    line-height: 1.62;
-    margin: 0 0 20px;
+  .about-section__subtitle,
+  .about-section__text,
+  .about-section__list span {
+    font-size: 0.87rem;
+    line-height: 1.7;
     max-width: 100%;
   }
 
-  .about-section__text {
-    font-size: 0.87rem;
-    line-height: 1.7;
+  .about-section__subtitle {
     margin: 0 0 14px;
-    max-width: 100%;
+  }
+
+  .about-section__text {
+    margin: 0 0 14px;
   }
 
   .about-section__list {
@@ -363,8 +358,6 @@
   }
 
   .about-section__list span {
-    font-size: 0.87rem;
-    line-height: 1.64;
     gap: 8px;
   }
 

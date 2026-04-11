@@ -14,52 +14,51 @@
 
 .sg-service__inner {
   position: relative;
-  padding: 2rem;
+  padding: 2.1rem;
   border-radius: 2rem;
   border: 1px solid rgba(60, 32, 21, 0.08);
-  box-shadow: 0 18px 46px rgba(60, 32, 21, 0.06);
+  box-shadow:
+    0 18px 46px rgba(60, 32, 21, 0.06),
+    inset 0 1px 0 rgba(255, 253, 248, 0.35);
   overflow: hidden;
+  backdrop-filter: blur(10px);
 }
 
 /* THEMES + ACCENTS */
 
-/* STRATEGY → olive + fond vert très clair */
 .sg-service--light .sg-service__inner {
   --service-accent: #828234;
   --service-accent-contrast: #fffdf8;
   --service-accent-soft: rgba(130, 130, 52, 0.14);
   background: linear-gradient(
     180deg,
-    rgba(130, 130, 52, 0.1) 0%,
-    rgba(255, 253, 248, 0.92) 100%
+    rgba(130, 130, 52, 0.08) 0%,
+    rgba(255, 253, 248, 0.96) 100%
   );
 }
 
-/* COMMUNITY MANAGEMENT → tout en bleu */
 .sg-service--blue .sg-service__inner {
   --service-accent: #bfd2ef;
   --service-accent-contrast: #3c2015;
   --service-accent-soft: rgba(191, 210, 239, 0.24);
   background: linear-gradient(
     180deg,
-    rgba(220, 231, 248, 0.92) 0%,
-    rgba(191, 210, 239, 0.72) 100%
+    rgba(220, 231, 248, 0.88) 0%,
+    rgba(255, 253, 248, 0.92) 100%
   );
 }
 
-/* UGC → rose */
 .sg-service--rose .sg-service__inner {
   --service-accent: #ea609f;
   --service-accent-contrast: #fffdf8;
   --service-accent-soft: rgba(234, 96, 159, 0.14);
   background: linear-gradient(
     180deg,
-    rgba(243, 211, 216, 0.82) 0%,
-    rgba(232, 166, 176, 0.34) 100%
+    rgba(243, 211, 216, 0.7) 0%,
+    rgba(255, 250, 252, 0.94) 100%
   );
 }
 
-/* ACQUISITION → brun chaud */
 .sg-service--warm .sg-service__inner {
   --service-accent: #3c2015;
   --service-accent-contrast: #fffdf8;
@@ -67,19 +66,18 @@
   background: linear-gradient(
     180deg,
     rgba(255, 249, 241, 0.96) 0%,
-    rgba(248, 239, 228, 0.88) 100%
+    rgba(248, 239, 228, 0.9) 100%
   );
 }
 
-/* GROWTH → jaune doux */
 .sg-service--beige .sg-service__inner {
   --service-accent: #f4edc6;
   --service-accent-contrast: #3c2015;
   --service-accent-soft: rgba(244, 237, 198, 0.26);
   background: linear-gradient(
     180deg,
-    rgba(247, 242, 219, 0.95) 0%,
-    rgba(244, 237, 198, 0.78) 100%
+    rgba(247, 242, 219, 0.92) 0%,
+    rgba(255, 252, 242, 0.96) 100%
   );
 }
 
@@ -88,24 +86,25 @@
 .sg-service__eyebrow {
   display: inline-flex;
   align-items: center;
-  margin: 0 0 0.95rem;
+  margin: 0 0 1rem;
   padding: 0.52rem 0.86rem;
   border-radius: 999px;
-  border: 1px solid rgba(60, 32, 21, 0.1);
-  background: rgba(255, 253, 248, 0.58);
+  border: 1px solid rgba(60, 32, 21, 0.08);
+  background: rgba(255, 253, 248, 0.7);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
   font-size: 0.74rem;
   font-weight: 700;
   line-height: 1.4;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(60, 32, 21, 0.7);
+  color: rgba(60, 32, 21, 0.68);
 }
 
 .sg-service__title {
-  margin: 0 0 0.95rem;
+  margin: 0 0 1rem;
   font-family: "Public Sans", sans-serif;
-  font-size: clamp(2rem, 4vw, 3.35rem);
-  line-height: 0.96;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 0.98;
   letter-spacing: -0.05em;
   color: #3c2015;
 }
@@ -114,7 +113,7 @@
 .sg-service--rose .sg-service__title,
 .sg-service--warm .sg-service__title,
 .sg-service--beige .sg-service__title {
-  background: linear-gradient(90deg, #3c2015 0%, rgba(60, 32, 21, 0.72) 100%);
+  background: linear-gradient(90deg, #3c2015 0%, rgba(60, 32, 21, 0.78) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -123,9 +122,9 @@
 .sg-service__intro {
   max-width: 100%;
   margin: 0;
-  font-size: 1.05rem;
-  line-height: 1.78;
-  color: rgba(60, 32, 21, 0.84);
+  font-size: 1.02rem;
+  line-height: 1.72;
+  color: rgba(60, 32, 21, 0.82);
 }
 
 /* BLOCKS UNDER INTRO */
@@ -134,24 +133,27 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 1.6rem;
 }
 
 .sg-service__block {
   min-height: 100%;
-  padding: 1.2rem 1.2rem 1.25rem;
-  border-radius: 1.4rem;
-  border: 1px solid rgba(60, 32, 21, 0.08);
-  background: rgba(255, 253, 248, 0.62);
+  padding: 1.25rem 1.25rem 1.3rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(60, 32, 21, 0.07);
+  background: rgba(255, 253, 248, 0.78);
+  box-shadow:
+    0 10px 24px rgba(60, 32, 21, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .sg-service__kicker {
-  margin: 0 0 0.85rem;
-  font-size: 0.78rem;
+  margin: 0 0 0.9rem;
+  font-size: 0.76rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(60, 32, 21, 0.62);
+  color: rgba(60, 32, 21, 0.58);
 }
 
 .sg-service__list {
@@ -163,7 +165,7 @@
 .sg-service__list li {
   position: relative;
   margin-bottom: 0.82rem;
-  padding-left: 1.25rem;
+  padding-left: 1.35rem;
   font-size: 0.98rem;
   line-height: 1.65;
   color: #3c2015;
@@ -197,9 +199,10 @@
   min-height: 38px;
   padding: 0.55rem 0.85rem;
   border-radius: 999px;
-  border: 1px solid rgba(60, 32, 21, 0.1);
-  background: rgba(255, 253, 248, 0.72);
-  font-size: 0.92rem;
+  border: 1px solid rgba(60, 32, 21, 0.08);
+  background: rgba(255, 253, 248, 0.78);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  font-size: 0.9rem;
   font-weight: 600;
   color: #3c2015;
 }
@@ -210,7 +213,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 1.35rem;
+  margin-top: 1.45rem;
 }
 
 .sg-service__btn {
@@ -246,13 +249,13 @@
 
 .sg-service__btn--secondary {
   border: 1px solid rgba(60, 32, 21, 0.12);
-  background: rgba(255, 253, 248, 0.72);
+  background: rgba(255, 253, 248, 0.76);
   color: #3c2015;
 }
 
 .sg-service__btn--secondary:hover {
   transform: translateY(-2px);
-  background: rgba(255, 250, 242, 0.92);
+  background: rgba(255, 250, 242, 0.94);
   border-color: rgba(60, 32, 21, 0.2);
 }
 
